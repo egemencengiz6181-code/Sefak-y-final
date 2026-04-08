@@ -1,19 +1,15 @@
-'use client';
-
+import { getTranslations } from 'next-intl/server';
 import ReneeServiceCard from '@/components/ui/renee-service-card';
-import { BookOpen, GraduationCap, Trophy, FileText } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 
-const serviceIcons = [BookOpen, GraduationCap, BookOpen, FileText, Trophy, GraduationCap, FileText];
 const serviceSlugs = ['7-sinif', '8-sinif', '10-sinif', '11-sinif', '12-sinif', 'mezun', 'deneme-kulubu'];
 
-export default function ServicesSection() {
-  const t = useTranslations('Services');
+export default async function ServicesSection() {
+  const t = await getTranslations('Services');
 
-  const services = serviceSlugs.map((slug, i) => ({
+  const services = serviceSlugs.map((slug) => ({
+    slug,
     title: t(`items.${slug}.title`),
     description: t(`items.${slug}.description`),
-    icon: serviceIcons[i],
     href: `/services/${slug}`,
     features: (t.raw(`items.${slug}.features`) as string[]).slice(0, 4),
   }));
@@ -23,12 +19,12 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-24">
           <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-primary mb-4">{t('title')}</h2>
-          <h3 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">{t('subtitle')}</h3>
+          <h3 className="text-4xl md:text-6xl font-bold tracking-tighter text-slate-900 dark:text-white">{t('subtitle')}</h3>
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="w-full md:w-[calc(50%-16px)] lg:w-[calc(25%-24px)]">
+          {services.map((service) => (
+            <div key={service.slug} className="w-full md:w-[calc(50%-16px)] lg:w-[calc(25%-24px)]">
               <ReneeServiceCard {...service} />
             </div>
           ))}

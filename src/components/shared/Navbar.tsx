@@ -8,8 +8,10 @@ import { cn } from "@/lib/utils"
 import { useTranslations } from 'next-intl'
 import LanguageSwitcher from "./LanguageSwitcher"
 import Image from "next/image"
-import AnalysisModal from "./AnalysisModal"
+import dynamic from "next/dynamic"
 import ThemeToggle from "./ThemeToggle"
+
+const AnalysisModal = dynamic(() => import('./AnalysisModal'), { ssr: false })
 
 interface NavItem {
   name: string

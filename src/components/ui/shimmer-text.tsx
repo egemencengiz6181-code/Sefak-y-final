@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
 interface ShimmerTextProps {
@@ -16,6 +17,12 @@ export function ShimmerText({
   duration = 2.8,
   delay = 1.0,
 }: ShimmerTextProps) {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+  const c = isDark ? "255,255,255" : "0,0,0";
+  const lo = isDark ? 0.08 : 0.06;
+  const hi = isDark ? 0.22 : 0.15;
+
   return (
     <div className="overflow-hidden">
       <motion.div
@@ -23,7 +30,7 @@ export function ShimmerText({
         style={{
           WebkitTextFillColor: "transparent",
           background:
-            "linear-gradient(to right, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.22) 40%, rgba(255,255,255,0.22) 60%, rgba(255,255,255,0.08) 100%)",
+            `linear-gradient(to right, rgba(${c},${lo}) 0%, rgba(${c},${hi}) 40%, rgba(${c},${hi}) 60%, rgba(${c},${lo}) 100%)`,
           WebkitBackgroundClip: "text",
           backgroundClip: "text",
           backgroundRepeat: "no-repeat",

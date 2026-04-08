@@ -182,9 +182,9 @@ function SectionCard({ section, index }: { section: SectionItem; index: number }
               <span className="text-[10px] font-black uppercase tracking-[0.25em]" style={{ color: color + 'aa' }}>
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <h3 className="text-lg font-bold text-white leading-tight">{section.title}</h3>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white leading-tight">{section.title}</h3>
             </div>
-            <p className="text-white/40 text-sm leading-relaxed line-clamp-1">{section.lead}</p>
+            <p className="text-slate-500 dark:text-white/40 text-sm leading-relaxed line-clamp-1">{section.lead}</p>
             <div className="flex flex-wrap gap-2 mt-3">
               {section.tags.map(tag => (
                 <span
@@ -225,15 +225,15 @@ function SectionCard({ section, index }: { section: SectionItem; index: number }
                   {section.blocks.map((block, i) => (
                     <div key={i} className="flex gap-3">
                       <div className="w-1.5 h-1.5 rounded-full mt-2.5 shrink-0" style={{ backgroundColor: color }} />
-                      <p className="text-white/60 leading-relaxed text-sm">{block.text}</p>
+                      <p className="text-slate-600 dark:text-white/60 leading-relaxed text-sm">{block.text}</p>
                     </div>
                   ))}
                   {section.list && (
                     <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {section.list.map((item, i) => (
-                        <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-2xl border border-white/[0.05] bg-white/[0.02]">
+                        <div key={i} className="flex items-center gap-3 px-4 py-3 rounded-2xl border border-black/[0.05] dark:border-white/[0.05] bg-black/[0.02] dark:bg-white/[0.02]">
                           <div className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: color }} />
-                          <span className="text-white/65 text-sm">{item}</span>
+                          <span className="text-slate-600 dark:text-white/65 text-sm">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -259,11 +259,11 @@ function SectionCard({ section, index }: { section: SectionItem; index: number }
 /* ─── Stat card ──────────────────────────────────────────────────────── */
 function StatCard({ icon: Icon, label, color }: { icon: React.ElementType; label: string; color: string }) {
   return (
-    <div className="flex items-center gap-3 p-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm">
+    <div className="flex items-center gap-3 p-5 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-sm">
       <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: color + '20' }}>
         <Icon className="w-5 h-5" style={{ color }} />
       </div>
-      <span className="text-sm font-semibold text-white/80 leading-tight">{label}</span>
+      <span className="text-sm font-semibold text-slate-700 dark:text-white/80 leading-tight">{label}</span>
     </div>
   );
 }
@@ -300,7 +300,7 @@ export default function RehberlikPage() {
                 variants={fadeUp} custom={1} initial="hidden" animate="show"
                 className="text-4xl md:text-5xl xl:text-6xl font-black tracking-tighter leading-[1.05] mb-6"
               >
-                <span className="bg-gradient-to-br from-white via-white to-white/40 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-900/40 dark:from-white dark:via-white dark:to-white/40 bg-clip-text text-transparent">
                   Psikolojik Danışmanlık
                 </span>
                 <br />
@@ -311,7 +311,7 @@ export default function RehberlikPage() {
 
               <motion.p
                 variants={fadeUp} custom={2} initial="hidden" animate="show"
-                className="text-base text-white/50 font-light leading-relaxed mb-10 max-w-lg"
+                className="text-base text-slate-500 dark:text-white/50 font-light leading-relaxed mb-10 max-w-lg"
               >
                 Seviye Belirleme Sınavı&apos;ndan başlayarak her öğrenciye özel oluşturulan kapsamlı danışmanlık programı; psikolojik testler, yapay zeka destekli analiz ve düzenli veli raporlarını bir arada sunar.
               </motion.p>
@@ -327,7 +327,7 @@ export default function RehberlikPage() {
                 </Link>
                 <a
                   href="#detaylar"
-                  className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl font-bold text-sm text-white/60 border border-white/[0.08] hover:border-white/20 hover:text-white transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl font-bold text-sm text-slate-500 dark:text-white/60 border border-black/[0.08] dark:border-white/[0.08] hover:border-black/20 dark:hover:border-white/20 hover:text-slate-900 dark:hover:text-white transition-all duration-300"
                 >
                   Detayları Gör
                 </a>
@@ -336,14 +336,14 @@ export default function RehberlikPage() {
 
             <motion.div variants={fadeUp} custom={4} initial="hidden" animate="show" className="relative">
               <div className="absolute -inset-4 rounded-[40px] blur-[60px] opacity-25 pointer-events-none" style={{ background: `linear-gradient(135deg,${BLUE}50,${RED}30)` }} />
-              <div className="relative rounded-3xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-2xl p-8">
+              <div className="relative rounded-3xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-2xl p-8">
                 <GlowingEffect spread={50} glow disabled={false} proximity={80} inactiveZone={0.01} borderWidth={2} />
 
                 <div className="flex items-center gap-3 mb-6 px-4 py-3 rounded-2xl border border-[#ec2027]/20 bg-[#ec2027]/[0.07]">
                   <Bot className="w-5 h-5 text-[#ec2027]" />
                   <div>
-                    <p className="text-white text-sm font-bold">Dijital Analiz</p>
-                    <p className="text-white/40 text-xs">Dijital analiz ve kişisel soru bankası</p>
+                    <p className="text-slate-900 dark:text-white text-sm font-bold">Dijital Analiz</p>
+                    <p className="text-slate-500 dark:text-white/40 text-xs">Dijital analiz ve kişisel soru bankası</p>
                   </div>
                 </div>
 
@@ -367,8 +367,8 @@ export default function RehberlikPage() {
           className="mb-10 text-center"
         >
           <p className="text-xs font-bold uppercase tracking-[0.35em] mb-3" style={{ color: BLUE }}>Hizmet Başlıkları</p>
-          <h2 className="text-3xl font-black text-white tracking-tight">Tüm Hizmetlerimiz</h2>
-          <p className="text-white/35 mt-3 text-sm">Genişletmek için bölüme tıklayın</p>
+          <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Tüm Hizmetlerimiz</h2>
+          <p className="text-slate-500 dark:text-white/35 mt-3 text-sm">Genişletmek için bölüme tıklayın</p>
         </motion.div>
 
         {SECTIONS.map((section, i) => (

@@ -69,7 +69,7 @@ function StoryCard({ s, i }: { s: typeof successStories[0]; i: number }) {
       }}
     >
       {/* GlowingEffect border */}
-      <div className="relative h-full rounded-3xl border border-white/[0.035]">
+      <div className="relative h-full rounded-3xl border border-black/[0.035] dark:border-white/[0.035]">
         <GlowingEffect
           spread={40}
           glow={true}
@@ -81,7 +81,7 @@ function StoryCard({ s, i }: { s: typeof successStories[0]; i: number }) {
 
         {/* glass body */}
         <div
-          className="relative h-full flex flex-col gap-5 p-6 rounded-3xl bg-white/[0.03] backdrop-blur-xl transition-colors duration-500 overflow-hidden"
+          className="relative h-full flex flex-col gap-5 p-6 rounded-3xl bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl transition-colors duration-500 overflow-hidden"
           style={{ backgroundColor: hovered ? `${s.color}08` : undefined }}
         >
           {/* top row */}
@@ -112,7 +112,7 @@ function StoryCard({ s, i }: { s: typeof successStories[0]; i: number }) {
             >
               {s.type}
             </span>
-            <span className="text-white/20 text-xs">{s.year}</span>
+            <span className="text-slate-400 dark:text-white/20 text-xs">{s.year}</span>
           </div>
 
           {/* content */}
@@ -120,8 +120,8 @@ function StoryCard({ s, i }: { s: typeof successStories[0]; i: number }) {
             <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: s.color }}>
               {s.label}
             </p>
-            <p className="text-white font-bold text-xl leading-tight mb-1">{s.name}</p>
-            <p className="text-white/40 text-sm">{s.school}</p>
+            <p className="text-slate-900 dark:text-white font-bold text-xl leading-tight mb-1">{s.name}</p>
+            <p className="text-slate-500 dark:text-white/40 text-sm">{s.school}</p>
           </div>
 
           {/* glow line at bottom */}
@@ -153,16 +153,16 @@ export default function ReferencesPage() {
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-sm mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black/10 dark:border-white/10 bg-black/[0.04] dark:bg-white/[0.04] backdrop-blur-sm mb-8"
           >
             <Trophy className="w-3.5 h-3.5 text-[#ec2027]" />
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-white/50">{t('subtitle')}</span>
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500 dark:text-white/50">{t('subtitle')}</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08 }}
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-white via-white to-white/30 bg-clip-text text-transparent leading-none"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-900/30 dark:from-white dark:via-white dark:to-white/30 bg-clip-text text-transparent leading-none"
           >
             {t('title')}
           </motion.h1>
@@ -178,13 +178,13 @@ export default function ReferencesPage() {
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="flex flex-col items-center gap-2 rounded-2xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-xl p-5"
+              className="flex flex-col items-center gap-2 rounded-2xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-xl p-5"
             >
-              <stat.icon className="w-4 h-4 text-white/20 mb-1" />
-              <span className="text-3xl font-black text-white tracking-tight">
+              <stat.icon className="w-4 h-4 text-slate-400 dark:text-white/20 mb-1" />
+              <span className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">
                 <Counter to={stat.value} suffix={stat.suffix} />
               </span>
-              <span className="text-white/35 text-xs text-center leading-tight">{stat.label}</span>
+              <span className="text-slate-500 dark:text-white/35 text-xs text-center leading-tight">{stat.label}</span>
             </div>
           ))}
         </motion.div>

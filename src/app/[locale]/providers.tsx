@@ -3,7 +3,7 @@
 import { ThemeProvider } from "next-themes";
 import { NextIntlClientProvider } from "next-intl";
 
-export function Providers({
+export default function Providers({
   children,
   locale,
   messages,

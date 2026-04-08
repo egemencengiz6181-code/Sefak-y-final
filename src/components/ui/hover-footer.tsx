@@ -119,7 +119,7 @@ export default function HoverFooter() {
   ];
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/5 bg-transparent">
+    <footer className="relative overflow-hidden border-t border-black/5 dark:border-white/5 bg-transparent">
       {/* Ambient background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-[#ec2027]/10 blur-[120px] rounded-full" />
@@ -127,7 +127,7 @@ export default function HoverFooter() {
 
       <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-8">
         {/* Top grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-16 border-b border-white/5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-16 border-b border-black/5 dark:border-white/5">
           {/* Brand */}
           <div className="space-y-6">
             <Link href="/" className="inline-block pointer-events-auto">
@@ -139,7 +139,7 @@ export default function HoverFooter() {
                 className="h-16 w-auto object-contain"
               />
             </Link>
-            <p className="text-sm text-white/30 leading-relaxed max-w-xs">
+            <p className="text-sm text-slate-500 dark:text-white/30 leading-relaxed max-w-xs">
               {ft('brand_tagline')}
             </p>
             <div className="flex gap-3">
@@ -150,7 +150,7 @@ export default function HoverFooter() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-full border border-white/8 bg-white/[0.03] flex items-center justify-center text-white/30 hover:text-[#ec2027] hover:border-[#ec2027]/40 transition-all pointer-events-auto"
+                  className="w-9 h-9 rounded-full border border-black/8 dark:border-white/8 bg-black/[0.03] dark:bg-white/[0.03] flex items-center justify-center text-slate-400 dark:text-white/30 hover:text-[#ec2027] hover:border-[#ec2027]/40 transition-all pointer-events-auto"
                 >
                   {s.icon}
                 </a>
@@ -160,13 +160,13 @@ export default function HoverFooter() {
 
           {/* Nav */}
           <div className="space-y-6">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/25">{ft('pages')}</p>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400 dark:text-white/25">{ft('pages')}</p>
             <ul className="space-y-3">
               {navLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-white/40 hover:text-white transition-colors flex items-center gap-1.5 group pointer-events-auto"
+                    className="text-sm text-slate-500 dark:text-white/40 hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-1.5 group pointer-events-auto"
                   >
                     <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 text-[#ec2027] transition-opacity" />
                     {l.name}
@@ -178,21 +178,21 @@ export default function HoverFooter() {
 
           {/* Contact */}
           <div className="space-y-6">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/25">{ft('contact')}</p>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400 dark:text-white/25">{ft('contact')}</p>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:zekeriyakoyfenbilimleri@gmail.com" className="flex items-center gap-3 text-sm text-white/40 hover:text-white transition-colors group pointer-events-auto">
+                <a href="mailto:zekeriyakoyfenbilimleri@gmail.com" className="flex items-center gap-3 text-sm text-slate-500 dark:text-white/40 hover:text-slate-900 dark:hover:text-white transition-colors group pointer-events-auto">
                   <Mail className="w-4 h-4 text-[#ec2027] shrink-0" />
                   zekeriyakoyfenbilimleri@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+902122015848" className="flex items-center gap-3 text-sm text-white/40 hover:text-white transition-colors pointer-events-auto">
+                <a href="tel:+902122015848" className="flex items-center gap-3 text-sm text-slate-500 dark:text-white/40 hover:text-slate-900 dark:hover:text-white transition-colors pointer-events-auto">
                   <Phone className="w-4 h-4 text-[#ec2027] shrink-0" />
                   0212 201 58 48
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-sm text-white/40">
+              <li className="flex items-start gap-3 text-sm text-slate-500 dark:text-white/40">
                 <MapPin className="w-4 h-4 text-[#ec2027] shrink-0 mt-0.5" />
                 <span>{ft('address')}</span>
               </li>
@@ -206,11 +206,11 @@ export default function HoverFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/20">
+        <div className="pt-6 border-t border-black/5 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-slate-400 dark:text-white/20">
             © {new Date().getFullYear()} Zekeriyaköy Fen Bilimleri. {ft('rights_suffix')}
           </p>
-          <p className="text-xs text-white/20">
+          <p className="text-xs text-slate-400 dark:text-white/20">
             {ft('tagline')}
           </p>
         </div>

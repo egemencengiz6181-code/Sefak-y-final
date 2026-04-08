@@ -2,9 +2,12 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import Waves from "@/components/ui/waves";
+import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import Image from "next/image";
+
+const Waves = dynamic(() => import('@/components/ui/waves'), { ssr: false });
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -17,13 +20,15 @@ const fadeUp = {
 
 export default function HeroMain() {
   const t = useTranslations("HeroMain");
+  const { resolvedTheme } = useTheme();
+  const wavesBg = resolvedTheme === "dark" ? "#000000" : "#f4f4f8";
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* ── WAVES BACKGROUND — sadece desktop (mobilde performans tasarrufu) ── */}
       <div className="hidden md:block absolute inset-0 z-0">
         <Waves
           strokeColor="#ec2027"
-          backgroundColor="#000000"
+          backgroundColor={wavesBg}
           lineCount={14}
           waveSpeedX={0.0007}
           waveSpeedY={0.0005}
@@ -37,7 +42,7 @@ export default function HeroMain() {
         />
       </div>
       {/* Mobil için sade gradient arka plan */}
-      <div className="md:hidden absolute inset-0 z-0 bg-gradient-to-br from-[#0a0a0f] via-[#0d0005] to-[#0a0a0f]" />
+      <div className="md:hidden absolute inset-0 z-0 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 dark:from-[#0a0a0f] dark:via-[#0d0005] dark:to-[#0a0a0f]" />
 
       {/* ── SCHOOL IMAGE BACKGROUND ──────────────────────────── */}
       <div className="absolute inset-0 z-[1] overflow-hidden">
@@ -52,7 +57,7 @@ export default function HeroMain() {
       </div>
 
       {/* ── VIGNETTE OVERLAY ─────────────────────────────────── */}
-      <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,transparent_40%,rgba(0,0,0,0.82)_100%)]" />
+      <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,transparent_40%,rgba(255,255,255,0.82)_100%)] dark:bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,transparent_40%,rgba(0,0,0,0.82)_100%)]" />
 
       {/* ── PURPLE GLOW ──────────────────────────────────────── */}
       <motion.div
@@ -90,7 +95,7 @@ export default function HeroMain() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.04] text-white mb-8"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.04] text-slate-900 dark:text-white mb-8"
         >
           {t("title_prefix")}{" "}
           <span className="bg-gradient-to-r from-[#ec2027] via-[#f06060] to-[#12648f] bg-clip-text text-transparent">
@@ -106,7 +111,7 @@ export default function HeroMain() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="text-lg md:text-xl text-white/40 font-light leading-relaxed max-w-2xl mx-auto mb-12"
+          className="text-lg md:text-xl text-slate-500 dark:text-white/40 font-light leading-relaxed max-w-2xl mx-auto mb-12"
         >
           {t("subtitle")}
         </motion.p>

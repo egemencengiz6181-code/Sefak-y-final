@@ -3,7 +3,7 @@ import {getMessages, getTranslations} from 'next-intl/server';
 import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 import MobileStickyButton from '@/components/shared/MobileStickyButton';
-import {Providers} from './providers';
+import Providers from './providers';
 import {locales} from '@/config/locales';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';

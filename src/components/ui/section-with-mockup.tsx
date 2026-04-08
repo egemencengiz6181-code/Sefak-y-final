@@ -80,10 +80,10 @@ const stats = [
 
 const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, description, badge }) => {
   return (
-    <section className="relative bg-black overflow-hidden py-28 md:py-40">
+    <section className="relative bg-white dark:bg-black overflow-hidden py-28 md:py-40">
       {/* Border lines */}
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-black/10 dark:via-white/10 to-transparent" />
+      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-black/10 dark:via-white/10 to-transparent" />
 
       {/* Ambient glows */}
       <div className="pointer-events-none absolute -top-40 -left-40 w-[640px] h-[640px] rounded-full bg-[#ec2027]/[0.06] blur-[120px]" />
@@ -111,7 +111,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
           <motion.h2
             variants={fadeUp}
             custom={1}
-            className="text-3xl md:text-5xl lg:text-[56px] font-bold tracking-tighter leading-tight text-white max-w-2xl"
+            className="text-3xl md:text-5xl lg:text-[56px] font-bold tracking-tighter leading-tight text-slate-900 dark:text-white max-w-2xl"
           >
             {title}
           </motion.h2>
@@ -153,14 +153,14 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
               viewport={{ once: true }}
-              className="absolute bottom-4 right-2 sm:bottom-8 sm:right-2 md:-right-4 z-20 flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-2xl border border-white/10 bg-black/60 backdrop-blur-xl shadow-xl"
+              className="absolute bottom-4 right-2 sm:bottom-8 sm:right-2 md:-right-4 z-20 flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-2xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/60 backdrop-blur-xl shadow-xl"
             >
               <div className="w-9 h-9 rounded-xl bg-[#ec2027]/20 flex items-center justify-center shrink-0">
                 <Trophy className="w-4 h-4 text-[#ec2027]" />
               </div>
               <div>
-                <p className="text-white font-bold text-sm leading-none">%94 Başarı</p>
-                <p className="text-white/40 text-xs mt-0.5">YKS Sınav Oranı</p>
+                <p className="text-slate-900 dark:text-white font-bold text-sm leading-none">%94 Başarı</p>
+                <p className="text-slate-500 dark:text-white/40 text-xs mt-0.5">YKS Sınav Oranı</p>
               </div>
             </motion.div>
 
@@ -178,7 +178,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
             <motion.p
               variants={fadeUp}
               custom={2}
-              className="text-white/55 text-base md:text-[17px] leading-[1.85] max-w-lg"
+              className="text-slate-600 dark:text-white/55 text-base md:text-[17px] leading-[1.85] max-w-lg"
             >
               {description}
             </motion.p>
@@ -201,14 +201,14 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
                 <motion.div
                   key={label}
                   variants={fadeUp}
-                  className="group relative flex flex-col gap-3 p-5 rounded-2xl border border-white/[0.07] bg-white/[0.03] hover:border-[#ec2027]/30 hover:bg-[#ec2027]/[0.04] transition-all duration-300 cursor-default"
+                  className="group relative flex flex-col gap-3 p-5 rounded-2xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] hover:border-[#ec2027]/30 hover:bg-[#ec2027]/[0.04] transition-all duration-300 cursor-default"
                 >
                   <div className="w-9 h-9 rounded-xl bg-[#ec2027]/10 flex items-center justify-center group-hover:bg-[#ec2027]/20 transition-colors">
                     <Icon className="w-4 h-4 text-[#ec2027]" />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-2xl leading-none">{value}</p>
-                    <p className="text-white/40 text-xs mt-1">{label}</p>
+                    <p className="text-slate-900 dark:text-white font-bold text-2xl leading-none">{value}</p>
+                    <p className="text-slate-500 dark:text-white/40 text-xs mt-1">{label}</p>
                   </div>
                   <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#ec2027]/5 to-transparent pointer-events-none" />
                 </motion.div>

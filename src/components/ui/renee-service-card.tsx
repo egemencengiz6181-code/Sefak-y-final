@@ -3,18 +3,29 @@
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { LucideIcon, ArrowRight } from 'lucide-react';
+import { LucideIcon, ArrowRight, BookOpen, GraduationCap, Trophy, FileText } from 'lucide-react';
 import { Link } from '@/navigation';
+
+const SLUG_ICONS: Record<string, LucideIcon> = {
+  '7-sinif':        BookOpen,
+  '8-sinif':        GraduationCap,
+  '10-sinif':       BookOpen,
+  '11-sinif':       FileText,
+  '12-sinif':       Trophy,
+  'mezun':          GraduationCap,
+  'deneme-kulubu':  FileText,
+};
 
 interface ReneeServiceCardProps {
   title: string;
   description: string;
-  icon: LucideIcon;
+  slug: string;
   href: string;
   features: string[];
 }
 
-export default function ReneeServiceCard({ title, description, icon: Icon, href, features }: ReneeServiceCardProps) {
+export default function ReneeServiceCard({ title, description, slug, href, features }: ReneeServiceCardProps) {
+  const Icon = SLUG_ICONS[slug] ?? BookOpen;
   const [isFlipped, setIsFlipped] = useState(false);
 
   // Mobil için: tıklayınca flip, back-face'de buton tıklanınca flip açık kalır
@@ -37,14 +48,14 @@ export default function ReneeServiceCard({ title, description, icon: Icon, href,
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
       >
         {/* Front Face */}
-        <div className="absolute inset-0 backface-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-white/5 to-primary/10 backdrop-blur-xl p-8 flex flex-col items-center justify-center text-center overflow-hidden">
+        <div className="absolute inset-0 backface-hidden rounded-[32px] border border-black/10 dark:border-white/10 bg-gradient-to-br from-black/5 dark:from-white/5 to-primary/10 backdrop-blur-xl p-8 flex flex-col items-center justify-center text-center overflow-hidden">
           <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity blur-3xl -z-10" />
           
           <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 border border-primary/20 group-hover:scale-110 transition-transform duration-500">
             <Icon className="w-10 h-10 text-primary-light" />
           </div>
           
-          <h3 className="text-2xl font-bold tracking-tight text-white mb-4">{title}</h3>
+          <h3 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">{title}</h3>
           <div className="w-12 h-1 bg-primary/30 rounded-full group-hover:w-24 group-hover:bg-primary/60 transition-all duration-500" />
           
           <div className="mt-8 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-foreground/40 font-bold">
@@ -63,7 +74,7 @@ export default function ReneeServiceCard({ title, description, icon: Icon, href,
               <div className="p-2 rounded-lg bg-primary/20">
                 <Icon className="w-5 h-5 text-primary-light" />
               </div>
-              <h4 className="text-lg font-bold text-white tracking-tight">{title}</h4>
+              <h4 className="text-lg font-bold text-slate-900 dark:text-white tracking-tight">{title}</h4>
             </div>
             
             <p className="text-sm text-foreground/60 leading-relaxed font-light">
@@ -72,7 +83,7 @@ export default function ReneeServiceCard({ title, description, icon: Icon, href,
 
             <ul className="space-y-3">
               {features.map((feature, i) => (
-                <li key={i} className="flex items-center gap-2 text-xs text-white/80">
+                <li key={i} className="flex items-center gap-2 text-xs text-slate-700 dark:text-white/80">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                   {feature}
                 </li>

@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import HeroMain from '@/components/ui/hero-main';
 import ServicesGrid from '@/components/sections/ServicesGrid';
-import TestimonialsSection from '@/components/sections/Testimonials';
-import LetsWorkSection from '@/components/ui/lets-work-section';
-import SectionWithMockup from '@/components/ui/section-with-mockup';
-import ShimmerText from '@/components/ui/shimmer-text';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const TestimonialsSection = dynamic(() => import('@/components/sections/Testimonials'));
+const LetsWorkSection = dynamic(() => import('@/components/ui/lets-work-section'));
+const SectionWithMockup = dynamic(() => import('@/components/ui/section-with-mockup'));
+const ShimmerText = dynamic(() => import('@/components/ui/shimmer-text'));
 
 export async function generateMetadata({
   params,
@@ -60,7 +62,7 @@ export default async function IndexPage({
           </div>
           <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
             <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-primary mb-4">{t('title')}</h2>
-            <p className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight text-white mb-8">
+            <p className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight text-slate-900 dark:text-white mb-8">
               {t('description')}
             </p>
             <Link 

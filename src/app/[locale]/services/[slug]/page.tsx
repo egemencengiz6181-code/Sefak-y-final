@@ -38,7 +38,7 @@ const slugImages: Record<string, { hero: string; tech: string; alt: string }> = 
     alt: '12. sınıf YKS son hazırlık',
   },
   mezun: {
-    hero: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1400&q=80',
+    hero: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1400&q=80',
     tech: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1400&q=80',
     alt: 'Mezun YKS hazırlık programı',
   },
@@ -93,13 +93,13 @@ function PhaseCard({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative p-8 rounded-3xl border border-white/5 bg-white/[0.03] backdrop-blur-sm hover:border-[#ec2027]/20 hover:bg-white/[0.05] transition-all duration-500 group"
+      className="relative p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-sm hover:border-[#ec2027]/20 hover:bg-black/[0.05] dark:hover:bg-white/[0.05] transition-all duration-500 group"
     >
-      <div className="text-7xl font-black text-white/[0.04] group-hover:text-[#ec2027]/10 transition-colors duration-500 absolute top-4 right-6 leading-none select-none">
+      <div className="text-7xl font-black text-black/[0.04] dark:text-white/[0.04] group-hover:text-[#ec2027]/10 transition-colors duration-500 absolute top-4 right-6 leading-none select-none">
         {num}
       </div>
       <div className="w-8 h-[2px] bg-gradient-to-r from-[#ec2027] to-[#12648f] rounded-full mb-6" />
-      <h3 className="text-base font-bold text-white mb-4 pr-8 leading-snug">{title}</h3>
+      <h3 className="text-base font-bold text-slate-900 dark:text-white mb-4 pr-8 leading-snug">{title}</h3>
       <p className="text-foreground/45 leading-relaxed text-sm">{text}</p>
     </motion.div>
   );
@@ -183,13 +183,13 @@ export default function ServicePage({
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="text-5xl md:text-7xl font-bold tracking-tighter leading-[1.04] bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent mb-10"
+          className="text-5xl md:text-7xl font-bold tracking-tighter leading-[1.04] bg-gradient-to-b from-slate-900 to-slate-900/50 dark:from-white dark:to-white/50 bg-clip-text text-transparent mb-10"
         >
           {t(`items.${slug}.title`)}
         </motion.h1>
 
         {/* HeroHighlight quote */}
-        <HeroHighlight containerClassName="w-full mb-14 border border-white/5 bg-white/[0.02]">
+        <HeroHighlight containerClassName="w-full mb-14 border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02]">
           <blockquote className="max-w-3xl mx-auto">
             <p className="text-xl md:text-2xl font-light leading-relaxed text-foreground/65">
               {rawQuote}
@@ -203,7 +203,7 @@ export default function ServicePage({
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden border border-white/5"
+          className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden border border-black/5 dark:border-white/5"
         >
           <Image
             src={images.hero}
@@ -216,8 +216,8 @@ export default function ServicePage({
           <div className="absolute inset-0 bg-gradient-to-r from-background/30 via-transparent to-background/30" />
           {/* Floating service title on image */}
           <div className="absolute bottom-8 left-8">
-            <div className="px-4 py-2 rounded-xl bg-background/80 backdrop-blur-md border border-white/10 inline-flex">
-              <span className="text-sm font-bold text-white">{t(`items.${slug}.title`)}</span>
+            <div className="px-4 py-2 rounded-xl bg-background/80 backdrop-blur-md border border-black/10 dark:border-white/10 inline-flex">
+              <span className="text-sm font-bold text-slate-900 dark:text-white">{t(`items.${slug}.title`)}</span>
             </div>
           </div>
         </motion.div>
@@ -235,7 +235,7 @@ export default function ServicePage({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="lg:sticky lg:top-32 p-8 rounded-3xl border border-white/5 bg-white/[0.03] backdrop-blur-sm"
+            className="lg:sticky lg:top-32 p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-sm"
           >
             <h3 className="text-xs font-bold uppercase tracking-[0.25em] text-[#ec2027] mb-6">{t('scope')}</h3>
             <ul className="space-y-3">
@@ -246,7 +246,7 @@ export default function ServicePage({
                 </li>
               ))}
             </ul>
-            <div className="mt-8 pt-8 border-t border-white/5">
+            <div className="mt-8 pt-8 border-t border-black/5 dark:border-white/5">
               <a
                 href="tel:02122015848"
                 target="_blank"
@@ -268,7 +268,7 @@ export default function ServicePage({
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-8 leading-snug">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-slate-900 dark:text-white mb-8 leading-snug">
               {t(`items.${slug}.title`)} {t('about_suffix')}
             </h2>
             <p className="text-foreground/55 leading-[1.9] text-lg font-light mb-8">
@@ -287,7 +287,7 @@ export default function ServicePage({
       <section className="max-w-5xl mx-auto px-6 pb-32">
         <motion.div custom={0} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mb-16">
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#ec2027] block mb-3">{t('strategy_section')}</span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">{t(`items.${slug}.strategy_title`)}</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white">{t(`items.${slug}.strategy_title`)}</h2>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <PhaseCard title={t(`items.${slug}.phase1_title`)} text={t(`items.${slug}.phase1_text`)} index={0} />
@@ -308,7 +308,7 @@ export default function ServicePage({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="relative aspect-square rounded-3xl overflow-hidden border border-white/5 order-2 lg:order-1"
+            className="relative aspect-square rounded-3xl overflow-hidden border border-black/5 dark:border-white/5 order-2 lg:order-1"
           >
             <Image
               src={images.tech}
@@ -334,7 +334,7 @@ export default function ServicePage({
             className="order-1 lg:order-2"
           >
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#ec2027] block mb-3">{t('tech_section')}</span>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-6 leading-snug">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-slate-900 dark:text-white mb-6 leading-snug">
               {t(`items.${slug}.tech_title`)}
             </h2>
             <p className="text-foreground/50 leading-relaxed mb-8 text-base">
@@ -352,7 +352,7 @@ export default function ServicePage({
       {/* ═══════════════════════════════════════════════════════════════
           § 5  DISCOVERY
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+      <section className="max-w-7xl mx-auto px-6 py-24 border-t border-black/5 dark:border-white/5">
         <motion.div custom={0} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
           <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-foreground/30">{t('discovery_title')}</h2>
         </motion.div>

@@ -34,7 +34,7 @@ export default function LetsWorkSection() {
     }
   };
 
-  const inputCls = "w-full bg-white/5 border border-white/10 hover:border-[#ec2027]/40 focus:border-[#ec2027] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/25 outline-none transition-all";
+  const inputCls = "w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-[#ec2027]/40 focus:border-[#ec2027] rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/25 outline-none transition-all";
 
   return (
     <section className="py-32 relative overflow-hidden bg-transparent">
@@ -48,7 +48,7 @@ export default function LetsWorkSection() {
           priority={false}
         />
         {/* Üstten ve alttan kararan gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0514] via-transparent to-[#0a0514]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
@@ -57,7 +57,7 @@ export default function LetsWorkSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/5 bg-white/5 backdrop-blur-md mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black/5 dark:border-white/5 bg-black/5 dark:bg-white/5 backdrop-blur-md mb-8"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
@@ -74,7 +74,7 @@ export default function LetsWorkSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight mb-8 bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight mb-8 bg-gradient-to-b from-slate-900 to-slate-900/40 dark:from-white dark:to-white/40 bg-clip-text text-transparent"
           >
             {t('title')}
           </motion.h2>
@@ -108,9 +108,9 @@ export default function LetsWorkSection() {
 
             <a
               href="mailto:zekeriyakoyfenbilimleri@gmail.com"
-              className="flex items-center gap-3 text-foreground/60 hover:text-white transition-colors group min-w-0"
+              className="flex items-center gap-3 text-foreground/60 hover:text-slate-900 dark:hover:text-white transition-colors group min-w-0"
             >
-              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all shrink-0">
+              <div className="w-12 h-12 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
               <span className="font-light text-sm sm:text-base truncate">zekeriyakoyfenbilimleri@gmail.com</span>
@@ -127,14 +127,14 @@ export default function LetsWorkSection() {
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 className="w-full max-w-xl overflow-hidden"
               >
-                <div className="bg-[#0a0514] border border-[#ec2027]/20 rounded-3xl p-8 shadow-[0_0_60px_rgba(236,32,39,0.15)] text-left">
+                <div className="bg-white dark:bg-[#0a0514] border border-[#ec2027]/20 rounded-3xl p-8 shadow-[0_0_60px_rgba(236,32,39,0.15)] text-left">
                   {sent ? (
                     <div className="flex flex-col items-center py-8 gap-4 text-center">
                       <div className="w-16 h-16 rounded-full bg-[#ec2027]/20 border border-[#ec2027]/30 flex items-center justify-center">
                         <CheckCircle2 className="w-8 h-8 text-[#ec2027]" />
                       </div>
-                      <h3 className="text-xl font-bold text-white">{ct('form.success_title')}</h3>
-                      <p className="text-sm text-white/40">{ct('form.success_text')}</p>
+                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">{ct('form.success_title')}</h3>
+                      <p className="text-sm text-slate-500 dark:text-white/40">{ct('form.success_text')}</p>
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-4">
