@@ -1,4 +1,6 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Quote } from 'lucide-react';
 
 interface TestimonialItem {
@@ -40,8 +42,8 @@ function MarqueeRow({ items, direction }: { items: TestimonialItem[]; direction:
   );
 }
 
-export default async function TestimonialsSection() {
-  const t = await getTranslations('Testimonials');
+export default function TestimonialsSection() {
+  const t = useTranslations('Testimonials');
   const items = t.raw('items') as TestimonialItem[];
 
   const mid = Math.ceil(items.length / 2);
