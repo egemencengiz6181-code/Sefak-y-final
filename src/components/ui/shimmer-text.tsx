@@ -34,7 +34,7 @@ export function ShimmerText({
         className={cn("inline-block whitespace-nowrap select-none", className)}
         style={{
           WebkitTextFillColor: "transparent",
-          background:
+          backgroundImage:
             `linear-gradient(to right, rgba(${c},${lo}) 0%, rgba(${c},${hi}) 40%, rgba(${c},${hi}) 60%, rgba(${c},${lo}) 100%)`,
           WebkitBackgroundClip: "text",
           backgroundClip: "text",
