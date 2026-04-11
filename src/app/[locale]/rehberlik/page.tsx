@@ -9,10 +9,11 @@ import {
   Sparkles, FlaskConical, Bot, CalendarCheck, Bell,
 } from 'lucide-react';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
-import LetsWorkSection from '@/components/ui/lets-work-section';
+import dynamic from 'next/dynamic';
+const LetsWorkSection = dynamic(() => import('@/components/ui/lets-work-section'), { ssr: false, loading: () => <div className="h-64" /> });
 
-const BLUE = '#12648f';
-const RED  = '#ec2027';
+const BLUE = '#2E3192';
+const RED  = '#E21F26';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -278,9 +279,9 @@ export default function RehberlikPage() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
       {/* ambient glows */}
-      <div className="fixed top-[-80px] left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#12648f]/8 blur-[180px] rounded-full pointer-events-none -z-10" />
-      <div className="fixed top-[40%] right-[-80px] w-[500px] h-[500px] bg-[#ec2027]/5 blur-[150px] rounded-full pointer-events-none -z-10" />
-      <div className="fixed bottom-0 left-[-80px] w-[400px] h-[400px] bg-[#12648f]/5 blur-[140px] rounded-full pointer-events-none -z-10" />
+      <div className="fixed top-[-80px] left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#2E3192]/8 blur-[180px] rounded-full pointer-events-none -z-10" />
+      <div className="fixed top-[40%] right-[-80px] w-[500px] h-[500px] bg-[#E21F26]/5 blur-[150px] rounded-full pointer-events-none -z-10" />
+      <div className="fixed bottom-0 left-[-80px] w-[400px] h-[400px] bg-[#2E3192]/5 blur-[140px] rounded-full pointer-events-none -z-10" />
 
       {/* ══ HERO ════════════════════════════════════════════════════════ */}
       <section ref={heroRef} className="relative min-h-[85vh] flex items-center pt-32 pb-20 px-6">
@@ -290,10 +291,10 @@ export default function RehberlikPage() {
             <div>
               <motion.div
                 variants={fadeUp} custom={0} initial="hidden" animate="show"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#12648f]/30 bg-[#12648f]/[0.08] backdrop-blur-sm mb-8"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2E3192]/30 bg-[#2E3192]/[0.08] backdrop-blur-sm mb-8"
               >
-                <Sparkles className="w-3.5 h-3.5 text-[#12648f]" />
-                <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#12648f]">Halkalı Fen Bilimleri</span>
+                <Sparkles className="w-3.5 h-3.5 text-[#2E3192]" />
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#2E3192]">Halkalı Final LGS Dershanesi</span>
               </motion.div>
 
               <motion.h1
@@ -304,7 +305,7 @@ export default function RehberlikPage() {
                   Psikolojik Danışmanlık
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-[#12648f] to-[#ec2027] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#2E3192] to-[#E21F26] bg-clip-text text-transparent">
                   ve Rehberlik Hizmetleri
                 </span>
               </motion.h1>
@@ -339,8 +340,8 @@ export default function RehberlikPage() {
               <div className="relative rounded-3xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-2xl p-8">
                 <GlowingEffect spread={50} glow disabled={false} proximity={80} inactiveZone={0.01} borderWidth={2} />
 
-                <div className="flex items-center gap-3 mb-6 px-4 py-3 rounded-2xl border border-[#ec2027]/20 bg-[#ec2027]/[0.07]">
-                  <Bot className="w-5 h-5 text-[#ec2027]" />
+                <div className="flex items-center gap-3 mb-6 px-4 py-3 rounded-2xl border border-[#E21F26]/20 bg-[#E21F26]/[0.07]">
+                  <Bot className="w-5 h-5 text-[#E21F26]" />
                   <div>
                     <p className="text-slate-900 dark:text-white text-sm font-bold">Dijital Analiz</p>
                     <p className="text-slate-500 dark:text-white/40 text-xs">Dijital analiz ve kişisel soru bankası</p>

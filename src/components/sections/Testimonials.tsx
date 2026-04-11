@@ -1,5 +1,6 @@
 'use client';
 
+import { memo } from 'react';
 import { Quote } from 'lucide-react';
 
 interface TestimonialItem {
@@ -8,22 +9,22 @@ interface TestimonialItem {
   text: string;
 }
 
-function TestimonialCard({ item }: { item: TestimonialItem }) {
+const TestimonialCard = memo(function TestimonialCard({ item }: { item: TestimonialItem }) {
   return (
     <div className="w-[300px] shrink-0 mx-3 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.04] dark:bg-white/[0.04] backdrop-blur-md p-5 flex flex-col gap-3 hover:border-black/[0.10] dark:hover:border-white/[0.10] hover:bg-black/[0.07] dark:hover:bg-white/[0.07] transition-colors duration-300">
-      <Quote className="w-4 h-4 text-[#ec2027] opacity-50 shrink-0" />
+      <Quote className="w-4 h-4 text-[#E21F26] opacity-50 shrink-0" />
       <p className="text-slate-600 dark:text-white/60 text-sm leading-relaxed italic flex-1">
         &ldquo;{item.text}&rdquo;
       </p>
       <div className="pt-3 border-t border-black/[0.06] dark:border-white/[0.06]">
         <p className="text-slate-900 dark:text-white font-semibold text-sm">{item.name}</p>
-        <p className="text-[#ec2027] text-xs mt-0.5">{item.role}</p>
+        <p className="text-[#E21F26] text-xs mt-0.5">{item.role}</p>
       </div>
     </div>
   );
-}
+});
 
-function MarqueeRow({ items, direction }: { items: TestimonialItem[]; direction: 'left' | 'right' }) {
+const MarqueeRow = memo(function MarqueeRow({ items, direction }: { items: TestimonialItem[]; direction: 'left' | 'right' }) {
   const doubled = [...(items ?? []), ...(items ?? [])];
   const animStyle: React.CSSProperties = {
     animation: `marquee-${direction} ${(items?.length ?? 1) * 7}s linear infinite`,
@@ -39,7 +40,7 @@ function MarqueeRow({ items, direction }: { items: TestimonialItem[]; direction:
       </div>
     </div>
   );
-}
+});
 
 export default function TestimonialsSection({
   items: rawItems = [],

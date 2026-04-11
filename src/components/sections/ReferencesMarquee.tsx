@@ -3,29 +3,29 @@
 import { motion } from "framer-motion"
 
 const row1 = [
-  "İstanbul Fen Lisesi",
   "Galatasaray Lisesi",
+  "İstanbul Erkek Lisesi",
   "Kabataş Erkek Lisesi",
+  "Cağaloğlu Anadolu Lisesi",
+  "Ankara Fen Lisesi",
+  "Vefa Lisesi",
+  "İstanbul Fen Lisesi",
   "Atatürk Fen Lisesi",
   "Darüşşafaka Lisesi",
-  "Boğaziçi Üniversitesi",
-  "İTÜ İstanbul",
-  "ODTÜ Ankara",
   "Beşiktaş Anadolu Lisesi",
-  "Vefa Lisesi",
-  "Nişantaşı Fen Lisesi",
-  "Arnavutköy Anadolu Lisesi",
+  "Kadıköy Anadolu Lisesi",
+  "Sultanahmet Anadolu Lisesi",
 ]
 
 const row2 = [
-  "YKS'de İlk 100",
-  "30 Yıllık Tecrübe",
+  "LGS Türkiye Derecesi",
   "Bireysel Öğrenci Takibi",
   "Küçük Grup Dersleri",
   "Deneyimli Öğretmenler",
-  "%95 Hedef Okul Başarısı",
-  "1995'ten Beri Halkalı'da",
-  "Sınırsız Tekrar İmkânı",
+  "%98 Hedef Lise Başarısı",
+  "Haftalık LGS Denemesi",
+  "Yapay Zeka Destekli Analiz",
+  "Rehberlik & Koçluk",
 ]
 
 function MarqueeRow({

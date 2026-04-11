@@ -2,17 +2,16 @@
 
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { type LucideIcon, ArrowRight, BookOpen, GraduationCap, Trophy, FileText } from 'lucide-react';
+import { type LucideIcon, ArrowRight, BookOpen, GraduationCap, Trophy, FileText, Users } from 'lucide-react';
 import { Link } from '@/navigation';
 
 const SLUG_ICONS: Record<string, LucideIcon> = {
+  '5-sinif':        BookOpen,
+  '6-sinif':        BookOpen,
   '7-sinif':        BookOpen,
   '8-sinif':        GraduationCap,
-  '10-sinif':       BookOpen,
-  '11-sinif':       FileText,
-  '12-sinif':       Trophy,
-  'mezun':          GraduationCap,
   'deneme-kulubu':  FileText,
+  'ozel-ders':      Users,
 };
 
 interface ReneeServiceCardProps {
@@ -92,7 +91,7 @@ export default function ReneeServiceCard({ title, description, slug, href, featu
 
           <Link 
             href={href}
-            className="w-full py-4 rounded-2xl bg-primary hover:bg-primary-light text-white text-sm font-bold transition-all text-center shadow-[0_0_20px_rgba(236,32,39,0.3)] flex items-center justify-center gap-2 group/btn"
+            className="w-full py-4 rounded-2xl bg-primary hover:bg-primary-light text-white text-sm font-bold transition-all text-center shadow-[0_0_20px_rgba(226,31,38,0.3)] flex items-center justify-center gap-2 group/btn"
           >
             <span>Detayları Gör</span>
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

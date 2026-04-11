@@ -46,8 +46,8 @@ export default function Footer() {
           <div className="space-y-8 col-span-1 lg:col-span-1">
             <Link href="/" className="inline-block">
               <Image 
-                src="/logos/Fen%20bilimleri%20logo.png" 
-                alt="Halkalı Fen Bilimleri" 
+                src="/logos/final%20logo%20png.png" 
+                alt="Halkalı Final LGS Dershanesi" 
                 width={200} 
                 height={80} 
                 className="h-20 w-auto object-contain"
@@ -107,18 +107,25 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-3 text-foreground/40">
                   <Mail className="w-5 h-5 text-primary shrink-0" />
-                  <a href="mailto:nazmiarikanfenbilimlerihalkali@gmail.com" className="hover:text-white transition-colors">
-                    nazmiarikanfenbilimlerihalkali@gmail.com
+                  <a href="mailto:halkalifinaletutmerkezi@abdkurumlari.com" className="hover:text-white transition-colors">
+                    halkalifinaletutmerkezi@abdkurumlari.com
                   </a>
                 </div>
               </div>
               
-              <div className="flex flex-col justify-end">
+              <div className="flex flex-col justify-end gap-2">
                 <a 
-                  href="tel:+905428250868" 
+                  href="tel:+905453491774" 
                   className="inline-flex items-center gap-2 text-primary font-medium group"
                 >
-                  <span>0(542) 825 08 68</span>
+                  <span>0545 349 17 74</span>
+                  <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </a>
+                <a 
+                  href="tel:+902124953021" 
+                  className="inline-flex items-center gap-2 text-primary font-medium group"
+                >
+                  <span>0212 495 30 21</span>
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </a>
               </div>

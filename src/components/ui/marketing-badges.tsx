@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useRouter } from '@/navigation';
 import { cn } from '@/lib/utils';
 import { 
-  BookOpen, GraduationCap, Trophy, FileText, Users, Star, BookMarked, BarChart2 
+  BookOpen, GraduationCap, Trophy, FileText, Users, BarChart2 
 } from 'lucide-react';
 
 interface BadgeProps {
@@ -27,7 +27,7 @@ const badges: BadgeProps[] = [
     rotation: -12,
     x: -280,
     y: -80,
-    color: "from-[#ec2027] to-[#c9191e]"
+    color: "from-[#E21F26] to-[#BE1821]"
   },
   { 
     id: '8-sinif', 
@@ -36,43 +36,34 @@ const badges: BadgeProps[] = [
     rotation: 8,
     x: -120,
     y: -140,
-    color: "from-[#12648f] to-[#0e4e6f]"
+    color: "from-[#2E3192] to-[#242672]"
   },
   { 
-    id: '10-sinif', 
-    label: '10. Sınıf', 
-    icon: <BookMarked className="w-4 h-4" />,
+    id: '5-sinif', 
+    label: '5. Sınıf', 
+    icon: <BookOpen className="w-4 h-4" />,
     rotation: -5,
     x: 150,
     y: -120,
-    color: "from-[#ec2027] to-[#12648f]"
+    color: "from-[#E21F26] to-[#2E3192]"
   },
   { 
-    id: '11-sinif', 
-    label: '11. Sınıf', 
-    icon: <FileText className="w-4 h-4" />,
+    id: '6-sinif', 
+    label: '6. Sınıf', 
+    icon: <BookOpen className="w-4 h-4" />,
     rotation: 10,
     x: 260,
     y: -30,
     color: "from-zinc-800 to-zinc-900"
   },
   { 
-    id: '12-sinif', 
-    label: '12. Sınıf & YKS', 
-    icon: <Trophy className="w-4 h-4" />,
+    id: 'ozel-ders', 
+    label: 'Özel Ders', 
+    icon: <Users className="w-4 h-4" />,
     rotation: 6,
     x: -220,
     y: 60,
-    color: "from-[#12648f] to-[#ec2027]"
-  },
-  { 
-    id: 'mezun', 
-    label: 'Mezun & YKS', 
-    icon: <GraduationCap className="w-4 h-4" />,
-    rotation: -3,
-    x: 0,
-    y: 110,
-    color: "from-zinc-700 to-zinc-900"
+    color: "from-[#2E3192] to-[#E21F26]"
   },
   { 
     id: 'deneme-kulubu', 
@@ -81,7 +72,7 @@ const badges: BadgeProps[] = [
     rotation: -8,
     x: 180,
     y: 90,
-    color: "from-[#ec2027] to-[#c9191e]"
+    color: "from-[#E21F26] to-[#BE1821]"
   },
   { 
     id: 'rehberlik', 
@@ -91,7 +82,7 @@ const badges: BadgeProps[] = [
     x: -40,
     y: -20,
     zIndex: 50,
-    color: "from-[#12648f] to-[#0e4e6f]"
+    color: "from-[#2E3192] to-[#242672]"
   }
 ];
 

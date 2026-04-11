@@ -3,9 +3,9 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
-import Image from 'next/image';
-import LocationMap from '@/components/shared/LocationMap';
-import LetsWorkSection from '@/components/ui/lets-work-section';
+import dynamic from 'next/dynamic';
+const LocationMap = dynamic(() => import('@/components/shared/LocationMap'), { ssr: false, loading: () => <div className="h-[450px] bg-background" /> });
+const LetsWorkSection = dynamic(() => import('@/components/ui/lets-work-section'), { ssr: false, loading: () => <div className="h-64" /> });
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -30,16 +30,6 @@ export default function AboutPage() {
 
   return (
     <div ref={containerRef} className="min-h-screen relative overflow-hidden bg-transparent z-10">
-      {/* Soluk Arka Plan Mührü */}
-      <div className="fixed top-[15%] right-[-250px] w-[900px] h-[900px] opacity-[0.05] rotate-12 pointer-events-none z-0">
-        <Image 
-          src="/logos/Fen%20bilimleri%20logo.png" 
-          alt="" 
-          fill 
-          className="object-contain"
-        />
-      </div>
-
       {/* İnce Partikül Arka Planı (CSS ile) */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-primary-light rounded-full animate-pulse" />
@@ -60,7 +50,7 @@ export default function AboutPage() {
             transition={{ delay: 0.5 }}
             className="text-primary-light tracking-[0.3em] uppercase text-xs mb-6 block font-medium"
           >
-            Halkalı Nazmi Arıkan Fen Bilimleri
+            Halkalı Final LGS Dershanesi
           </motion.span>
           <motion.h1 
             initial={{ opacity: 0, scale: 0.95 }}

@@ -1,15 +1,16 @@
 import type { MetadataRoute } from 'next';
 import { works } from '@/config/works';
 
-const origin = 'https://www.zekeriyakoyfenbilimleri.com';
+const origin = 'https://www.halkalifinal.com';
 const locales = ['tr'] as const;
 
 const serviceSlugs = [
-  '10-sinif',
-  '11-sinif',
-  '12-sinif',
-  'mezun',
+  '5-sinif',
+  '6-sinif',
+  '7-sinif',
+  '8-sinif',
   'deneme-kulubu',
+  'ozel-ders',
 ] as const;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

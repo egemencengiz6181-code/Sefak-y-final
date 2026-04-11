@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const origin = 'https://www.zekeriyakoyfenbilimleri.com';
+  const origin = 'https://www.halkalifinal.com';
   return {
     rules: [
       {

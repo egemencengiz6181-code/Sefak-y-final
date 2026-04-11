@@ -58,14 +58,16 @@ function FloatingImage({
       onMouseLeave={() => startFloat()}
       className={className}
     >
-      <Image
-        src={src}
-        alt=""
-        fill
-        sizes="(max-width: 768px) 80vw, 40vw"
-        className="object-cover object-center"
-        loading="lazy"
-      />
+      <div className="relative w-full h-full">
+        <Image
+          src={src}
+          alt=""
+          fill
+          sizes="(max-width: 768px) 80vw, 40vw"
+          className="object-cover object-center"
+          loading="lazy"
+        />
+      </div>
       {children}
     </motion.div>
   );
@@ -75,7 +77,7 @@ const stats = [
   { icon: Trophy,        value: '15+',  label: 'Yıl Deneyim' },
   { icon: Users,         value: '500+', label: 'Mezun Öğrenci' },
   { icon: FlaskConical,  value: '%94',  label: 'Başarı Oranı' },
-  { icon: BookOpen,      value: '7-12', label: 'Sınıf Aralığı' },
+  { icon: BookOpen,      value: '5-8', label: 'Sınıf Aralığı' },
 ];
 
 const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, description, badge }) => {
@@ -86,8 +88,8 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-black/10 dark:via-white/10 to-transparent" />
 
       {/* Ambient glows */}
-      <div className="pointer-events-none absolute -top-40 -left-40 w-[640px] h-[640px] rounded-full bg-[#ec2027]/[0.06] blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-40 -right-40 w-[480px] h-[480px] rounded-full bg-[#12648f]/[0.08] blur-[100px]" />
+      <div className="pointer-events-none absolute -top-40 -left-40 w-[640px] h-[640px] rounded-full bg-[#E21F26]/[0.06] blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-40 -right-40 w-[480px] h-[480px] rounded-full bg-[#2E3192]/[0.08] blur-[100px]" />
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10">
 
@@ -102,9 +104,9 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
             <motion.span
               variants={fadeUp}
               custom={0}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#ec2027]/25 bg-[#ec2027]/10 text-[11px] font-bold tracking-[0.3em] uppercase text-[#ec2027] mb-5"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E21F26]/25 bg-[#E21F26]/10 text-[11px] font-bold tracking-[0.3em] uppercase text-[#E21F26] mb-5"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ec2027] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E21F26] animate-pulse" />
               {badge}
             </motion.span>
           )}
@@ -130,7 +132,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
           >
             {/* Back image — okul3 */}
             <FloatingImage
-              src="/okul2/okul3.jpg"
+              src="/okul2/unnamed-6.jpg"
               float={{ y: [0, -14, 0], duration: 9, delay: 0 }}
               className="absolute bottom-0 left-0 w-[74%] h-[72%] rounded-2xl overflow-hidden border border-white/[0.07] cursor-pointer"
             >
@@ -139,12 +141,12 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
 
             {/* Front image — okul2 */}
             <FloatingImage
-              src="/okul2/okul2.jpg"
+              src="/okul2/unnamed-7.jpg"
               float={{ y: [0, 10, 0], duration: 7, delay: 1.2 }}
               className="absolute top-0 right-0 w-[70%] h-[78%] rounded-2xl overflow-hidden border border-white/[0.11] shadow-2xl cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/45" />
-              <div className="absolute top-0 left-0 w-1 h-16 bg-gradient-to-b from-[#ec2027] to-transparent rounded-full" />
+              <div className="absolute top-0 left-0 w-1 h-16 bg-gradient-to-b from-[#E21F26] to-transparent rounded-full" />
             </FloatingImage>
 
             {/* Floating stat badge */}
@@ -155,8 +157,8 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
               viewport={{ once: true }}
               className="absolute bottom-4 right-2 sm:bottom-8 sm:right-2 md:-right-4 z-20 flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-2xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/60 backdrop-blur-xl shadow-xl"
             >
-              <div className="w-9 h-9 rounded-xl bg-[#ec2027]/20 flex items-center justify-center shrink-0">
-                <Trophy className="w-4 h-4 text-[#ec2027]" />
+              <div className="w-9 h-9 rounded-xl bg-[#E21F26]/20 flex items-center justify-center shrink-0">
+                <Trophy className="w-4 h-4 text-[#E21F26]" />
               </div>
               <div>
                 <p className="text-slate-900 dark:text-white font-bold text-sm leading-none">%94 Başarı</p>
@@ -165,7 +167,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
             </motion.div>
 
             {/* Red glow */}
-            <div className="absolute bottom-0 left-1/4 w-1/2 h-16 bg-[#ec2027]/15 blur-[52px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-0 left-1/4 w-1/2 h-16 bg-[#E21F26]/15 blur-[52px] rounded-full pointer-events-none" />
           </motion.div>
 
           {/* ── Right: text + stats ── */}
@@ -186,7 +188,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
             <motion.div
               variants={fadeUp}
               custom={3}
-              className="h-px w-full bg-gradient-to-r from-[#ec2027]/30 via-white/10 to-transparent"
+              className="h-px w-full bg-gradient-to-r from-[#E21F26]/30 via-white/10 to-transparent"
             />
 
             {/* Stats grid */}
@@ -201,32 +203,32 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
                 <motion.div
                   key={label}
                   variants={fadeUp}
-                  className="group relative flex flex-col gap-3 p-5 rounded-2xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] hover:border-[#ec2027]/30 hover:bg-[#ec2027]/[0.04] transition-all duration-300 cursor-default"
+                  className="group relative flex flex-col gap-3 p-5 rounded-2xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] hover:border-[#E21F26]/30 hover:bg-[#E21F26]/[0.04] transition-all duration-300 cursor-default"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-[#ec2027]/10 flex items-center justify-center group-hover:bg-[#ec2027]/20 transition-colors">
-                    <Icon className="w-4 h-4 text-[#ec2027]" />
+                  <div className="w-9 h-9 rounded-xl bg-[#E21F26]/10 flex items-center justify-center group-hover:bg-[#E21F26]/20 transition-colors">
+                    <Icon className="w-4 h-4 text-[#E21F26]" />
                   </div>
                   <div>
                     <p className="text-slate-900 dark:text-white font-bold text-2xl leading-none">{value}</p>
                     <p className="text-slate-500 dark:text-white/40 text-xs mt-1">{label}</p>
                   </div>
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#ec2027]/5 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#E21F26]/5 to-transparent pointer-events-none" />
                 </motion.div>
               ))}
 
               {/* Kişiye Özel Kitap - Sıfır Hata */}
               <motion.div
                 variants={fadeUp}
-                className="col-span-2 group relative flex flex-col gap-3 p-5 rounded-2xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] hover:border-[#ec2027]/30 hover:bg-[#ec2027]/[0.04] transition-all duration-300 cursor-default"
+                className="col-span-2 group relative flex flex-col gap-3 p-5 rounded-2xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] hover:border-[#E21F26]/30 hover:bg-[#E21F26]/[0.04] transition-all duration-300 cursor-default"
               >
-                <div className="w-9 h-9 rounded-xl bg-[#ec2027]/10 flex items-center justify-center group-hover:bg-[#ec2027]/20 transition-colors">
-                  <BookMarked className="w-4 h-4 text-[#ec2027]" />
+                <div className="w-9 h-9 rounded-xl bg-[#E21F26]/10 flex items-center justify-center group-hover:bg-[#E21F26]/20 transition-colors">
+                  <BookMarked className="w-4 h-4 text-[#E21F26]" />
                 </div>
                 <div>
                   <p className="text-slate-900 dark:text-white font-bold text-sm leading-snug">Kişiye Özel Kitap - Sıfır Hata</p>
                   <p className="text-slate-500 dark:text-white/40 text-xs mt-1 leading-relaxed">Öğrencilerimize özel olarak hazırladığımız sıfır hata kitapçıkları, denemelerde sık yapılan hataları içeren sorular barındırır. Bu kitapçıklar, öğrencilerimizin zayıf olduğu konularda daha fazla çalışma fırsatı sunar. Kişiye özel kitaplar ise denemelerde sık yapılan hataların yapay zeka ile analiz edilerek hazırlanmış benzer sorularını içerir.</p>
                 </div>
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#ec2027]/5 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#E21F26]/5 to-transparent pointer-events-none" />
               </motion.div>
             </motion.div>
           </motion.div>

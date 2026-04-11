@@ -34,7 +34,7 @@ export default function LetsWorkSection() {
     }
   };
 
-  const inputCls = "w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-[#ec2027]/40 focus:border-[#ec2027] rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/25 outline-none transition-all";
+  const inputCls = "w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-[#E21F26]/40 focus:border-[#E21F26] rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/25 outline-none transition-all";
 
   return (
     <section className="py-32 relative overflow-hidden bg-transparent">
@@ -42,7 +42,7 @@ export default function LetsWorkSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/okul/okul.jpeg"
-          alt="Halkalı Fen Bilimleri"
+          alt="Halkalı Final LGS Dershanesi"
           fill
           className="object-cover opacity-[0.12] mix-blend-luminosity"
           priority={false}
@@ -99,7 +99,7 @@ export default function LetsWorkSection() {
           >
             <button
               onClick={() => setShowForm(!showForm)}
-              className="group relative inline-flex items-center gap-3 px-10 py-5 rounded-full bg-[#ec2027] text-white font-medium transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(236,32,39,0.3)] hover:shadow-[0_0_30px_rgba(236,32,39,0.5)]"
+              className="group relative inline-flex items-center gap-3 px-10 py-5 rounded-full bg-[#E21F26] text-white font-medium transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(226,31,38,0.3)] hover:shadow-[0_0_30px_rgba(226,31,38,0.5)]"
             >
               <MessageCircle className="w-5 h-5" />
               <span>{t('cta')}</span>
@@ -107,13 +107,13 @@ export default function LetsWorkSection() {
             </button>
 
             <a
-              href="mailto:nazmiarikanfenbilimlerihalkali@gmail.com"
+              href="mailto:halkalifinaletutmerkezi@abdkurumlari.com"
               className="flex items-center gap-3 text-foreground/60 hover:text-slate-900 dark:hover:text-white transition-colors group min-w-0"
             >
               <div className="w-12 h-12 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
-              <span className="font-light text-sm sm:text-base truncate">nazmiarikanfenbilimlerihalkali@gmail.com</span>
+              <span className="font-light text-sm sm:text-base truncate">halkalifinaletutmerkezi@abdkurumlari.com</span>
             </a>
           </motion.div>
 
@@ -127,11 +127,11 @@ export default function LetsWorkSection() {
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 className="w-full max-w-xl overflow-hidden"
               >
-                <div className="bg-white dark:bg-[#0a0514] border border-[#ec2027]/20 rounded-3xl p-8 shadow-[0_0_60px_rgba(236,32,39,0.15)] text-left">
+                <div className="bg-white dark:bg-[#0a0514] border border-[#E21F26]/20 rounded-3xl p-8 shadow-[0_0_60px_rgba(226,31,38,0.15)] text-left">
                   {sent ? (
                     <div className="flex flex-col items-center py-8 gap-4 text-center">
-                      <div className="w-16 h-16 rounded-full bg-[#ec2027]/20 border border-[#ec2027]/30 flex items-center justify-center">
-                        <CheckCircle2 className="w-8 h-8 text-[#ec2027]" />
+                      <div className="w-16 h-16 rounded-full bg-[#E21F26]/20 border border-[#E21F26]/30 flex items-center justify-center">
+                        <CheckCircle2 className="w-8 h-8 text-[#E21F26]" />
                       </div>
                       <h3 className="text-xl font-bold text-slate-900 dark:text-white">{ct('form.success_title')}</h3>
                       <p className="text-sm text-slate-500 dark:text-white/40">{ct('form.success_text')}</p>
@@ -147,7 +147,7 @@ export default function LetsWorkSection() {
                       <button
                         type="submit"
                         disabled={loading}
-                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#ec2027] hover:bg-[#c8191f] disabled:opacity-40 text-white font-semibold text-sm transition-all hover:scale-[1.02] active:scale-95"
+                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#E21F26] hover:bg-[#BE1821] disabled:opacity-40 text-white font-semibold text-sm transition-all hover:scale-[1.02] active:scale-95"
                       >
                         {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
                         {loading ? ct('form.sending') : ct('form.send')}

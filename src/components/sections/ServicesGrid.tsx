@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import ReneeServiceCard from '@/components/ui/renee-service-card';
 
-const serviceSlugs = ['10-sinif', '11-sinif', '12-sinif', 'mezun', 'deneme-kulubu', '12-sinif-vip', 'mezun-vip', 'ozel-ders'];
+const serviceSlugs = ['5-sinif', '6-sinif', '7-sinif', '8-sinif', 'deneme-kulubu', 'ozel-ders'];
 
 export default async function ServicesSection() {
   const t = await getTranslations('Services');

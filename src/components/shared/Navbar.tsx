@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState, useRef } from "react"
+import React, { useEffect, useState, useRef, useMemo, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Link, usePathname } from "@/navigation"
 import { LucideIcon, ChevronDown, GraduationCap, BookOpen, Users, FileText, Menu, X, Trophy, Award, Star } from "lucide-react"
@@ -37,34 +37,34 @@ export default function Navbar() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const openMenu = (name: string) => {
+  const openMenu = useCallback((name: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current)
     setIsHovered(name)
-  }
+  }, [])
 
-  const closeMenu = () => {
+  const closeMenu = useCallback(() => {
     closeTimer.current = setTimeout(() => setIsHovered(null), 80)
-  }
+  }, [])
 
-  const navItems: NavItem[] = [
+  const navItems: NavItem[] = useMemo(() => [
     { name: t('home'), url: "/", icon: BookOpen },
     { name: t('about'), url: "/about", icon: BookOpen },
     { name: t('services'), url: "/services", icon: ChevronDown, hasMegaMenu: true },
     { name: t('guidance'), url: "/rehberlik", icon: Users },
     { name: t('references'), url: "/references", icon: Award },
     { name: t('contact'), url: "/contact", icon: BookOpen },
-  ]
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  ], [t])
 
-  const services: ServiceItem[] = [
-    { title: st('items.10-sinif.title'), description: st('items.10-sinif.description'), href: "/services/10-sinif", icon: GraduationCap },
-    { title: st('items.11-sinif.title'), description: st('items.11-sinif.description'), href: "/services/11-sinif", icon: GraduationCap },
-    { title: st('items.12-sinif.title'), description: st('items.12-sinif.description'), href: "/services/12-sinif", icon: GraduationCap },
-    { title: st('items.mezun.title'), description: st('items.mezun.description'), href: "/services/mezun", icon: Trophy },
+  const services: ServiceItem[] = useMemo(() => [
+    { title: st('items.5-sinif.title'), description: st('items.5-sinif.description'), href: "/services/5-sinif", icon: GraduationCap },
+    { title: st('items.6-sinif.title'), description: st('items.6-sinif.description'), href: "/services/6-sinif", icon: GraduationCap },
+    { title: st('items.7-sinif.title'), description: st('items.7-sinif.description'), href: "/services/7-sinif", icon: GraduationCap },
+    { title: st('items.8-sinif.title'), description: st('items.8-sinif.description'), href: "/services/8-sinif", icon: Trophy },
     { title: st('items.deneme-kulubu.title'), description: st('items.deneme-kulubu.description'), href: "/services/deneme-kulubu", icon: FileText },
-    { title: st('items.12-sinif-vip.title'), description: st('items.12-sinif-vip.description'), href: "/services/12-sinif-vip", icon: Star },
-    { title: st('items.mezun-vip.title'), description: st('items.mezun-vip.description'), href: "/services/mezun-vip", icon: Star },
     { title: st('items.ozel-ders.title'), description: st('items.ozel-ders.description'), href: "/services/ozel-ders", icon: Users },
-  ]
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  ], [st])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,8 +104,8 @@ export default function Navbar() {
       <div className="pointer-events-auto w-[200px] md:w-[260px] flex items-center">
         <Link href="/" className="flex items-center">
           <Image 
-                      src="/logos/Fen%20bilimleri%20logo.png" 
-            alt="Halkalı Fen Bilimleri Dershanesi" 
+                      src="/logos/final%20logo%20png.png" 
+            alt="Halkalı Final LGS Dershanesi" 
             width={240} 
             height={72} 
             className="h-[64px] md:h-[80px] w-auto object-contain"
@@ -241,8 +241,8 @@ export default function Navbar() {
           <div className="flex items-center justify-between px-6 py-5 border-b border-black/10 dark:border-white/10">
             <Link href="/" onClick={() => setIsMobileOpen(false)}>
               <Image
-                src="/logos/Fen%20bilimleri%20logo.png"
-                alt="Halkalı Fen Bilimleri Dershanesi"
+                src="/logos/final%20logo%20png.png"
+                alt="Halkalı Final LGS Dershanesi"
                 width={200}
                 height={60}
                 className="h-[56px] w-auto object-contain"

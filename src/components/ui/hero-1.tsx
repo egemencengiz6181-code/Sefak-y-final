@@ -8,7 +8,7 @@ export default function HeroSection() {
   const t = useTranslations('Hero');
 
   const handleCTA = () => {
-    window.open("https://wa.me/905428250868", "_blank");
+    window.open("https://wa.me/905453491774", "_blank");
   };
 
   return (
@@ -50,7 +50,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="text-xl md:text-2xl text-foreground/50 font-light mb-12 max-w-3xl mx-auto leading-relaxed"
         >
-          {t('subtitle', { defaultValue: 'Halkalı Fen Bilimleri, YKS, TYT ve AYT\'de hedef üniversiteye giden yolu açar.' })}
+          {t('subtitle', { defaultValue: 'Halkalı Final LGS Dershanesi, LGS\'de hedef liseye giden yolu açar.' })}
         </motion.p>
 
         <motion.div

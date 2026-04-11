@@ -4,8 +4,9 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import Image from 'next/image';
-import LocationMap from '@/components/shared/LocationMap';
-import LetsWorkSection from '@/components/ui/lets-work-section';
+import dynamic from 'next/dynamic';
+const LocationMap = dynamic(() => import('@/components/shared/LocationMap'), { ssr: false, loading: () => <div className="h-[450px] bg-background" /> });
+const LetsWorkSection = dynamic(() => import('@/components/ui/lets-work-section'), { ssr: false, loading: () => <div className="h-64" /> });
 
 export default function ContactPage() {
   const t = useTranslations('Contact');
@@ -15,7 +16,7 @@ export default function ContactPage() {
       {/* Soluk Arka Plan Mührü (Özel İletişim Sayfası İçin Yüksek Opasite) */}
       <div className="fixed top-[15%] right-[-250px] w-[900px] h-[900px] opacity-[0.12] rotate-12 pointer-events-none z-0">
         <Image 
-          src="/logos/Fen%20bilimleri%20logo.png" 
+          src="/logos/final%20logo%20png.png" 
           alt="" 
           fill 
           className="object-contain"
@@ -59,7 +60,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2">{t('info.address')}</h3>
                   <p className="text-foreground/40 font-light leading-relaxed">
-                    Kent Hastanesi Karşısı, Halkalı Merkez, Fatih Cd. No : 18/1 Kat : 1, 34303 Küçükçekmece/İstanbul
+                    Halkalı Merkez, Fatih Cd. No:18, Kat:2 34303 Küçükçekmece/İstanbul, Istanbul, Turkey 34000
                   </p>
                 </div>
               </div>
@@ -70,9 +71,14 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">{t('info.phone')}</h3>
-                  <p className="text-foreground/40 font-light leading-relaxed hover:text-primary-light transition-colors">
-                    0(542) 825 08 68
-                  </p>
+                  <div className="space-y-2">
+                    <a href="tel:+905453491774" className="block text-foreground/40 font-light hover:text-primary-light transition-colors">
+                      0545 349 17 74
+                    </a>
+                    <a href="tel:+902124953021" className="block text-foreground/40 font-light hover:text-primary-light transition-colors">
+                      0212 495 30 21
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -82,9 +88,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">{t('info.email')}</h3>
-                  <p className="text-foreground/40 font-light leading-relaxed hover:text-primary-light transition-colors block">
-                    nazmiarikanfenbilimlerihalkali@gmail.com
-                  </p>
+                  <a href="mailto:halkalifinaletutmerkezi@abdkurumlari.com" className="text-foreground/40 font-light leading-relaxed hover:text-primary-light transition-colors block">
+                    halkalifinaletutmerkezi@abdkurumlari.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -115,7 +121,7 @@ export default function ContactPage() {
                 <label className="text-sm font-medium text-foreground/40 ml-1">{t('form.message')}</label>
                 <textarea rows={4} className="w-full px-6 py-4 rounded-2xl bg-background/50 border border-black/10 dark:border-white/10 focus:border-primary-light outline-none transition-colors font-light text-sm resize-none"></textarea>
               </div>
-              <button className="w-full py-5 bg-[#ec2027] hover:bg-[#c8191f] text-white font-medium rounded-2xl transition-all shadow-[0_0_20px_rgba(236,32,39,0.3)] hover:shadow-[0_0_30px_rgba(236,32,39,0.5)] flex items-center justify-center gap-2 group">
+              <button className="w-full py-5 bg-[#E21F26] hover:bg-[#BE1821] text-white font-medium rounded-2xl transition-all shadow-[0_0_20px_rgba(226,31,38,0.3)] hover:shadow-[0_0_30px_rgba(226,31,38,0.5)] flex items-center justify-center gap-2 group">
                 {t('form.send')}
                 <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>

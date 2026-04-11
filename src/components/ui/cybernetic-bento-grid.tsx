@@ -181,13 +181,13 @@ export default function CyberneticBentoGrid() {
         {/* Section header */}
         <div className="mb-16 flex items-end justify-between">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#ec2027] mb-3">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#E21F26] mb-3">
               ✦ {t("section_label")}
             </p>
             <h2 className="text-5xl md:text-6xl font-black tracking-tighter leading-none text-white">
               {t("section_title_1")}
               <br />
-              <span className="bg-gradient-to-r from-[#ec2027] to-[#12648f] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#E21F26] to-[#2E3192] bg-clip-text text-transparent">
                 {t("section_title_2")}
               </span>
             </h2>

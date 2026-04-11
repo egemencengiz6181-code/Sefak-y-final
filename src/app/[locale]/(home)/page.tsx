@@ -17,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Index' });
-  const origin = 'https://www.zekeriyakoyfenbilimleri.com';
+  const origin = 'https://www.halkalifinal.com';
   return {
     title: t('title'),
     description: t('description'),
@@ -45,6 +45,10 @@ export default async function IndexPage({
 }) {
   const {locale} = await params;
   const t = await getTranslations('WhyUs');
+  const tt = await getTranslations('Testimonials');
+  const testimonialItems = tt.raw('items') as { name: string; role: string; text: string }[];
+  const testimonialsTitle = tt('title');
+  const testimonialsSubtitle = tt('subtitle');
 
   return (
     <>
@@ -67,28 +71,28 @@ export default async function IndexPage({
             </p>
             <Link 
               href={`/${locale}/contact`}
-              className="inline-flex items-center px-8 py-4 bg-[#ec2027] hover:bg-[#c8191f] text-white font-medium rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(236,32,39,0.3)]"
+              className="inline-flex items-center px-8 py-4 bg-[#E21F26] hover:bg-[#BE1821] text-white font-medium rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(226,31,38,0.3)]"
             >
               {t('cta')}
             </Link>
           </div>
         </section>
 
-        {/* Fen Bilimleri Bölümü */}
+        {/* LGS Programları Bölümü */}
         <SectionWithMockup
-          badge="Fen Bilimleri"
+          badge="LGS Programları"
           title={
             <>
               Sağlam Temel,<br />
-              <span className="bg-gradient-to-r from-[#ec2027] via-[#f06060] to-[#fff] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#E21F26] via-[#E65F5F] to-[#fff] bg-clip-text text-transparent">
                 Kanıtlanmış Başarı
               </span>
             </>
           }
-          description="Fen Bilimleri, öğrencilerin lisans eğitimine yönelik temel bilimlerdeki sağlam temellerini atmak ve sınavlarda başarı göstermelerini sağlamak için kritik bir alandır. Dershanemiz bu alanda deneyimli öğretmen kadrosu ve zengin eğitim materyalleriyle öğrencilerin akademik seviyelerini yükseltmeye odaklanır. Sunduğumuz programlar öğrencilerin yalnızca teorik bilgi değil, aynı zamanda pratik becerilerini de geliştirerek sınavlarda yüksek başarı göstermelerini sağlar."
+          description="Halkalı Final LGS Dershanesi, 5. sınıftan 8. sınıfa kadar öğrencilerin LGS'de hedef liselerine ulaşmalarını sağlamak için deneyimli öğretmen kadrosu ve zengin eğitim materyalleriyle akademik seviyelerini yükseltmeye odaklanır. Sunduğumuz programlar öğrencilerin yalnızca teorik bilgi değil, aynı zamanda pratik becerilerini de geliştirerek sınavlarda yüksek başarı göstermelerini sağlar."
         />
 
-        <TestimonialsSection />
+        <TestimonialsSection items={testimonialItems} title={testimonialsTitle} subtitle={testimonialsSubtitle} />
         <LetsWorkSection />
       </div>
     </>

@@ -1,32 +1,32 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.zekeriyakoyfenbilimleri.com'),
+  metadataBase: new URL('https://www.halkalifinal.com'),
   title: {
-    default: 'Halkalı Fen Bilimleri',
-    template: '%s | Halkalı Fen Bilimleri',
+    default: 'Halkalı Final LGS Dershanesi',
+    template: '%s | Halkalı Final LGS Dershanesi',
   },
-  description: "Küçükçekmece — Halkalı Nazmi Arıkan Fen Bilimleri Dershanesi. YKS, TYT ve AYT'de hedef üniversiteye giden yol.",
-  authors: [{ name: 'Halkalı Fen Bilimleri', url: 'https://www.zekeriyakoyfenbilimleri.com' }],
-  creator: 'Halkalı Fen Bilimleri',
-  publisher: 'Halkalı Fen Bilimleri',
+  description: "Küçükçekmece — Halkalı Final LGS Dershanesi. LGS'de hedef liseye giden yol.",
+  authors: [{ name: 'Halkalı Final LGS Dershanesi', url: 'https://www.halkalifinal.com' }],
+  creator: 'Halkalı Final LGS Dershanesi',
+  publisher: 'Halkalı Final LGS Dershanesi',
   robots: {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true },
   },
   icons: {
-    icon: '/logos/Fen%20bilimleri%20logo.png',
+    icon: '/logos/final%20logo%20png.png',
   },
   openGraph: {
     type: 'website',
-    siteName: 'Halkalı Fen Bilimleri',
+    siteName: 'Halkalı Final LGS Dershanesi',
     locale: 'tr_TR',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@halkalifenbilimleri',
-    creator: '@halkalifenbilimleri',
+    site: '@halkalifinal_lgs',
+    creator: '@halkalifinal_lgs',
   },
 };
 

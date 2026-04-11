@@ -58,7 +58,7 @@ function Steps({ current, total }: { current: number; total: number }) {
         <div
           key={i}
           className={`h-1 rounded-full transition-all duration-500 ${
-            i < current ? "bg-[#ec2027] flex-1" : i === current ? "bg-[#f06060] flex-[2]" : "bg-black/10 dark:bg-white/10 flex-1"
+            i < current ? "bg-[#E21F26] flex-1" : i === current ? "bg-[#E65F5F] flex-[2]" : "bg-black/10 dark:bg-white/10 flex-1"
           }`}
         />
       ))}
@@ -73,13 +73,13 @@ function Field({ label, placeholder, value, onChange, type = "text" }: {
 }) {
   return (
     <div className="space-y-1.5">
-      <label className="text-xs font-semibold uppercase tracking-[0.15em] text-[#ec2027]">{label}</label>
+      <label className="text-xs font-semibold uppercase tracking-[0.15em] text-[#E21F26]">{label}</label>
       <input
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-[#ec2027]/40 focus:border-[#ec2027] rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/25 outline-none transition-all"
+        className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-[#E21F26]/40 focus:border-[#E21F26] rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/25 outline-none transition-all"
       />
     </div>
   );
@@ -91,13 +91,13 @@ function TextArea({ label, placeholder, value, onChange }: {
 }) {
   return (
     <div className="space-y-1.5">
-      <label className="text-xs font-semibold uppercase tracking-[0.15em] text-[#ec2027]">{label}</label>
+      <label className="text-xs font-semibold uppercase tracking-[0.15em] text-[#E21F26]">{label}</label>
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         rows={4}
-        className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-[#ec2027]/40 focus:border-[#ec2027] rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/25 outline-none transition-all resize-none"
+        className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-[#E21F26]/40 focus:border-[#E21F26] rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/25 outline-none transition-all resize-none"
       />
     </div>
   );
@@ -190,17 +190,17 @@ export default function AnalysisModal() {
                   onClick={handleClose}
                 >
               <div
-                className="relative w-full max-w-lg bg-white dark:bg-[#0a0514] border border-[#ec2027]/20 rounded-3xl shadow-[0_0_80px_rgba(236,32,39,0.2)] overflow-hidden"
+                className="relative w-full max-w-lg bg-white dark:bg-[#0a0514] border border-[#E21F26]/20 rounded-3xl shadow-[0_0_80px_rgba(226,31,38,0.2)] overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Purple glow top */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[#ec2027]/10 blur-[80px] rounded-full pointer-events-none" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[#E21F26]/10 blur-[80px] rounded-full pointer-events-none" />
 
                 <div className="relative p-8">
                   {/* Header */}
                   <div className="flex items-center justify-between mb-2">
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#ec2027]">
+                      <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#E21F26]">
                         {at('eyebrow')}
                       </p>
                       <h2 className="text-xl font-bold text-slate-900 dark:text-white mt-0.5">
@@ -231,18 +231,18 @@ export default function AnalysisModal() {
                             onClick={() => setForm((prev) => ({ ...prev, path: val }))}
                             className={`w-full flex items-center gap-4 p-5 rounded-2xl border text-left transition-all duration-300 group ${
                               form.path === val
-                                ? "border-[#ec2027] bg-[#ec2027]/10"
-                                : "border-black/8 dark:border-white/8 bg-black/[0.02] dark:bg-white/[0.02] hover:border-[#ec2027]/40 hover:bg-black/5 dark:hover:bg-white/5"
+                                ? "border-[#E21F26] bg-[#E21F26]/10"
+                                : "border-black/8 dark:border-white/8 bg-black/[0.02] dark:bg-white/[0.02] hover:border-[#E21F26]/40 hover:bg-black/5 dark:hover:bg-white/5"
                             }`}
                           >
-                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${form.path === val ? "bg-[#ec2027]/20" : "bg-black/5 dark:bg-white/5 group-hover:bg-[#ec2027]/10"}`}>
-                              <Icon className={`w-6 h-6 ${form.path === val ? "text-[#ec2027]" : "text-slate-400 dark:text-white/40 group-hover:text-[#ec2027]"}`} />
+                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${form.path === val ? "bg-[#E21F26]/20" : "bg-black/5 dark:bg-white/5 group-hover:bg-[#E21F26]/10"}`}>
+                              <Icon className={`w-6 h-6 ${form.path === val ? "text-[#E21F26]" : "text-slate-400 dark:text-white/40 group-hover:text-[#E21F26]"}`} />
                             </div>
                             <div>
                               <div className="font-semibold text-slate-900 dark:text-white text-sm">{title}</div>
                               <div className="text-xs text-slate-500 dark:text-white/40 mt-0.5">{sub}</div>
                             </div>
-                            {form.path === val && <CheckCircle2 className="w-5 h-5 text-[#ec2027] ml-auto shrink-0" />}
+                            {form.path === val && <CheckCircle2 className="w-5 h-5 text-[#E21F26] ml-auto shrink-0" />}
                           </button>
                         ))}
                       </motion.div>
@@ -264,7 +264,7 @@ export default function AnalysisModal() {
                         <Field label={at('field_sector')} placeholder={at('field_sector_placeholder')} value={form.sector} onChange={(v) => set("sector", v)} />
                         <TextArea label={at('field_project_details')} placeholder={at('field_project_placeholder')} value={form.projectDetail} onChange={(v) => set("projectDetail", v)} />
                         <div className="space-y-2">
-                          <label className="text-xs font-semibold uppercase tracking-[0.15em] text-[#ec2027]">{at('field_services')}</label>
+                          <label className="text-xs font-semibold uppercase tracking-[0.15em] text-[#E21F26]">{at('field_services')}</label>
                           <div className="flex flex-wrap gap-2">
                             {serviceOptions.map((s) => (
                               <button
@@ -272,8 +272,8 @@ export default function AnalysisModal() {
                                 onClick={() => toggleService(s)}
                                 className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${
                                   form.services.includes(s)
-                                    ? "border-[#ec2027] bg-[#ec2027]/20 text-[#f06060]"
-                                    : "border-black/10 dark:border-white/10 text-slate-400 dark:text-white/40 hover:border-[#ec2027]/40 hover:text-slate-600 dark:hover:text-white/70"
+                                    ? "border-[#E21F26] bg-[#E21F26]/20 text-[#E65F5F]"
+                                    : "border-black/10 dark:border-white/10 text-slate-400 dark:text-white/40 hover:border-[#E21F26]/40 hover:text-slate-600 dark:hover:text-white/70"
                                 }`}
                               >
                                 {s}
@@ -282,7 +282,7 @@ export default function AnalysisModal() {
                           </div>
                         </div>
                         <div className="pt-2 border-t border-black/8 dark:border-white/8 space-y-4">
-                          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#ec2027]">{ft('contact_info')}</p>
+                          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#E21F26]">{ft('contact_info')}</p>
                           <Field label={at('field_name')} placeholder={at('placeholder_name')} value={form.name} onChange={(v) => set("name", v)} />
                           <Field label={at('field_email')} placeholder={at('placeholder_email')} value={form.email} onChange={(v) => set("email", v)} type="email" />
                           <Field label={at('field_phone')} placeholder={at('placeholder_phone')} value={form.phone} onChange={(v) => set("phone", v)} type="tel" />
@@ -293,8 +293,8 @@ export default function AnalysisModal() {
                     {/* ── STEP 2: Final request ───────────────────── */}
                     {step === 2 && (
                       <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-4">
-                        <div className="p-4 rounded-2xl bg-[#ec2027]/5 border border-[#ec2027]/15">
-                          <p className="text-xs text-[#ec2027] font-semibold uppercase tracking-wider mb-2">{at('summary_label')}</p>
+                        <div className="p-4 rounded-2xl bg-[#E21F26]/5 border border-[#E21F26]/15">
+                          <p className="text-xs text-[#E21F26] font-semibold uppercase tracking-wider mb-2">{at('summary_label')}</p>
                           <p className="text-sm text-slate-500 dark:text-white/60">
                             {form.path === "existing"
                               ? `${at('summary_existing')} · ${form.name} · ${form.email}`
@@ -318,14 +318,14 @@ export default function AnalysisModal() {
                         animate={{ opacity: 1, scale: 1 }}
                         className="text-center py-8 space-y-4"
                       >
-                        <div className="w-16 h-16 rounded-full bg-[#ec2027]/20 border border-[#ec2027]/30 flex items-center justify-center mx-auto">
-                          <CheckCircle2 className="w-8 h-8 text-[#ec2027]" />
+                        <div className="w-16 h-16 rounded-full bg-[#E21F26]/20 border border-[#E21F26]/30 flex items-center justify-center mx-auto">
+                          <CheckCircle2 className="w-8 h-8 text-[#E21F26]" />
                         </div>
                         <h3 className="text-xl font-bold text-slate-900 dark:text-white">{at('success_title')}</h3>
                         <p className="text-sm text-slate-500 dark:text-white/40 max-w-xs mx-auto">{at('success_text')}</p>
                         <button
                           onClick={handleClose}
-                          className="mt-4 px-8 py-3 rounded-full bg-[#ec2027] hover:bg-[#c8191f] text-white text-sm font-semibold transition-all hover:scale-105"
+                          className="mt-4 px-8 py-3 rounded-full bg-[#E21F26] hover:bg-[#BE1821] text-white text-sm font-semibold transition-all hover:scale-105"
                         >
                           {at('btn_close')}
                         </button>
@@ -350,7 +350,7 @@ export default function AnalysisModal() {
                         <button
                           onClick={() => setStep((s) => s + 1)}
                           disabled={!canNext}
-                          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#ec2027] hover:bg-[#c8191f] disabled:opacity-30 disabled:cursor-not-allowed text-white text-sm font-semibold transition-all hover:scale-105 active:scale-95"
+                          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#E21F26] hover:bg-[#BE1821] disabled:opacity-30 disabled:cursor-not-allowed text-white text-sm font-semibold transition-all hover:scale-105 active:scale-95"
                         >
                           {at('btn_next')}
                           <ArrowRight className="w-4 h-4" />
@@ -359,7 +359,7 @@ export default function AnalysisModal() {
                         <button
                           onClick={handleSubmit}
                           disabled={!canNext || loading}
-                          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#ec2027] hover:bg-[#c8191f] disabled:opacity-30 disabled:cursor-not-allowed text-white text-sm font-semibold transition-all hover:scale-105 active:scale-95"
+                          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#E21F26] hover:bg-[#BE1821] disabled:opacity-30 disabled:cursor-not-allowed text-white text-sm font-semibold transition-all hover:scale-105 active:scale-95"
                         >
                           {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
                           {loading ? at('btn_sending') : at('btn_submit')}

@@ -27,7 +27,7 @@ export default function HeroMain() {
       {/* ── WAVES BACKGROUND — sadece desktop (mobilde performans tasarrufu) ── */}
       <div className="hidden md:block absolute inset-0 z-0">
         <Waves
-          strokeColor="#ec2027"
+          strokeColor="#E21F26"
           backgroundColor={wavesBg}
           lineCount={14}
           waveSpeedX={0.0007}
@@ -51,8 +51,8 @@ export default function HeroMain() {
           alt=""
           fill
           className="object-cover object-center opacity-[0.08]"
-          priority
           sizes="100vw"
+          loading="lazy"
         />
       </div>
 
@@ -63,7 +63,7 @@ export default function HeroMain() {
       <motion.div
         className="absolute z-[2] w-[720px] h-[720px] rounded-full blur-[160px] opacity-[0.18]"
         style={{
-          background: "radial-gradient(circle, #ec2027 0%, #12648f 50%, transparent 80%)",
+          background: "radial-gradient(circle, #E21F26 0%, #2E3192 50%, transparent 80%)",
           top: "50%",
           left: "50%",
           x: "-50%",
@@ -81,10 +81,10 @@ export default function HeroMain() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#ec2027]/30 bg-[#ec2027]/10 backdrop-blur-sm mb-8"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E21F26]/30 bg-[#E21F26]/10 backdrop-blur-sm mb-8"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#ec2027] animate-pulse" />
-          <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#ec2027]/80">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#E21F26] animate-pulse" />
+          <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#E21F26]/80">
             Halkalı · Küçükçekmece / İstanbul
           </span>
         </motion.div>
@@ -98,7 +98,16 @@ export default function HeroMain() {
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.04] text-slate-900 dark:text-white mb-8"
         >
           {t("title_prefix")}{" "}
-          <span className="bg-gradient-to-r from-[#ec2027] via-[#f06060] to-[#12648f] bg-clip-text text-transparent">
+          <span
+            style={{
+              background: "linear-gradient(to right, #E21F26, #E65F5F, #2E3192)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              color: "transparent",
+              display: "inline-block",
+            }}
+          >
             {t("title_highlight")}
           </span>
           <br />
@@ -125,10 +134,11 @@ export default function HeroMain() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="https://wa.me/905428250868"
+            href="https://wa.me/905453491774"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#ec2027] hover:bg-[#c8191f] text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_32px_rgba(236,32,39,0.45)] hover:shadow-[0_0_48px_rgba(236,32,39,0.6)]"
+            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#E21F26] hover:bg-[#BE1821] text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_32px_rgba(226,31,38,0.45)] hover:shadow-[0_0_48px_rgba(226,31,38,0.6)]"
+            style={{ backgroundColor: '#E21F26' }}
           >
             <MessageCircle className="w-4 h-4" />
             {t("cta")}
