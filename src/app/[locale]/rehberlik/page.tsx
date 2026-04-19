@@ -294,7 +294,7 @@ export default function RehberlikPage() {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2E3192]/30 bg-[#2E3192]/[0.08] backdrop-blur-sm mb-8"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#2E3192]" />
-                <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#2E3192]">Şirinevler Final Dershanesi</span>
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#2E3192]">Sefaköy Final LGS Dershanesi</span>
               </motion.div>
 
               <motion.h1

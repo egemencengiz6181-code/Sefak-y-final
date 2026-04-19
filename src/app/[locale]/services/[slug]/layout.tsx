@@ -3,16 +3,13 @@ import { getTranslations } from 'next-intl/server';
 
 // Valid service slugs that match messages keys
 const validSlugs = [
-  '9-sinif',
-  '10-sinif',
-  '11-sinif',
-  '12-sinif',
-  'mezun',
-  '12-sinif-vip',
-  'mezun-vip',
-  'acik-lise',
-  'deneme-kulubu',
+  '5-sinif',
+  '6-sinif',
+  '7-sinif',
+  '8-sinif',
+  '8-sinif-vip',
   'ozel-ders',
+  'deneme-kulubu',
 ] as const;
 
 type ServiceSlug = (typeof validSlugs)[number];
@@ -27,7 +24,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const origin = 'https://www.sirinevlerfinal.com';
+  const origin = 'https://www.sefakoyfinal.com';
   const path = `${origin}/${locale}/services/${slug}`;
 
   if (!isValidSlug(slug)) {

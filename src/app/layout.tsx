@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.sirinevlerfinal.com'),
+  metadataBase: new URL('https://www.sefakoyfinal.com'),
   title: {
-    default: 'Şirinevler Final Dershanesi',
-    template: '%s | Şirinevler Final Dershanesi',
+    default: 'Sefaköy Final LGS Dershanesi',
+    template: '%s | Sefaköy Final LGS Dershanesi',
   },
-  description: "Bahçelievler — Şirinevler Final Dershanesi. YKS'de hedef üniversiteye giden yol.",
-  authors: [{ name: 'Şirinevler Final Dershanesi', url: 'https://www.sirinevlerfinal.com' }],
-  creator: 'Şirinevler Final Dershanesi',
-  publisher: 'Şirinevler Final Dershanesi',
+  description: "Küçükçekmece — Sefaköy Final LGS Dershanesi. LGS'de hedef okula giden yol.",
+  authors: [{ name: 'Sefaköy Final LGS Dershanesi', url: 'https://www.sefakoyfinal.com' }],
+  creator: 'Sefaköy Final LGS Dershanesi',
+  publisher: 'Sefaköy Final LGS Dershanesi',
   robots: {
     index: true,
     follow: true,
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    siteName: 'Şirinevler Final Dershanesi',
+    siteName: 'Sefaköy Final LGS Dershanesi',
     locale: 'tr_TR',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@sirinevlerfinal',
-    creator: '@sirinevlerfinal',
+    site: '@sefakoyfinal',
+    creator: '@sefakoyfinal',
   },
 };
 

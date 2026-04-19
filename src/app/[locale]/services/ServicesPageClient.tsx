@@ -104,9 +104,9 @@ interface ServicesGridProps {
 }
 
 export default function ServicesPageClient({ pageTitle, pageSubtitle, sectionLise, sectionMezun, sectionVip, sectionDestek, cards }: ServicesGridProps) {
-  const lise = cards.filter(c => ['9-sinif','10-sinif','11-sinif','12-sinif'].includes(c.slug));
-  const mezun = cards.filter(c => ['mezun','acik-lise'].includes(c.slug));
-  const vip = cards.filter(c => ['12-sinif-vip','mezun-vip'].includes(c.slug));
+  const lise = cards.filter(c => ['5-sinif','6-sinif'].includes(c.slug));
+  const mezun = cards.filter(c => ['7-sinif','8-sinif'].includes(c.slug));
+  const vip = cards.filter(c => ['8-sinif-vip'].includes(c.slug));
   const destek = cards.filter(c => ['ozel-ders','deneme-kulubu'].includes(c.slug));
 
   return (

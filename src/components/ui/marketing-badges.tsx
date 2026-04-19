@@ -21,8 +21,8 @@ interface BadgeProps {
 
 const badges: BadgeProps[] = [
   { 
-    id: '9-sinif', 
-    label: '9. Sınıf', 
+    id: '5-sinif', 
+    label: '5. Sınıf', 
     icon: <BookOpen className="w-4 h-4" />,
     rotation: -12,
     x: -280,
@@ -30,8 +30,8 @@ const badges: BadgeProps[] = [
     color: "from-[#E21F26] to-[#BE1821]"
   },
   { 
-    id: '10-sinif', 
-    label: '10. Sınıf', 
+    id: '6-sinif', 
+    label: '6. Sınıf', 
     icon: <BookOpen className="w-4 h-4" />,
     rotation: 8,
     x: -120,
@@ -39,8 +39,8 @@ const badges: BadgeProps[] = [
     color: "from-[#2E3192] to-[#242672]"
   },
   { 
-    id: '11-sinif', 
-    label: '11. Sınıf', 
+    id: '7-sinif', 
+    label: '7. Sınıf', 
     icon: <GraduationCap className="w-4 h-4" />,
     rotation: -5,
     x: 150,
@@ -48,8 +48,8 @@ const badges: BadgeProps[] = [
     color: "from-[#E21F26] to-[#2E3192]"
   },
   { 
-    id: '12-sinif', 
-    label: '12. Sınıf & YKS', 
+    id: '8-sinif', 
+    label: '8. Sınıf & LGS', 
     icon: <Trophy className="w-4 h-4" />,
     rotation: 10,
     x: 260,
@@ -57,8 +57,8 @@ const badges: BadgeProps[] = [
     color: "from-zinc-800 to-zinc-900"
   },
   { 
-    id: 'mezun', 
-    label: 'Mezun', 
+    id: '8-sinif-vip', 
+    label: '8. Sınıf VIP', 
     icon: <GraduationCap className="w-4 h-4" />,
     rotation: 6,
     x: -220,

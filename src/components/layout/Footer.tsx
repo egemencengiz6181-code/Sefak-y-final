@@ -24,7 +24,7 @@ export default function Footer() {
       {/* Google Maps Section */}
       <div className="w-full h-[400px] relative overflow-hidden group">
         <iframe
-          src="https://maps.google.com/maps?q=%C5%9Eirinevler%2C+H%C3%BCrriyet+Mahallesi%2C+Mahmutbey+Caddesi%2C+No%3A5%2C+Bah%C3%A7elievler%2F%C4%B0stanbul&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=Kartaltepe+Mahallesi+Halkal%C4%B1+Caddesi+2.+Orkide+Sokak%2C+No%3A+2%2C+K%C3%BC%C3%A7%C3%BCk%C3%A7ekmece%2F%C4%B0stanbul&t=&z=16&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0, filter: 'grayscale(1) contrast(1.2) invert(0.9)' }}
@@ -45,7 +45,7 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <Image 
                 src="/logos/final%20logo%20png.png" 
-                alt="Şirinevler Final Dershanesi" 
+                alt="Sefaköy Final LGS Dershanesi" 
                 width={200} 
                 height={80} 
                 className="h-20 w-auto object-contain"
@@ -105,8 +105,8 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-3 text-foreground/40">
                   <Mail className="w-5 h-5 text-primary shrink-0" />
-                  <a href="mailto:sirinevlerfinalozelogretim@abdkurumlari.com" className="hover:text-white transition-colors">
-                    sirinevlerfinalozelogretim@abdkurumlari.com
+                  <a href="mailto:sefakoyfinal@abdkurumlari.com" className="hover:text-white transition-colors">
+                    sefakoyfinal@abdkurumlari.com
                   </a>
                 </div>
               </div>

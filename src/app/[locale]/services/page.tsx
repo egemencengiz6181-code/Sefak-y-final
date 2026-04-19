@@ -10,16 +10,13 @@ export default async function ServicesPage({
   const t = await getTranslations({ locale, namespace: 'Services' });
 
   const cards = [
-    { slug: '9-sinif',        icon: 'BookOpen',      span: 'md:col-span-1', title: t('items.9-sinif.title'),        description: t('items.9-sinif.description') },
-    { slug: '10-sinif',       icon: 'BookOpen',      span: 'md:col-span-1', title: t('items.10-sinif.title'),       description: t('items.10-sinif.description') },
-    { slug: '11-sinif',       icon: 'GraduationCap', span: 'md:col-span-1', title: t('items.11-sinif.title'),       description: t('items.11-sinif.description') },
-    { slug: '12-sinif',       icon: 'Trophy',        span: 'md:col-span-1', title: t('items.12-sinif.title'),       description: t('items.12-sinif.description') },
-    { slug: 'mezun',          icon: 'GraduationCap', span: 'md:col-span-1', title: t('items.mezun.title'),          description: t('items.mezun.description') },
-    { slug: '12-sinif-vip',   icon: 'Star',          span: 'md:col-span-1', title: t('items.12-sinif-vip.title'),   description: t('items.12-sinif-vip.description') },
-    { slug: 'mezun-vip',      icon: 'Award',         span: 'md:col-span-1', title: t('items.mezun-vip.title'),      description: t('items.mezun-vip.description') },
-    { slug: 'acik-lise',      icon: 'BookOpen',      span: 'md:col-span-1', title: t('items.acik-lise.title'),      description: t('items.acik-lise.description') },
-    { slug: 'ozel-ders',      icon: 'Users',         span: 'md:col-span-1', title: t('items.ozel-ders.title'),      description: t('items.ozel-ders.description') },
-    { slug: 'deneme-kulubu',  icon: 'FileText',      span: 'md:col-span-1', title: t('items.deneme-kulubu.title'),  description: t('items.deneme-kulubu.description') },
+    { slug: '5-sinif',       icon: 'BookOpen',      span: 'md:col-span-1', title: t('items.5-sinif.title'),       description: t('items.5-sinif.description') },
+    { slug: '6-sinif',       icon: 'BookOpen',      span: 'md:col-span-1', title: t('items.6-sinif.title'),       description: t('items.6-sinif.description') },
+    { slug: '7-sinif',       icon: 'GraduationCap', span: 'md:col-span-1', title: t('items.7-sinif.title'),       description: t('items.7-sinif.description') },
+    { slug: '8-sinif',       icon: 'Trophy',        span: 'md:col-span-1', title: t('items.8-sinif.title'),       description: t('items.8-sinif.description') },
+    { slug: '8-sinif-vip',   icon: 'Star',          span: 'md:col-span-1', title: t('items.8-sinif-vip.title'),   description: t('items.8-sinif-vip.description') },
+    { slug: 'ozel-ders',     icon: 'Users',         span: 'md:col-span-1', title: t('items.ozel-ders.title'),     description: t('items.ozel-ders.description') },
+    { slug: 'deneme-kulubu', icon: 'FileText',      span: 'md:col-span-1', title: t('items.deneme-kulubu.title'), description: t('items.deneme-kulubu.description') },
   ];
 
   return (

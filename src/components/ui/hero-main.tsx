@@ -6,6 +6,8 @@ import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useState } from "react";
+import ContactPopup from "@/components/shared/ContactPopup";
 
 const Waves = dynamic(() => import('@/components/ui/waves'), { ssr: false });
 
@@ -22,6 +24,7 @@ export default function HeroMain() {
   const t = useTranslations("HeroMain");
   const { resolvedTheme } = useTheme();
   const wavesBg = resolvedTheme === "dark" ? "#000000" : "#f4f4f8";
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* ── WAVES BACKGROUND — sadece desktop (mobilde performans tasarrufu) ── */}
@@ -85,7 +88,7 @@ export default function HeroMain() {
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#E21F26] animate-pulse" />
           <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#E21F26]/80">
-            Şirinevler · Bahçelievler / İstanbul
+            Sefaköy · Küçükçekmece / İstanbul
           </span>
         </motion.div>
 
@@ -133,22 +136,22 @@ export default function HeroMain() {
           animate="visible"
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a
-            href="https://wa.me/902125517273"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => setPopupOpen(true)}
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#E21F26] hover:bg-[#BE1821] text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_32px_rgba(226,31,38,0.45)] hover:shadow-[0_0_48px_rgba(226,31,38,0.6)]"
             style={{ backgroundColor: '#E21F26' }}
           >
             <MessageCircle className="w-4 h-4" />
             {t("cta")}
             <ArrowRight className="w-4 h-4 -translate-x-1 group-hover:translate-x-0 transition-transform" />
-          </a>
+          </button>
         </motion.div>
       </div>
 
       {/* ── BOTTOM FADE ──────────────────────────────────────── */}
       <div className="absolute bottom-0 left-0 right-0 h-32 z-[2] bg-gradient-to-t from-background to-transparent" />
+
+      <ContactPopup isOpen={popupOpen} onClose={() => setPopupOpen(false)} />
     </section>
   );
 }

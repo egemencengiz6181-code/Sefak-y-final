@@ -57,14 +57,11 @@ export default function Navbar() {
   ], [t])
 
   const services: ServiceItem[] = useMemo(() => [
-    { title: st('items.9-sinif.title'), description: st('items.9-sinif.description'), href: "/services/9-sinif", icon: BookOpen },
-    { title: st('items.10-sinif.title'), description: st('items.10-sinif.description'), href: "/services/10-sinif", icon: BookOpen },
-    { title: st('items.11-sinif.title'), description: st('items.11-sinif.description'), href: "/services/11-sinif", icon: GraduationCap },
-    { title: st('items.12-sinif.title'), description: st('items.12-sinif.description'), href: "/services/12-sinif", icon: Trophy },
-    { title: st('items.mezun.title'), description: st('items.mezun.description'), href: "/services/mezun", icon: GraduationCap },
-    { title: st('items.12-sinif-vip.title'), description: st('items.12-sinif-vip.description'), href: "/services/12-sinif-vip", icon: Star },
-    { title: st('items.mezun-vip.title'), description: st('items.mezun-vip.description'), href: "/services/mezun-vip", icon: Award },
-    { title: st('items.acik-lise.title'), description: st('items.acik-lise.description'), href: "/services/acik-lise", icon: BookOpen },
+    { title: st('items.5-sinif.title'), description: st('items.5-sinif.description'), href: "/services/5-sinif", icon: BookOpen },
+    { title: st('items.6-sinif.title'), description: st('items.6-sinif.description'), href: "/services/6-sinif", icon: BookOpen },
+    { title: st('items.7-sinif.title'), description: st('items.7-sinif.description'), href: "/services/7-sinif", icon: GraduationCap },
+    { title: st('items.8-sinif.title'), description: st('items.8-sinif.description'), href: "/services/8-sinif", icon: Trophy },
+    { title: st('items.8-sinif-vip.title'), description: st('items.8-sinif-vip.description'), href: "/services/8-sinif-vip", icon: Star },
     { title: st('items.ozel-ders.title'), description: st('items.ozel-ders.description'), href: "/services/ozel-ders", icon: Users },
     { title: st('items.deneme-kulubu.title'), description: st('items.deneme-kulubu.description'), href: "/services/deneme-kulubu", icon: FileText },
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -103,13 +100,16 @@ export default function Navbar() {
 
   return (
     <>
-    <header className="fixed top-0 left-0 right-0 z-50 w-full px-6 md:px-12 py-5 flex items-center justify-between pointer-events-none">
+    <header className={cn(
+      "fixed top-0 left-0 right-0 z-50 w-full px-6 md:px-12 py-5 flex items-center justify-between pointer-events-none transition-colors duration-300",
+      isScrolled && "md:bg-transparent bg-white/90 dark:bg-neutral-950/90 backdrop-blur-lg md:backdrop-blur-none"
+    )}>
       {/* Logo - Sol Taraf */}
       <div className="pointer-events-auto w-[200px] md:w-[260px] flex items-center">
         <Link href="/" className="flex items-center">
           <Image 
                       src="/logos/final%20logo%20png.png" 
-            alt="Şirinevler Final Dershanesi" 
+            alt="Sefaköy Final LGS Dershanesi" 
             width={240} 
             height={72} 
             className="h-[64px] md:h-[80px] w-auto object-contain"
@@ -120,7 +120,10 @@ export default function Navbar() {
 
       {/* Nav Linkleri - Orta Kısım (sadece desktop) */}
       <div className="pointer-events-auto hidden md:flex flex-col items-center">
-        <div className="flex items-center gap-1 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg relative max-w-fit">
+        <div className={cn(
+          "flex items-center gap-1 border border-black/10 dark:border-white/10 backdrop-blur-xl py-1 px-1 rounded-full shadow-lg relative max-w-fit transition-colors duration-300",
+          isScrolled ? "bg-white/80 dark:bg-neutral-900/80 shadow-md" : "bg-black/5 dark:bg-white/5"
+        )}>
           {navItems.map((item) => {
             const isActive = activeTab === item.name
 
@@ -181,7 +184,7 @@ export default function Navbar() {
               transition={{ duration: 0.18 }}
               onMouseEnter={() => openMenu(servicesLabel)}
               onMouseLeave={() => closeMenu()}
-              className="absolute top-full mt-3 w-[820px] p-6 bg-background/95 border border-black/10 dark:border-white/10 backdrop-blur-2xl rounded-[32px] shadow-2xl z-50"
+              className="absolute top-full mt-3 w-[820px] p-6 bg-white/95 dark:bg-neutral-950/95 border border-black/10 dark:border-white/10 backdrop-blur-2xl rounded-[32px] shadow-2xl z-[100]"
             >
               <div className="grid grid-cols-2 gap-4">
                 {services.map((service) => (
@@ -246,7 +249,7 @@ export default function Navbar() {
             <Link href="/" onClick={() => setIsMobileOpen(false)}>
               <Image
                 src="/logos/final%20logo%20png.png"
-                alt="Şirinevler Final Dershanesi"
+                alt="Sefaköy Final LGS Dershanesi"
                 width={200}
                 height={60}
                 className="h-[56px] w-auto object-contain"
