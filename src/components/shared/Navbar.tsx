@@ -122,7 +122,10 @@ export default function Navbar() {
       {/* Nav Linkleri - Orta Kısım (sadece desktop) */}
       <div className="pointer-events-auto hidden md:flex flex-col items-center">
         <div className={cn(
-          "flex items-center gap-1 py-1 px-1 rounded-full relative max-w-fit transition-colors duration-300"
+          "flex items-center gap-1 py-1 px-1 rounded-full relative max-w-fit transition-all duration-300",
+          "bg-white/80 dark:bg-neutral-900/80 backdrop-blur-xl",
+          "border border-black/[0.08] dark:border-white/[0.08]",
+          "shadow-[0_4px_24px_rgba(0,0,0,0.06)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.3)]"
         )}>
           {navItems.map((item) => {
             const isActive = activeTab === item.name
