@@ -130,18 +130,18 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            {/* Back image — okul3 */}
+            {/* Back image */}
             <FloatingImage
-              src="/okul2/unnamed-6.jpg"
+              src="/okul2/okul-giris.jpg"
               float={{ y: [0, -14, 0], duration: 9, delay: 0 }}
               className="absolute bottom-0 left-0 w-[74%] h-[72%] rounded-2xl overflow-hidden border border-white/[0.07] cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-black/55 via-transparent to-transparent" />
             </FloatingImage>
 
-            {/* Front image — okul2 */}
+            {/* Front image */}
             <FloatingImage
-              src="/okul2/unnamed-7.jpg"
+              src="/okul2/okul-sinif.jpg"
               float={{ y: [0, 10, 0], duration: 7, delay: 1.2 }}
               className="absolute top-0 right-0 w-[70%] h-[78%] rounded-2xl overflow-hidden border border-white/[0.11] shadow-2xl cursor-pointer"
             >

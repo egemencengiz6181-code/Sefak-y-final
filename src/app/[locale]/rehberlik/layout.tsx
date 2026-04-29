@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({
   params,
@@ -7,12 +6,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Services.items.rehberlik' });
   const origin = 'https://www.sefakoyfinal.com';
   const path = `${origin}/${locale}/rehberlik`;
 
-  const title = t('meta_title');
-  const description = t('meta_description');
+  const title = locale === 'en'
+    ? 'Guidance & Counseling | Sefaköy Final LGS Academy'
+    : 'Rehberlik & Psikolojik Danışmanlık | Sefaköy Final LGS Dershanesi';
+  const description = locale === 'en'
+    ? 'Psychological support, attention tests and individual guidance services for our students.'
+    : 'Öğrencilerimiz için psikolojik destek, dikkat testleri ve bireysel rehberlik hizmetleri.';
 
   return {
     title,

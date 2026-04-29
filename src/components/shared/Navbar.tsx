@@ -103,7 +103,7 @@ export default function Navbar() {
     <>
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 w-full px-6 md:px-12 py-5 flex items-center justify-between pointer-events-none transition-colors duration-300",
-      isScrolled && "md:bg-transparent bg-white/90 dark:bg-neutral-950/90 backdrop-blur-lg md:backdrop-blur-none"
+      isScrolled && "max-md:bg-white/90 max-md:dark:bg-neutral-950/90 max-md:backdrop-blur-lg"
     )}>
       {/* Logo - Sol Taraf */}
       <div className="pointer-events-auto w-[200px] md:w-[260px] flex items-center">

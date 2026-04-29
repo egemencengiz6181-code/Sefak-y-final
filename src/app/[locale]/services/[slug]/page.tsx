@@ -4,6 +4,7 @@ import { locales } from '@/config/locales';
 import ServiceSlugContent from './ServiceSlugContent';
 
 const VALID_SLUGS = [
+  'ilkokul-grubu',
   '5-sinif', '6-sinif', '7-sinif', '8-sinif',
   '8-sinif-vip',
   'deneme-kulubu', 'ozel-ders',
@@ -12,6 +13,7 @@ const VALID_SLUGS = [
 type ServiceSlug = (typeof VALID_SLUGS)[number];
 
 const slugImages: Record<ServiceSlug, { hero: string; tech: string; alt: string }> = {
+  'ilkokul-grubu':  { hero: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1400&q=80', alt: 'İlkokul grubu 1-4. sınıf okul ve ödev desteği' },
   '5-sinif':       { hero: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1400&q=80', alt: '5. sınıf LGS hazırlık programı' },
   '6-sinif':       { hero: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1400&q=80', alt: '6. sınıf LGS hazırlık programı' },
   '7-sinif':       { hero: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1400&q=80', alt: '7. sınıf LGS hazırlık' },
