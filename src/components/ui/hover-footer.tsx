@@ -130,7 +130,7 @@ export default function HoverFooter() {
           <div className="space-y-6">
             <Link href="/" className="inline-block pointer-events-auto">
               <Image
-                src="/logos/final%20logo%20png.png"
+                src="/logos/sefak%C3%B6ylogo.png"
                 alt="Sefaköy Final LGS Dershanesi"
                 width={180}
                 height={60}
@@ -179,9 +179,9 @@ export default function HoverFooter() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400 dark:text-white/25">{ft('contact')}</p>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:sefakoyfinal@abdkurumlari.com" className="flex items-center gap-3 text-sm text-slate-500 dark:text-white/40 hover:text-slate-900 dark:hover:text-white transition-colors group pointer-events-auto">
+                <a href="mailto:sefakoy.finalabd@gmail.com" className="flex items-center gap-3 text-sm text-slate-500 dark:text-white/40 hover:text-slate-900 dark:hover:text-white transition-colors group pointer-events-auto">
                   <Mail className="w-4 h-4 text-[#E21F26] shrink-0" />
-                  sefakoyfinal@abdkurumlari.com
+                  sefakoy.finalabd@gmail.com
                 </a>
               </li>
               <li>

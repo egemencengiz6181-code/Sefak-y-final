@@ -15,7 +15,7 @@
     "title_prefix": "The road",
     "title_highlight": "to success",
     "title_suffix": "starts here.",
-    "subtitle": "The right place to reach your target high school in LGS. We stand by you with experienced teachers, individual follow-up and proven study programs.",
+    "subtitle": "With our strong school preparation program for 4th, 5th, 6th and 7th graders and to reach your target high school in LGS — the right address. We stand by you with experienced teachers, individual follow-up and proven study programs.",
     "cta": "Register & Get Info"
   },
   "Services": {
@@ -39,21 +39,13 @@
     "items": {
       "5-sinif": {
         "title": "5th Grade",
-        "description": "2 weekend days + 1 weekday. 10-12 lesson hours/week. Extra study sessions, one-on-one Q&A and guidance support.",
+        "description": "1 weekend day + 1 weekday. 10-12 lesson hours/week. Extra study sessions, one-on-one Q&A and guidance support.",
         "hero_quote": "A strong foundation in 5th grade is the key to LGS success.",
-        "intro": "Students attend 2 weekend days and 1 weekday.",
-        "body": "Students attend 2 weekend days and 1 weekday. Core subjects on Saturday and Sunday. Total 10-12 lesson hours per week. Extra weekly problem-solving study sessions. One-on-one question solving with teachers. Students can reach teachers anytime. Guidance unit conducts recognition and attention tests. Emotional and psychological status is reported. Achievement graphs are recorded in the digital app. Students reinforce learning with next-generation questions. Exam preparation, LGS exam introduction, complementary school education, reading activities, attention improvement, reading comprehension, and test technique development.",
+        "intro": "Students attend 1 weekend day and 1 weekday.",
+        "body": "Students attend 1 weekend day and 1 weekday. Core subjects on Saturday. Total 10-12 lesson hours per week. Extra weekly problem-solving study sessions. One-on-one question solving with teachers. Students can reach teachers anytime. Guidance unit conducts recognition and attention tests. Emotional and psychological status is reported. Achievement graphs are recorded in the digital app. Students reinforce learning with next-generation questions. Exam preparation, LGS exam introduction, complementary school education, reading activities, attention improvement, reading comprehension, and test technique development.",
         "strategy_title": "Program Content",
         "phase1_title": "Core Subjects & Q&A",
-        "phase1_text": "Core subjects on weekends. Extra weekly study sessions and one-on-one Q&A support.",
-        "phase2_title": "Guidance & Psychological Support",
-        "phase2_text": "Recognition and attention tests applied. Emotional and psychological status reported. Achievement graphs recorded in digital app.",
-        "phase3_title": "Academic Development Activities",
-        "phase3_text": "Exam prep, LGS introduction, reading activities, attention improvement, reading comprehension and test technique development.",
-        "result_title": "Outcomes",
-        "result_text": "Strong foundational knowledge, exam habits and a ready start toward the LGS process.",
-        "tech_title": "10-12 lesson hours/week · 2 weekend + 1 weekday",
-        "tech_intro": "2 weekend days and 1 weekday. Total 10-12 lesson hours.",
+        "phase1_text": "Core subjects on Saturday. Extra weekly study sessions and one-on-one Q&A support.",
         "tech_tools": "Weekly study sessions · One-on-one Q&A · Guidance · Attention tests",
         "features": [
           "Weekly study sessions",
@@ -69,33 +61,35 @@
       },
       "6-sinif": {
         "title": "6th Grade",
-        "description": "2 weekend days + 1 weekday. 10-12 lesson hours/week. Extra study sessions, one-on-one Q&A and guidance support.",
+        "description": "2 weekend days + 2 weekdays. Total 14 lesson hours. One-on-one Q&A, guidance support, 7-day library and camp programs.",
         "hero_quote": "Every step in 6th grade brings you closer to your LGS goal.",
-        "intro": "Students attend 2 weekend days and 1 weekday.",
-        "body": "Students attend 2 weekend days and 1 weekday. Core subjects on Saturday and Sunday. Total 10-12 lesson hours per week. Extra weekly problem-solving study sessions. One-on-one question solving with teachers. Students can reach teachers anytime. Guidance unit conducts recognition and attention tests. Emotional and psychological status is reported. Achievement graphs are recorded in the digital app. Students reinforce learning with next-generation questions. Exam preparation, LGS exam introduction, complementary school education, reading activities, attention improvement, reading comprehension, and test technique development.",
+        "intro": "Students attend 2 weekend days and 2 weekdays.",
+        "body": "Students attend 2 weekend days and 2 weekdays. Total 14 lesson hours. Extra weekly problem-solving study sessions. One-on-one question solving with teachers. Students can reach teachers anytime. Library available 7 days 08:30–19:00. Guidance unit conducts recognition and attention tests. Emotional and psychological status is reported. Achievement graphs are recorded in the digital app. Students reinforce learning with next-generation questions. Exam preparation, LGS exam introduction, complementary school education, reading activities, attention improvement, reading comprehension, and test technique development. Camp programs available.",
         "strategy_title": "Program Content",
-        "phase1_title": "Core Subjects & Q&A",
-        "phase1_text": "Core subjects on weekends. Extra weekly study sessions and one-on-one Q&A support.",
+        "phase1_title": "Intensive Lessons & Q&A",
+        "phase1_text": "2 weekend + 2 weekday lessons. Extra weekly study sessions and one-on-one Q&A. Library 7 days 08:30–19:00.",
         "phase2_title": "Guidance & Psychological Support",
         "phase2_text": "Recognition and attention tests applied. Emotional and psychological status reported. Achievement graphs recorded in digital app.",
         "phase3_title": "Academic Development Activities",
-        "phase3_text": "Exam prep, LGS introduction, reading activities, attention improvement, reading comprehension and test technique development.",
+        "phase3_text": "Exam prep, LGS introduction, reading activities, attention improvement, reading comprehension and test technique development. Camp programs.",
         "result_title": "Outcomes",
-        "result_text": "Strong foundational knowledge, exam habits and continued readiness for the LGS process.",
-        "tech_title": "10-12 lesson hours/week · 2 weekend + 1 weekday",
-        "tech_intro": "2 weekend days and 1 weekday. Total 10-12 lesson hours.",
-        "tech_tools": "Weekly study sessions · One-on-one Q&A · Guidance · Attention tests",
+        "result_text": "Strong foundational knowledge, exam habits and confident continuation of the LGS process.",
+        "tech_title": "14 lesson hours/week · 2 weekend + 2 weekdays · 7-day library",
+        "tech_intro": "2 weekend days and 2 weekdays. Total 14 lesson hours. 7-day library (08:30–19:00).",
+        "tech_tools": "Weekly study sessions · One-on-one Q&A · 7-day library · Guidance · Attention tests",
         "features": [
           "Weekly study sessions",
           "One-on-one Q&A",
+          "7-day library (08:30-19:00)",
           "Recognition & attention tests",
           "Psychological status report",
           "Digital achievement graph",
           "Next-gen question practice",
-          "Test technique development"
+          "Test technique development",
+          "Camp programs"
         ],
         "meta_title": "6th Grade Program | Sefaköy Final LGS Academy",
-        "meta_description": "10-12 hour per week program with one-on-one Q&A and guidance support for 6th grade students."
+        "meta_description": "14 lesson hours/week with one-on-one Q&A, 7-day library and guidance support for 6th grade students."
       },
       "7-sinif": {
         "title": "7th Grade",
@@ -224,30 +218,59 @@
       },
       "deneme-kulubu": {
         "title": "Mock Exam Club",
-        "description": "Regular YKS mock exams, net analysis and peer learning. Open to all grade levels.",
+        "description": "Regular LGS mock exams, net analysis and peer learning. Open to all grade levels.",
         "hero_quote": "Every mock exam takes you one step forward.",
-        "intro": "The Mock Exam Club aims to provide regular exam experience to all students. Weekly YKS format mock exams and detailed net analysis.",
+        "intro": "The Mock Exam Club aims to provide regular exam experience to all students. Weekly LGS format mock exams and detailed net analysis.",
         "body": "Students continuously improve through group evaluation sessions and peer learning.",
         "strategy_title": "Mock Exam Club Program",
-        "phase1_title": "Weekly YKS Mock Exams",
-        "phase1_text": "Full weekly mock exams in YKS format. Practice under real exam conditions.",
+        "phase1_title": "Weekly LGS Mock Exams",
+        "phase1_text": "Full weekly mock exams in LGS format. Practice under real exam conditions.",
         "phase2_title": "Net Analysis",
         "phase2_text": "Topic-based net analysis after mock exams, individual review of incorrectly answered questions.",
         "phase3_title": "Group Evaluation",
         "phase3_text": "Group sessions where students evaluate together and peer learning.",
         "result_title": "Outcome",
         "result_text": "Continuously increasing net score, exam habits and strengthened confidence.",
-        "tech_title": "YKS Format · Weekly mock + analysis",
-        "tech_intro": "Weekly mock exams in YKS format. Analysis sessions included.",
-        "tech_tools": "Weekly mock exam · Net analysis · Group evaluation · Progress tracking",
+        "tech_title": "LGS Format \u00b7 Weekly mock + analysis",
+        "tech_intro": "Weekly mock exams in LGS format. Analysis sessions included.",
+        "tech_tools": "Weekly mock exam \u00b7 Net analysis \u00b7 Group evaluation \u00b7 Progress tracking",
         "features": [
           "Weekly mock exam",
           "Net analysis",
           "Group evaluation",
           "Progress tracking"
         ],
-        "meta_title": "Mock Exam Club | Şirinevler Final Academy",
-        "meta_description": "Weekly YKS format mock exams, net analysis and group evaluation."
+        "meta_title": "Mock Exam Club | Sefak\u00f6y Final LGS Academy",
+        "meta_description": "Weekly LGS format mock exams, net analysis and group evaluation."
+      },
+      "ilkokul-grubu": {
+        "title": "Primary School Group (Grades 1-4)",
+        "description": "5 weekdays of school and homework support. Comprehensive academic support program for primary school students.",
+        "hero_quote": "Together we build the right foundation during the most beautiful years of learning.",
+        "intro": "Our primary school students receive school and homework support 5 weekdays.",
+        "body": "School and homework support is provided 5 weekdays. Students come to our center after school to reinforce what they learned during the day and complete their homework. Individual follow-up is conducted with experienced teachers, and each student's development is regularly reported to parents. Activities aimed at strengthening reading, writing and basic math skills are organized. Students' academic and social development is supported in a balanced manner.",
+        "strategy_title": "Program Content",
+        "phase1_title": "School & Homework Support",
+        "phase1_text": "School and homework support 5 weekdays. Students reinforce daily lessons.",
+        "phase2_title": "Individual Tracking & Parent Updates",
+        "phase2_text": "Each student's development is individually tracked. Progress reports are regularly shared with parents.",
+        "phase3_title": "Skill Development Activities",
+        "phase3_text": "Activities to strengthen reading, writing and basic math skills. Attention and concentration exercises.",
+        "result_title": "Outcomes",
+        "result_text": "Strong academic foundation, study habits and school adjustment.",
+        "tech_title": "5 weekdays \u00b7 School & Homework Support",
+        "tech_intro": "Regular school and homework support every weekday.",
+        "tech_tools": "Homework support \u00b7 Individual tracking \u00b7 Skill activities \u00b7 Parent updates",
+        "features": [
+          "5 weekday support",
+          "Homework assistance",
+          "Individual tracking",
+          "Parent updates",
+          "Reading & writing activities",
+          "Attention development"
+        ],
+        "meta_title": "Primary School Group (Grades 1-4) | Sefak\u00f6y Final LGS Academy",
+        "meta_description": "School and homework support program 5 weekdays for primary school students in grades 1-4."
       }
     }
   },
@@ -325,6 +348,7 @@
     "analysis": "Free Consultation",
     "blog": "Blog",
     "services_items": {
+      "ilkokul-grubu": "Primary School Group (Grades 1-4)",
       "5-sinif": "5th Grade",
       "6-sinif": "6th Grade",
       "7-sinif": "7th Grade",
@@ -392,43 +416,43 @@
     "items": [
       {
         "name": "Elif K.",
-        "role": "YKS — Boğaziçi University / Computer Engineering",
-        "text": "With the support I received throughout 12th grade, I reached my target score in YKS. Our teachers were truly very attentive."
+        "role": "LGS — Kabataş High School",
+        "text": "With the support I received in 8th grade, I reached my target score in LGS. Our teachers were truly very attentive."
       },
       {
         "name": "Yusuf E. (Parent)",
-        "role": "Son will study medicine via YKS",
-        "text": "My son studied here and won a place at Cerrahpaşa Medical Faculty. We were amazed by the individual attention."
+        "role": "Son earned place at target high school via LGS",
+        "text": "My son studied here and won a place at his target high school. We were amazed by the individual attention."
       },
       {
         "name": "Selin T.",
-        "role": "YKS — Bahçeşehir University / Pilotage (Full Scholarship)",
-        "text": "Thanks to the Mock Exam Club, my exam anxiety went away and I entered YKS with confidence. The guidance service was invaluable."
+        "role": "LGS — Kadıköy Anatolian High School",
+        "text": "Thanks to the Mock Exam Club, my exam anxiety went away and I entered LGS with confidence. The guidance service was invaluable."
       },
       {
         "name": "Kerem A.",
-        "role": "YKS — İTÜ / Software Engineering",
-        "text": "Thanks to the weekly mock exams and individual analysis, I felt ready for YKS. It was a wonderful process."
+        "role": "LGS — Nişantaşı Anatolian High School",
+        "text": "Thanks to the weekly mock exams and individual analysis, I felt ready for LGS. It was a wonderful process."
       },
       {
         "name": "Zeynep B. (Parent)",
-        "role": "Daughter won Koç University Law via YKS",
+        "role": "Daughter earned place at target high school via LGS",
         "text": "My daughter prepared here. Both academic and psychological support were excellent."
       },
       {
         "name": "Arda Y.",
-        "role": "YKS — METU / Aerospace Engineering",
-        "text": "I joined the program. Thanks to the intensive schedule and personalized lessons, I got into my target university."
+        "role": "LGS — Fatih Science High School",
+        "text": "I joined the program. Thanks to the intensive schedule and personalized lessons, I got into my target high school."
       },
       {
         "name": "Melis G. (Parent)",
-        "role": "Daughter studying at Hacettepe Medical via YKS",
+        "role": "Daughter placed in top 1000 in LGS",
         "text": "The teachers' individual attention to each student amazed us. My daughter gained confidence in a very short time."
       },
       {
         "name": "Can S.",
-        "role": "YKS — Galatasaray University / Business",
-        "text": "The detailed mock exam analyses helped me identify and close the gaps in my knowledge. I got a great result in YKS."
+        "role": "LGS — Bağcılar Anatolian High School",
+        "text": "The detailed mock exam analyses helped me identify and close the gaps in my knowledge. I got a great result in LGS."
       }
     ]
   },
@@ -472,6 +496,7 @@
     "placeholder_email": "example@email.com",
     "placeholder_phone": "05XX XXX XX XX",
     "services": [
+      "Primary School Group (Grades 1-4)",
       "5th Grade",
       "6th Grade",
       "7th Grade",
@@ -482,16 +507,16 @@
     ]
   },
   "Blog": {
-    "meta_title": "Education Blog | Şirinevler Final Academy",
-    "meta_description": "Useful articles on YKS and high school education.",
+    "meta_title": "Education Blog | Sefak\u00f6y Final LGS Academy",
+    "meta_description": "Useful articles on LGS and primary/middle school education.",
     "title_prefix": "Education",
     "title_highlight": "Blog",
-    "subtitle": "Useful articles on YKS and high school education.",
+    "subtitle": "Useful articles on LGS and primary/middle school education.",
     "empty_title": "No posts yet",
     "empty_subtitle": "Content coming soon.",
     "recent": "Recent Posts",
     "categories": {
-      "yks": "YKS",
+      "yks": "LGS",
       "tips": "Study Tips",
       "motivation": "Motivation"
     }

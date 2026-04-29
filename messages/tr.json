@@ -15,7 +15,7 @@
     "title_prefix": "Başarıya",
     "title_highlight": "giden yol",
     "title_suffix": "buradan geçer.",
-    "subtitle": "LGS'de hedef okula ulaşmak için doğru adres. Deneyimli öğretmenler, kişisel takip ve kanıtlanmış ders programlarıyla yanındayız.",
+    "subtitle": "4, 5, 6 ve 7. sınıflarda güçlü okula hazırlık programımızla ve LGS'de hedef okula ulaşmak için doğru adres. Deneyimli öğretmenler, kişisel takip ve kanıtlanmış ders programlarıyla yanındayız.",
     "cta": "Kayıt & Bilgi Al"
   },
   "Services": {
@@ -39,21 +39,21 @@
     "items": {
       "5-sinif": {
         "title": "5. Sınıf",
-        "description": "Hafta sonu 2 gün + hafta içi 1 gün. Toplam 10-12 ders saati. Ekstra soru çözüm etütleri, birebir soru çözümü ve rehberlik desteği.",
+        "description": "Hafta sonu 1 gün + hafta içi 1 gün. Toplam 10-12 ders saati. Ekstra soru çözüm etütleri, birebir soru çözümü ve rehberlik desteği.",
         "hero_quote": "5. sınıfta atılan sağlam temel, LGS başarısının anahtarıdır.",
-        "intro": "Öğrencilerimiz hafta sonu 2 hafta içi 1 gün kursa gelmektedir.",
-        "body": "Öğrencilerimiz hafta sonu 2 hafta içi 1 gün kursa gelmektedir. Cumartesi ve Pazar günü yapılan kurslarımızda temel dersleri almaktadırlar. Toplam 10-12 ders saati görmektedirler. Ekstra haftalık soru çözüm etütleri yapılmaktadır. Öğretmenlerle birebir soru çözüm saatlerinde sorularını sorabilmektedirler. Öğrencimiz istediği yer ve saatte sorularını öğretmenlere sorabilmektedir. Öğrencilerimiz için Rehberlik birimimiz tarafından tanıma ve dikkat testleri yapılır. Öğrencilerimizin duygusal ve psikolojik durumları rapor edilir. Başarı grafikleri dijital uygulamamıza kaydedilir. Öğrencilerimizin yeni nesil sorularla öğrendiklerini pekiştirmesi sağlanır. Öğrencilerimiz için yazılılara hazırlık, LGS sınavını tanıma, okul derslerine yardımcı olacak eğitimler, okuma etkinlikleri, dikkati artırmaya yönelik çalışmalar, okuduğunu anlama çalışmaları ve test tekniği geliştirme çalışmaları yapılmaktadır.",
+        "intro": "Öğrencilerimiz hafta sonu 1 gün hafta içi 1 gün kursa gelmektedir.",
+        "body": "Öğrencilerimiz hafta sonu 1 gün hafta içi 1 gün kursa gelmektedir. Cumartesi günü yapılan kurslarımızda temel dersleri almaktadırlar. Toplam 10-12 ders saati görmektedirler. Ekstra haftalık soru çözüm etütleri yapılmaktadır. Öğretmenlerle birebir soru çözüm saatlerinde sorularını sorabilmektedirler. Öğrencimiz istediği yer ve saatte sorularını öğretmenlere sorabilmektedir. Öğrencilerimiz için Rehberlik birimimiz tarafından tanıma ve dikkat testleri yapılır. Öğrencilerimizin duygusal ve psikolojik durumları rapor edilir. Başarı grafikleri dijital uygulamamıza kaydedilir. Öğrencilerimizin yeni nesil sorularla öğrendiklerini pekiştirmesi sağlanır. Öğrencilerimiz için yazılılara hazırlık, LGS sınavını tanıma, okul derslerine yardımcı olacak eğitimler, okuma etkinlikleri, dikkati artırmaya yönelik çalışmalar, okuduğunu anlama çalışmaları ve test tekniği geliştirme çalışmaları yapılmaktadır.",
         "strategy_title": "Program İçeriği",
         "phase1_title": "Temel Dersler & Soru Çözümü",
-        "phase1_text": "Cumartesi ve Pazar günü temel dersler. Ekstra haftalık soru çözüm etütleri ve birebir soru çözümü imkânı.",
+        "phase1_text": "Cumartesi günü temel dersler. Ekstra haftalık soru çözüm etütleri ve birebir soru çözümü imkânı.",
         "phase2_title": "Rehberlik & Psikolojik Destek",
         "phase2_text": "Tanıma ve dikkat testleri uygulanır. Öğrencilerin duygusal ve psikolojik durumu rapor edilir. Başarı grafikleri dijital uygulamaya kaydedilir.",
         "phase3_title": "Akademik Gelişim Çalışmaları",
         "phase3_text": "Yazılılara hazırlık, LGS sınavını tanıma, okuma etkinlikleri, dikkat artırma, okuduğunu anlama ve test tekniği geliştirme çalışmaları.",
         "result_title": "Kazanımlar",
         "result_text": "Güçlü temel bilgi, sınav alışkanlığı ve LGS sürecine hazır başlangıç.",
-        "tech_title": "Haftalık 10-12 ders saati · Hafta sonu 2 + hafta içi 1 gün",
-        "tech_intro": "Hafta sonu 2 gün ve hafta içi 1 gün kurs. Toplam 10-12 saat ders.",
+        "tech_title": "Haftalık 10-12 ders saati · Hafta sonu 1 + hafta içi 1 gün",
+        "tech_intro": "Hafta sonu 1 gün ve hafta içi 1 gün kurs. Toplam 10-12 saat ders.",
         "tech_tools": "Haftalık soru çözüm etüdü · Birebir soru çözümü · Rehberlik · Dikkat testleri",
         "features": [
           "Haftalık soru çözüm etüdü",
@@ -69,33 +69,35 @@
       },
       "6-sinif": {
         "title": "6. Sınıf",
-        "description": "Hafta sonu 2 gün + hafta içi 1 gün. Toplam 10-12 ders saati. Ekstra soru çözüm etütleri, birebir soru çözümü ve rehberlik desteği.",
+        "description": "Hafta sonu 2 gün + hafta içi 2 gün. Toplam 14 ders saati. Birebir soru çözümü, rehberlik desteği, 7 gün kütüphane ve kamp programları.",
         "hero_quote": "6. sınıfta attığın her adım, LGS hedefine seni yaklaştırır.",
-        "intro": "Öğrencilerimiz hafta sonu 2 hafta içi 1 gün kursa gelmektedir.",
-        "body": "Öğrencilerimiz hafta sonu 2 hafta içi 1 gün kursa gelmektedir. Cumartesi ve Pazar günü yapılan kurslarımızda temel dersleri almaktadırlar. Toplam 10-12 ders saati görmektedirler. Ekstra haftalık soru çözüm etütleri yapılmaktadır. Öğretmenlerle birebir soru çözüm saatlerinde sorularını sorabilmektedirler. Öğrencimiz istediği yer ve saatte sorularını öğretmenlere sorabilmektedir. Öğrencilerimiz için Rehberlik birimimiz tarafından tanıma ve dikkat testleri yapılır. Öğrencilerimizin duygusal ve psikolojik durumları rapor edilir. Başarı grafikleri dijital uygulamamıza kaydedilir. Öğrencilerimizin yeni nesil sorularla öğrendiklerini pekiştirmesi sağlanır. Öğrencilerimiz için yazılılara hazırlık, LGS sınavını tanıma, okul derslerine yardımcı olacak eğitimler, okuma etkinlikleri, dikkati artırmaya yönelik çalışmalar, okuduğunu anlama çalışmaları ve test tekniği geliştirme çalışmaları yapılmaktadır.",
+        "intro": "Öğrencilerimiz hafta sonu 2 gün hafta içi 2 gün kursa gelmektedirler.",
+        "body": "Öğrencilerimiz hafta sonu 2 gün hafta içi 2 gün kursa gelmektedirler. Toplam 14 saat ders görmektedirler. Ekstra haftalık soru çözüm etütleri yapılmaktadır. Öğretmenlerle birebir soru çözüm saatlerinde sorularını sorabilmektedirler. Öğrencimiz istediği yer ve saatte sorularını öğretmenlere sorabilmektedir. Haftanın 7 günü 08.30 – 19.00 arasında kütüphanemizde ders çalışma imkânına sahiptirler. Öğrencilerimiz için Rehberlik birimimiz tarafından tanıma ve dikkat testleri yapılır. Öğrencilerimizin duygusal ve psikolojik durumları rapor edilir. Başarı grafikleri dijital uygulamamıza kaydedilir. Öğrencilerimizin yeni nesil sorularla öğrendiklerini pekiştirmesi sağlanır. Öğrencilerimiz için yazılılara hazırlık, LGS sınavını tanıma, okul derslerine yardımcı olacak eğitimler, okuma etkinlikleri, dikkati artırmaya yönelik çalışmalar, okuduğunu anlama çalışmaları ve test tekniği geliştirme çalışmaları yapılmaktadır. Kamp programlarına katılım sağlanabilmektedir.",
         "strategy_title": "Program İçeriği",
-        "phase1_title": "Temel Dersler & Soru Çözümü",
-        "phase1_text": "Cumartesi ve Pazar günü temel dersler. Ekstra haftalık soru çözüm etütleri ve birebir soru çözümü imkânı.",
+        "phase1_title": "Yoğun Dersler & Birebir Soru Çözümü",
+        "phase1_text": "Hafta sonu 2 + hafta içi 2 gün ders. Ekstra haftalık soru çözüm etütleri ve birebir soru çözümü imkânı. Haftanın 7 günü 08:30–19:00 kütüphane imkânı.",
         "phase2_title": "Rehberlik & Psikolojik Destek",
         "phase2_text": "Tanıma ve dikkat testleri uygulanır. Öğrencilerin duygusal ve psikolojik durumu rapor edilir. Başarı grafikleri dijital uygulamaya kaydedilir.",
         "phase3_title": "Akademik Gelişim Çalışmaları",
-        "phase3_text": "Yazılılara hazırlık, LGS sınavını tanıma, okuma etkinlikleri, dikkat artırma, okuduğunu anlama ve test tekniği geliştirme çalışmaları.",
+        "phase3_text": "Yazılılara hazırlık, LGS sınavını tanıma, okuma etkinlikleri, dikkat artırma, okuduğunu anlama ve test tekniği geliştirme çalışmaları. Kamp programları.",
         "result_title": "Kazanımlar",
-        "result_text": "Güçlü temel bilgi, sınav alışkanlığı ve LGS sürecine hazır devam.",
-        "tech_title": "Haftalık 10-12 ders saati · Hafta sonu 2 + hafta içi 1 gün",
-        "tech_intro": "Hafta sonu 2 gün ve hafta içi 1 gün kurs. Toplam 10-12 saat ders.",
-        "tech_tools": "Haftalık soru çözüm etüdü · Birebir soru çözümü · Rehberlik · Dikkat testleri",
+        "result_text": "Güçlü temel bilgi, sınav alışkanlığı ve LGS sürecine güvenle devam.",
+        "tech_title": "Haftalık 14 ders saati · Hafta sonu 2 + hafta içi 2 gün · 7 gün kütüphane",
+        "tech_intro": "Hafta sonu 2 gün ve hafta içi 2 gün kurs. Toplam 14 saat ders. 7 gün kütüphane imkânı (08:30–19:00).",
+        "tech_tools": "Haftalık soru çözüm etüdü · Birebir soru çözümü · 7 gün kütüphane · Rehberlik · Dikkat testleri",
         "features": [
           "Haftalık soru çözüm etüdü",
           "Birebir soru çözümü",
+          "7 gün kütüphane (08:30-19:00)",
           "Tanıma ve dikkat testleri",
           "Psikolojik durum raporu",
           "Dijital başarı grafiği",
           "Yeni nesil soru pekiştirme",
-          "Test tekniği geliştirme"
+          "Test tekniği geliştirme",
+          "Kamp programları"
         ],
         "meta_title": "6. Sınıf Programı | Sefaköy Final LGS Dershanesi",
-        "meta_description": "6. sınıf öğrencileri için haftalık 10-12 ders saati, birebir soru çözümü ve rehberlik destekli LGS hazırlık programı."
+        "meta_description": "6. sınıf öğrencileri için haftalık 14 ders saati, birebir soru çözümü, 7 gün kütüphane ve rehberlik destekli LGS hazırlık programı."
       },
       "7-sinif": {
         "title": "7. Sınıf",
@@ -134,7 +136,7 @@
         "description": "Hafta sonu 2 gün + hafta içi 2 gün. Toplam 14 saat ders. Haftada 1 deneme (son 3 ayda haftada 3), Baykuş kütüphane ve bireysel rehberlik.",
         "hero_quote": "8. sınıf, LGS hedefinin gerçeğe dönüştüğü yıldır.",
         "intro": "Öğrencilerimiz hafta sonu 2 gün hafta içi 2 gün gelmektedir.",
-        "body": "Öğrencilerimiz hafta sonu 2 gün hafta içi 2 gün gelmektedir. Toplam 14 saat ders görmektedirler. Her öğrenci birebir soru çözümünü öğretmeniyle yapabilmektedir. Öğretmenlerle birebir soru çözüm saatlerinde sorularını sorabilmektedirler. Öğrencimiz istediği yer ve saatte sorularını öğretmenlere sorabilmektedir. Öğrencilerimiz haftada bir deneme olmaktadır. Her deneme sonrası deneme analizleri yapılarak seviyelerine uygun ve eksiklerine göre soru bankası oluşturulur. LGS'ye son 3 ay kala ise haftada 3 gün deneme olmaktadır. Baykuş kütüphane programıyla öğrencilerimiz akşam öğretmen eşliğinde kütüphanemizde ders çalışabilmektedir. Haftalık bireysel rehberlik görüşmelerine katılıp özel ders çalışma programı yapılır ve her hafta bu programlar rehberlik birimimizce kontrol edilerek veliye bilgi verilir. Haftanın 7 günü 09.00 – 19.00 arasında kütüphanemizde ders çalışma imkânına sahiptirler. LGS sınavına hazırlık aşamasının en önemli olduğu bu dönemde öğrencilerimizin dikkat testlerini uygulayıp dikkatlerini dağıtacak bütün uyaranları ortadan kaldırmaya yönelik motivasyon çalışmaları yapılır. Öğrencilerimize LGS deneme provaları yapılır ve yapay zeka destekli (XYS) eğitim modeliyle eksiklikler belirlenip öğrencinin eksiklerini gidermesi için bireysel soru bankaları oluşturulur. Rehberlik birimimizce öğrencimize haftalık bireysel program hazırlanır ve program takip edilir. Yazılılara hazırlık, Nitelikli Liselerin gezileri ve tanıtımı, hedef oluşturma, motivasyon etkinlikleri, okuduğunu anlama ve hızlı okuma teknikleri iyileştirilir. Öğrencilerimize rehberlik birimlerimizce ve eğitim koçlarımız tarafından sınav netlerini artırmaya yönelik çalışmalar yapılır. Öğrencilerimize Yaz kampı, ara dönem kampı, ara tatil ve yarıyıl tatil kampı olmak üzere ders çalışma kampları yapılır. Öğrencilerimizin birçok yayından yeni nesil sorularla öğrendiklerini pekiştirmesi sağlanır. Ayrıca döneme Yaz Kampı ile başlangıç yaparak sınav dönemine erken başlanması sağlanır.",
+        "body": "Öğrencilerimiz haftada 12 saat ana ders ve 4 saat bire bir soru çözümü şeklinde yoğunlaştırılmış bir eğitim almaktadır. Öğrencilerimiz hafta sonu 2 gün hafta içi 2 gün gelmektedir. Toplam 14 saat ders görmektedirler. Her öğrenci birebir soru çözümünü öğretmeniyle yapabilmektedir. Öğretmenlerle birebir soru çözüm saatlerinde sorularını sorabilmektedirler. Öğrencimiz istediği yer ve saatte sorularını öğretmenlere sorabilmektedir. Öğrencilerimiz haftada bir deneme olmaktadır. Her deneme sonrası deneme analizleri yapılarak seviyelerine uygun ve eksiklerine göre soru bankası oluşturulur. LGS'ye son 3 ay kala ise haftada 3 gün deneme olmaktadır. Baykuş kütüphane programıyla öğrencilerimiz akşam öğretmen eşliğinde kütüphanemizde ders çalışabilmektedir. Haftalık bireysel rehberlik görüşmelerine katılıp özel ders çalışma programı yapılır ve her hafta bu programlar rehberlik birimimizce kontrol edilerek veliye bilgi verilir. Haftanın 7 günü 09.00 – 19.00 arasında kütüphanemizde ders çalışma imkânına sahiptirler. LGS sınavına hazırlık aşamasının en önemli olduğu bu dönemde öğrencilerimizin dikkat testlerini uygulayıp dikkatlerini dağıtacak bütün uyaranları ortadan kaldırmaya yönelik motivasyon çalışmaları yapılır. Öğrencilerimize LGS deneme provaları yapılır ve yapay zeka destekli (XYS) eğitim modeliyle eksiklikler belirlenip öğrencinin eksiklerini gidermesi için bireysel soru bankaları oluşturulur. Rehberlik birimimizce öğrencimize haftalık bireysel program hazırlanır ve program takip edilir. Yazılılara hazırlık, Nitelikli Liselerin gezileri ve tanıtımı, hedef oluşturma, motivasyon etkinlikleri, okuduğunu anlama ve hızlı okuma teknikleri iyileştirilir. Öğrencilerimize rehberlik birimlerimizce ve eğitim koçlarımız tarafından sınav netlerini artırmaya yönelik çalışmalar yapılır. Öğrencilerimize Yaz kampı, ara dönem kampı, ara tatil ve yarıyıl tatil kampı olmak üzere ders çalışma kampları yapılır. Öğrencilerimizin birçok yayından yeni nesil sorularla öğrendiklerini pekiştirmesi sağlanır. Ayrıca döneme Yaz Kampı ile başlangıç yaparak sınav dönemine erken başlanması sağlanır.",
         "strategy_title": "Program İçeriği",
         "phase1_title": "Yoğun Ders & Birebir Soru Çözümü",
         "phase1_text": "Hafta sonu 2 + hafta içi 2 gün ders. Birebir soru çözümü. Baykuş kütüphane ile akşam öğretmen eşliğinde ders çalışma imkânı. 7 gün 09:00–19:00 kütüphane.",
@@ -224,21 +226,21 @@
       },
       "deneme-kulubu": {
         "title": "Deneme Kulübü",
-        "description": "Düzenli YKS deneme sınavları, net analizi ve akran öğrenmesi. Tüm sınıflara açık.",
+        "description": "Düzenli LGS deneme sınavları, net analizi ve akran öğrenmesi. Tüm sınıflara açık.",
         "hero_quote": "Her deneme seni bir adım öne taşır.",
-        "intro": "Deneme Kulübü, tüm sınıflardaki öğrencilere düzenli sınav deneyimi kazandırmayı hedefler. Haftalık YKS formatında denemeler ve detaylı net analizi.",
+        "intro": "Deneme Kulübü, tüm sınıflardaki öğrencilere düzenli sınav deneyimi kazandırmayı hedefler. Haftalık LGS formatında denemeler ve detaylı net analizi.",
         "body": "Grup değerlendirme görüşmeleri ve akran öğrenmesi ile öğrenciler sürekli gelişir.",
         "strategy_title": "Deneme Kulübü Programı",
-        "phase1_title": "Haftalık YKS Denemesi",
-        "phase1_text": "YKS formatında haftalık tam denemeler. Gerçek sınav koşullarında uygulama.",
+        "phase1_title": "Haftalık LGS Denemesi",
+        "phase1_text": "LGS formatında haftalık tam denemeler. Gerçek sınav koşullarında uygulama.",
         "phase2_title": "Net Analizi",
         "phase2_text": "Deneme sonrası konu bazlı net analizi, yanlış yapılan soruların bireysel incelenmesi.",
         "phase3_title": "Grup Değerlendirme",
         "phase3_text": "Öğrencilerin bir arada değerlendirme yaptığı grup görüşmeleri ve akran öğrenmesi.",
         "result_title": "Kazanım",
         "result_text": "Sürekli artan net sayısı, sınav alışkanlığı ve güçlenen özgüven.",
-        "tech_title": "YKS Formatı · Haftalık deneme + analiz",
-        "tech_intro": "YKS formatında haftalık deneme sınavları. Analiz görüşmeleri dahil.",
+        "tech_title": "LGS Formatı · Haftalık deneme + analiz",
+        "tech_intro": "LGS formatında haftalık deneme sınavları. Analiz görüşmeleri dahil.",
         "tech_tools": "Haftalık deneme · Net analizi · Grup değerlendirme · Gelişim takibi",
         "features": [
           "Haftalık deneme",
@@ -247,7 +249,36 @@
           "Gelişim takibi"
         ],
         "meta_title": "Deneme Kulübü | Sefaköy Final LGS Dershanesi",
-        "meta_description": "Haftalık YKS formatında denemeler, net analizi ve grup değerlendirme."
+        "meta_description": "Haftalık LGS formatında denemeler, net analizi ve grup değerlendirme."
+      },
+      "ilkokul-grubu": {
+        "title": "İlkokul Grubu (1-4. Sınıf)",
+        "description": "Hafta içi 5 gün okul ve ödev desteği. İlkokul öğrencilerine yönelik kapsamlı akademik destek programı.",
+        "hero_quote": "Öğrenmenin en güzel yıllarında doğru temeli birlikte atıyoruz.",
+        "intro": "İlkokul öğrencilerimize hafta içi 5 gün okul ve ödev desteği sağlanmaktadır.",
+        "body": "Hafta içi 5 gün okul ve ödev desteği sağlanmaktadır. Öğrencilerimiz okul sonrasında kursumuza gelerek gün içinde gördükleri dersleri pekiştirir ve ödevlerini tamamlarlar. Deneyimli öğretmenlerimiz eşliğinde bireysel takip yapılmakta, her öğrencinin gelişimi düzenli olarak velilere raporlanmaktadır. Okuma, yazma ve temel matematik becerilerini güçlendirmeye yönelik etkinlikler düzenlenmektedir. Öğrencilerimizin akademik ve sosyal gelişimleri dengeli biçimde desteklenmektedir.",
+        "strategy_title": "Program İçeriği",
+        "phase1_title": "Okul & Ödev Desteği",
+        "phase1_text": "Hafta içi 5 gün okul ve ödev desteği. Öğrenciler gün içinde gördükleri dersleri pekiştirir.",
+        "phase2_title": "Bireysel Takip & Veli Bilgilendirme",
+        "phase2_text": "Her öğrencinin gelişimi bireysel olarak takip edilir. Gelişim raporları velilerle düzenli olarak paylaşılır.",
+        "phase3_title": "Beceri Geliştirme Etkinlikleri",
+        "phase3_text": "Okuma, yazma ve temel matematik becerilerini güçlendirmeye yönelik etkinlikler. Dikkat ve konsantrasyon çalışmaları.",
+        "result_title": "Kazanımlar",
+        "result_text": "Güçlü akademik temel, çalışma alışkanlığı ve okula uyum.",
+        "tech_title": "Hafta içi 5 gün · Okul & Ödev Desteği",
+        "tech_intro": "Hafta içi her gün düzenli okul ve ödev desteği.",
+        "tech_tools": "Ödev desteği · Bireysel takip · Beceri etkinlikleri · Veli bilgilendirme",
+        "features": [
+          "Hafta içi 5 gün destek",
+          "Ödev yardımı",
+          "Bireysel takip",
+          "Veli bilgilendirme",
+          "Okuma ve yazma etkinlikleri",
+          "Dikkat geliştirme çalışmaları"
+        ],
+        "meta_title": "İlkokul Grubu (1-4. Sınıf) | Sefaköy Final LGS Dershanesi",
+        "meta_description": "İlkokul 1-4. sınıf öğrencileri için hafta içi 5 gün okul ve ödev desteği programı."
       }
     }
   },
@@ -325,6 +356,7 @@
     "analysis": "Ücretsiz Ön Görüşme",
     "blog": "Blog",
     "services_items": {
+      "ilkokul-grubu": "İlkokul Grubu (1-4. Sınıf)",
       "5-sinif": "5. Sınıf",
       "6-sinif": "6. Sınıf",
       "7-sinif": "7. Sınıf",
@@ -392,43 +424,43 @@
     "items": [
       {
         "name": "Elif K.",
-        "role": "YKS — Boğaziçi Üniversitesi / Bilgisayar Mühendisliği",
-        "text": "12. sınıfta aldığım destekle YKS'de hedef puana ulaştım. Öğretmenlerimiz gerçekten çok ilgilendi."
+        "role": "LGS — Kabataş Erkek Lisesi",
+        "text": "8. sınıfta aldığım destekle LGS'de hedef puana ulaştım. Öğretmenlerimiz gerçekten çok ilgilendi."
       },
       {
         "name": "Yusuf E. (Veli)",
-        "role": "Çocuğu YKS ile tıp okuyacak",
-        "text": "Oğlum burada okudu ve Cerrahpaşa Tıp Fakültesi'ni kazandı. Bireysel ilgiye çok şaşırdık."
+        "role": "Çocuğu LGS ile hedef lisesini kazandı",
+        "text": "Oğlum burada okudu ve hedeflediği liseyi kazandı. Bireysel ilgiye çok şaşırdık."
       },
       {
         "name": "Selin T.",
-        "role": "YKS — Bahçeşehir Üniversitesi / Pilotaj (Tam Burslu)",
-        "text": "Deneme Kulübü sayesinde sınav kaygım geçti ve YKS'ye güvenle girdim. Rehberlik hizmeti çok değerliydi."
+        "role": "LGS — Kadıköy Anadolu Lisesi",
+        "text": "Deneme Kulübü sayesinde sınav kaygım geçti ve LGS'ye güvenle girdim. Rehberlik hizmeti çok değerliydi."
       },
       {
         "name": "Kerem A.",
-        "role": "YKS — İTÜ / Yazılım Mühendisliği",
-        "text": "Haftalık denemeler ve bireysel analiz sayesinde YKS'ye hazır hissettim. Çok güzel bir süreçti."
+        "role": "LGS — Nişantaşı Anadolu Lisesi",
+        "text": "Haftalık denemeler ve bireysel analiz sayesinde LGS'ye hazır hissettim. Çok güzel bir süreçti."
       },
       {
         "name": "Zeynep B. (Veli)",
-        "role": "Kızı YKS ile Koç Üniversitesi Hukuk'u kazandı",
+        "role": "Kızı LGS ile hedef lisesini kazandı",
         "text": "Kızım burada hazırlandı. Hem akademik hem de psikolojik destek mükemmeldi."
       },
       {
         "name": "Arda Y.",
-        "role": "YKS — ODTÜ / Havacılık ve Uzay Mühendisliği",
-        "text": "Programa katıldım. Yoğun tempo ve bireysel ders programı sayesinde hedef üniversiteme girdim."
+        "role": "LGS — Fatih Fen Lisesi",
+        "text": "Programa katıldım. Yoğun tempo ve bireysel ders programı sayesinde hedef liseme girdim."
       },
       {
         "name": "Melis G. (Veli)",
-        "role": "Kızı YKS ile Hacettepe Tıp'ta okuyor",
+        "role": "Kızı LGS'de ilk 1000'e girdi",
         "text": "Öğretmenlerin her öğrenciye özel ilgisi bizi şaşırttı. Kızım çok kısa sürede özgüven kazandı."
       },
       {
         "name": "Can S.",
-        "role": "YKS — Galatasaray Üniversitesi / İşletme",
-        "text": "Deneme sınavlarındaki detaylı analizler sayesinde hangi konularda eksiğim olduğumu gördüm ve kapattım. YKS'de çok iyi sonuç aldım."
+        "role": "LGS — Bağcılar Anadolu Lisesi",
+        "text": "Deneme sınavlarındaki detaylı analizler sayesinde hangi konularda eksiğim olduğumu gördüm ve kapattım. LGS'de çok iyi sonuç aldım."
       }
     ]
   },
@@ -472,6 +504,7 @@
     "placeholder_email": "ornek@email.com",
     "placeholder_phone": "05XX XXX XX XX",
     "services": [
+      "İlkokul Grubu (1-4. Sınıf)",
       "5. Sınıf",
       "6. Sınıf",
       "7. Sınıf",
@@ -482,16 +515,16 @@
     ]
   },
   "Blog": {
-    "meta_title": "Eğitim Blogu | Şirinevler Final Dershanesi",
-    "meta_description": "YKS ve lise eğitim hayatı hakkında faydalı yazılar.",
+    "meta_title": "Eğitim Blogu | Sefaköy Final LGS Dershanesi",
+    "meta_description": "LGS ve ilkokul/ortaokul eğitim hayatı hakkında faydalı yazılar.",
     "title_prefix": "Eğitim",
     "title_highlight": "Blogu",
-    "subtitle": "YKS ve lise eğitim hayatı hakkında faydalı yazılar.",
+    "subtitle": "LGS ve ilkokul/ortaokul eğitim hayatı hakkında faydalı yazılar.",
     "empty_title": "Henüz yazı yok",
     "empty_subtitle": "Yakında içerikler eklenecek.",
     "recent": "Son Yazılar",
     "categories": {
-      "yks": "YKS",
+      "yks": "LGS",
       "tips": "Çalışma Tüyoları",
       "motivation": "Motivasyon"
     }

@@ -16,7 +16,7 @@ export default function ContactPage() {
       {/* Soluk Arka Plan Mührü (Özel İletişim Sayfası İçin Yüksek Opasite) */}
       <div className="fixed top-[15%] right-[-250px] w-[900px] h-[900px] opacity-[0.12] rotate-12 pointer-events-none z-0">
         <Image 
-          src="/logos/final%20logo%20png.png" 
+          src="/logos/sefak%C3%B6ylogo.png" 
           alt="" 
           fill 
           className="object-contain"
@@ -88,8 +88,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">{t('info.email')}</h3>
-                  <a href="mailto:sefakoyfinal@abdkurumlari.com" className="text-foreground/40 font-light leading-relaxed hover:text-primary-light transition-colors block">
-                    sefakoyfinal@abdkurumlari.com
+                  <a href="mailto:sefakoy.finalabd@gmail.com" className="text-foreground/40 font-light leading-relaxed hover:text-primary-light transition-colors block">
+                    sefakoy.finalabd@gmail.com
                   </a>
                 </div>
               </div>

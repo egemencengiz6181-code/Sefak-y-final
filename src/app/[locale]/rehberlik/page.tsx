@@ -95,13 +95,13 @@ const SECTIONS: SectionItem[] = [
     list: [
       'Odaklanma ve Dikkat',
       'Veli Eğitim Seminerleri',
-      "YKS'ye İlk Adım",
+      "LGS'ye İlk Adım",
       'Zamanı Etkili Kullanma',
       'Verimli Test Çözme Teknikleri',
       'Liseye / Üniversiteye Geri Sayım',
       'Motivasyon',
     ],
-    tags: ['YKS', 'Motivasyon', 'Dikkat', 'Başarı'],
+    tags: ['LGS', 'Motivasyon', 'Dikkat', 'Başarı'],
   },
   {
     id: 'yazili',

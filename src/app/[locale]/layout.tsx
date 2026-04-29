@@ -70,7 +70,7 @@ export default async function LocaleLayout({
         {/* Arka Plan İkonu (Global Mühür) */}
         <div className="fixed top-[15%] right-[-250px] w-[900px] h-[900px] opacity-[0.08] rotate-12 pointer-events-none z-0">
           <Image 
-            src="/logos/final%20logo%20png.png" 
+            src="/logos/sefak%C3%B6ylogo.png" 
             alt="" 
             fill 
             className="object-contain"

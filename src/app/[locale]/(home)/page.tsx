@@ -78,7 +78,7 @@ export default async function IndexPage({
           </div>
         </section>
 
-        {/* YKS Programları Bölümü */}
+        {/* LGS Programları Bölümü */}
         <SectionWithMockup
           badge="LGS Programları"
           title={
@@ -89,7 +89,7 @@ export default async function IndexPage({
               </span>
             </>
           }
-          description="Sefaköy Final LGS Dershanesi, 5. sınıftan 8. sınıfa kadar öğrencilerin LGS'de hedef liselerine ulaşmalarını sağlamak için deneyimli öğretmen kadrosu ve zengin eğitim materyalleriyle akademik seviyelerini yükseltmeye odaklanır. Sunduğumuz programlar öğrencilerin yalnızca teorik bilgi değil, aynı zamanda pratik becerilerini de geliştirerek sınavlarda yüksek başarı göstermelerini sağlar."
+          description="Sefaköy Final Kursu; ilkokuldan ortaokula kadar okul ve ödev destekli eğitim modeliyle, beşinci sınıftan sekizinci sınıfa kadar ise öğrencilerin LGS'de hedef liselerine ulaşmalarını sağlayan yenlikçi bir vizyonla hizmet vermektedir. Deneyimli öğretmen kadrosu ve zengin eğitim materyalleriyle her öğrencinin akademik seviyesini yükseltmeye odaklanırız."
         />
 
         <TestimonialsSection items={testimonialItems} title={testimonialsTitle} subtitle={testimonialsSubtitle} />

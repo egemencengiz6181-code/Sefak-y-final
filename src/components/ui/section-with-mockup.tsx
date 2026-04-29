@@ -77,7 +77,7 @@ const stats = [
   { icon: Trophy,        value: '15+',  label: 'Yıl Deneyim' },
   { icon: Users,         value: '500+', label: 'Mezun Öğrenci' },
   { icon: FlaskConical,  value: '%94',  label: 'Başarı Oranı' },
-  { icon: BookOpen,      value: '5-8', label: 'Sınıf Aralığı' },
+  { icon: BookOpen,      value: '1-8', label: 'Sınıf Aralığı' },
 ];
 
 const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, description, badge }) => {
@@ -162,7 +162,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
               </div>
               <div>
                 <p className="text-slate-900 dark:text-white font-bold text-sm leading-none">%94 Başarı</p>
-                <p className="text-slate-500 dark:text-white/40 text-xs mt-0.5">YKS Sınav Oranı</p>
+              <p className="text-slate-500 dark:text-white/40 text-xs mt-0.5">LGS Başarı Oranı</p>
               </div>
             </motion.div>
 
@@ -219,16 +219,28 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({ title, descriptio
               {/* Kişiye Özel Kitap - Sıfır Hata */}
               <motion.div
                 variants={fadeUp}
-                className="col-span-2 group relative flex flex-col gap-3 p-5 rounded-2xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] hover:border-[#E21F26]/30 hover:bg-[#E21F26]/[0.04] transition-all duration-300 cursor-default"
+                className="col-span-2 group relative flex flex-col gap-4 p-7 rounded-2xl border-2 border-[#E21F26]/30 bg-gradient-to-br from-[#E21F26]/10 via-[#E21F26]/5 to-[#2E3192]/10 hover:border-[#E21F26]/60 hover:from-[#E21F26]/15 hover:via-[#E21F26]/8 hover:to-[#2E3192]/15 transition-all duration-300 cursor-default shadow-[0_0_30px_rgba(226,31,38,0.08)] hover:shadow-[0_0_40px_rgba(226,31,38,0.18)]"
               >
-                <div className="w-9 h-9 rounded-xl bg-[#E21F26]/10 flex items-center justify-center group-hover:bg-[#E21F26]/20 transition-colors">
-                  <BookMarked className="w-4 h-4 text-[#E21F26]" />
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#E21F26] to-[#BE1821] flex items-center justify-center shadow-[0_4px_12px_rgba(226,31,38,0.4)] group-hover:shadow-[0_6px_20px_rgba(226,31,38,0.5)] transition-shadow">
+                    <BookMarked className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#E21F26] mb-0.5 block">Yapay Zeka Destekli</span>
+                    <p className="text-slate-900 dark:text-white font-black text-base leading-snug">Kişiye Özel Kitap &amp; Sıfır Hata</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-slate-900 dark:text-white font-bold text-sm leading-snug">Kişiye Özel Kitap - Sıfır Hata</p>
-                  <p className="text-slate-500 dark:text-white/40 text-xs mt-1 leading-relaxed">Öğrencilerimize özel olarak hazırladığımız sıfır hata kitapçıkları, denemelerde sık yapılan hataları içeren sorular barındırır. Bu kitapçıklar, öğrencilerimizin zayıf olduğu konularda daha fazla çalışma fırsatı sunar. Kişiye özel kitaplar ise denemelerde sık yapılan hataların yapay zeka ile analiz edilerek hazırlanmış benzer sorularını içerir.</p>
+                <p className="text-slate-600 dark:text-white/60 text-sm leading-relaxed">Öğrencilerimize özel olarak hazırladığımız sıfır hata kitapçıkları, denemelerde sık yapılan hataları içeren sorular barındırır. Kişiye özel kitaplar ise yapay zeka analizi ile hazırlanmış benzer soruları içerir; öğrencinin eksiklerini hızla kapatır.</p>
+                <div className="flex items-center gap-2 pt-1">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E21F26]/15 border border-[#E21F26]/30 text-[#E21F26] text-xs font-semibold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E21F26] animate-pulse" />
+                    Her Öğrenciye Özel
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2E3192]/10 border border-[#2E3192]/20 text-[#2E3192] dark:text-blue-400 text-xs font-semibold">
+                    Yapay Zeka Analizi
+                  </span>
                 </div>
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#E21F26]/5 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-[#E21F26]/8 to-transparent pointer-events-none" />
               </motion.div>
             </motion.div>
           </motion.div>

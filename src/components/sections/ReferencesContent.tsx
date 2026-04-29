@@ -22,19 +22,19 @@ const TestimonialsSection = dynamic(
 );
 
 const successStories = [
-  { icon: Trophy,        label: 'YKS — Tıp Fakültesi',          name: 'Yusuf E.',   school: 'Cerrahpaşa Tıp Fakültesi',        year: '2025', color: '#E21F26', type: 'YKS', gridArea: '1/1/3/2' },
-  { icon: GraduationCap, label: 'YKS — Mühendislik',             name: 'Elif K.',    school: 'Boğaziçi / Bilgisayar Müh.',       year: '2025', color: '#2E3192', type: 'YKS', gridArea: '1/2/2/3' },
-  { icon: Star,          label: 'YKS — Havacılık',              name: 'Arda Y.',    school: 'ODTÜ / Havacılık Uzay Müh.',     year: '2025', color: '#E21F26', type: 'YKS', gridArea: '1/3/2/4' },
-  { icon: GraduationCap, label: 'YKS — Hukuk',                  name: 'Zeynep B.',  school: 'Koç Üniversitesi / Hukuk',         year: '2025', color: '#2E3192', type: 'YKS', gridArea: '1/4/3/5' },
-  { icon: BookOpen,      label: 'YKS — Yazılım Mühendisliği',   name: 'Kerem A.',   school: 'İTÜ / Yazılım Mühendisliği',    year: '2025', color: '#2E3192', type: 'YKS', gridArea: '2/2/3/3' },
-  { icon: Star,          label: 'YKS — Tıp Fakültesi',          name: 'Melis G.',   school: 'Hacettepe / Tıp Fakültesi',      year: '2024', color: '#E21F26', type: 'YKS', gridArea: '2/3/3/4' },
-  { icon: Trophy,        label: 'YKS — İşletme',                name: 'Can S.',     school: 'Galatasaray / İşletme',          year: '2025', color: '#2E3192', type: 'YKS', gridArea: '3/1/4/3' },
-  { icon: GraduationCap, label: 'YKS — Pilotaj',                name: 'Selin T.',   school: 'Bahçeşehir / Pilotaj (Burslu)',   year: '2024', color: '#E21F26', type: 'YKS', gridArea: '3/3/4/5' },
+  { icon: Trophy,        label: 'LGS — İlk 100',               name: 'Yusuf E.',   school: 'Kabataş Erkek Lisesi',                year: '2025', color: '#E21F26', type: 'LGS', gridArea: '1/1/3/2' },
+  { icon: GraduationCap, label: 'LGS — Fen Lisesi',             name: 'Elif K.',    school: 'Fatih Fen Lisesi',                        year: '2025', color: '#2E3192', type: 'LGS', gridArea: '1/2/2/3' },
+  { icon: Star,          label: 'LGS — Anadolu Lisesi',         name: 'Arda Y.',    school: 'Kadıköy Anadolu Lisesi',                year: '2025', color: '#E21F26', type: 'LGS', gridArea: '1/3/2/4' },
+  { icon: GraduationCap, label: 'LGS — İlk 500',               name: 'Zeynep B.',  school: 'Nişantaşı Anadolu Lisesi',              year: '2025', color: '#2E3192', type: 'LGS', gridArea: '1/4/3/5' },
+  { icon: BookOpen,      label: 'LGS — Anadolu Lisesi',         name: 'Kerem A.',   school: 'Şişli Anadolu Lisesi',                  year: '2025', color: '#2E3192', type: 'LGS', gridArea: '2/2/3/3' },
+  { icon: Star,          label: 'LGS — Fen Lisesi',             name: 'Melis G.',   school: 'Kadıköy Fen Lisesi',                    year: '2024', color: '#E21F26', type: 'LGS', gridArea: '2/3/3/4' },
+  { icon: Trophy,        label: 'LGS — Sözel Biyoloji',         name: 'Can S.',     school: 'Bağcılar Anadolu Lisesi',               year: '2025', color: '#2E3192', type: 'LGS', gridArea: '3/1/4/3' },
+  { icon: GraduationCap, label: 'LGS — İlk 1000',              name: 'Selin T.',   school: 'Sultanahmet Anadolu Lisesi',              year: '2024', color: '#E21F26', type: 'LGS', gridArea: '3/3/4/5' },
 ];
 
 const stats = [
   { value: 200, suffix: '+', label: 'Başarılı Öğrenci', icon: Medal },
-  { value: 95,  suffix: '%', label: 'Üniversite Yerleşme',   icon: Flame },
+  { value: 94,  suffix: '%', label: 'LGS Başarı Oranı',       icon: Flame },
   { value: 15,  suffix: '+', label: 'Yıllık Deneyim',    icon: Star },
 ];
 

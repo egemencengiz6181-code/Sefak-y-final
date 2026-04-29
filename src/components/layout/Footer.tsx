@@ -44,7 +44,7 @@ export default function Footer() {
           <div className="space-y-8 col-span-1 lg:col-span-1">
             <Link href="/" className="inline-block">
               <Image 
-                src="/logos/final%20logo%20png.png" 
+                src="/logos/sefak%C3%B6ylogo.png" 
                 alt="Sefaköy Final LGS Dershanesi" 
                 width={200} 
                 height={80} 
@@ -105,8 +105,8 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-3 text-foreground/40">
                   <Mail className="w-5 h-5 text-primary shrink-0" />
-                  <a href="mailto:sefakoyfinal@abdkurumlari.com" className="hover:text-white transition-colors">
-                    sefakoyfinal@abdkurumlari.com
+                  <a href="mailto:sefakoy.finalabd@gmail.com" className="hover:text-white transition-colors">
+                    sefakoy.finalabd@gmail.com
                   </a>
                 </div>
               </div>

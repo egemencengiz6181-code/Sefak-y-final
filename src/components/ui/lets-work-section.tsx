@@ -107,13 +107,13 @@ export default function LetsWorkSection() {
             </button>
 
             <a
-              href="mailto:sefakoyfinal@abdkurumlari.com"
+              href="mailto:sefakoy.finalabd@gmail.com"
               className="flex items-center gap-3 text-foreground/60 hover:text-slate-900 dark:hover:text-white transition-colors group min-w-0"
             >
               <div className="w-12 h-12 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/5 transition-all shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
-              <span className="font-light text-sm sm:text-base truncate">sefakoyfinal@abdkurumlari.com</span>
+              <span className="font-light text-sm sm:text-base truncate">sefakoy.finalabd@gmail.com</span>
             </a>
           </motion.div>
 

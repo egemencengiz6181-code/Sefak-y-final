@@ -57,6 +57,7 @@ export default function Navbar() {
   ], [t])
 
   const services: ServiceItem[] = useMemo(() => [
+    { title: st('items.ilkokul-grubu.title'), description: st('items.ilkokul-grubu.description'), href: "/services/ilkokul-grubu", icon: BookOpen },
     { title: st('items.5-sinif.title'), description: st('items.5-sinif.description'), href: "/services/5-sinif", icon: BookOpen },
     { title: st('items.6-sinif.title'), description: st('items.6-sinif.description'), href: "/services/6-sinif", icon: BookOpen },
     { title: st('items.7-sinif.title'), description: st('items.7-sinif.description'), href: "/services/7-sinif", icon: GraduationCap },
@@ -108,7 +109,7 @@ export default function Navbar() {
       <div className="pointer-events-auto w-[200px] md:w-[260px] flex items-center">
         <Link href="/" className="flex items-center">
           <Image 
-                      src="/logos/final%20logo%20png.png" 
+                      src="/logos/sefak%C3%B6ylogo.png"
             alt="Sefaköy Final LGS Dershanesi" 
             width={240} 
             height={72} 
@@ -121,8 +122,7 @@ export default function Navbar() {
       {/* Nav Linkleri - Orta Kısım (sadece desktop) */}
       <div className="pointer-events-auto hidden md:flex flex-col items-center">
         <div className={cn(
-          "flex items-center gap-1 border border-black/10 dark:border-white/10 backdrop-blur-xl py-1 px-1 rounded-full shadow-lg relative max-w-fit transition-colors duration-300",
-          isScrolled ? "bg-white/80 dark:bg-neutral-900/80 shadow-md" : "bg-black/5 dark:bg-white/5"
+          "flex items-center gap-1 py-1 px-1 rounded-full relative max-w-fit transition-colors duration-300"
         )}>
           {navItems.map((item) => {
             const isActive = activeTab === item.name
@@ -248,7 +248,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between px-6 py-5 border-b border-black/10 dark:border-white/10">
             <Link href="/" onClick={() => setIsMobileOpen(false)}>
               <Image
-                src="/logos/final%20logo%20png.png"
+                src="/logos/sefak%C3%B6ylogo.png"
                 alt="Sefaköy Final LGS Dershanesi"
                 width={200}
                 height={60}

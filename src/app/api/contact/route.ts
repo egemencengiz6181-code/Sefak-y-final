@@ -72,8 +72,8 @@ export async function POST(req: NextRequest) {
     }
 
     await transporter.sendMail({
-      from: '"Sefaköy Final LGS Dershanesi" <sefakoyfinal@abdkurumlari.com>',
-      to: 'sefakoyfinal@abdkurumlari.com',
+      from: '"Sefaköy Final LGS Dershanesi" <sefakoy.finalabd@gmail.com>',
+      to: 'sefakoy.finalabd@gmail.com',
       subject,
       html,
     });
