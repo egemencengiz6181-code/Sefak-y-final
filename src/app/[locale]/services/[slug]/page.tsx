@@ -7,6 +7,7 @@ const VALID_SLUGS = [
   'ilkokul-grubu',
   '5-sinif', '6-sinif', '7-sinif', '8-sinif',
   '8-sinif-vip',
+  '9-sinif', '10-sinif', '11-sinif', '12-sinif', 'mezun',
   'deneme-kulubu', 'ozel-ders',
 ] as const;
 
@@ -21,6 +22,11 @@ const slugImages: Record<ServiceSlug, { hero: string; tech: string; alt: string 
   '8-sinif-vip':   { hero: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1400&q=80', alt: '8. sınıf VIP LGS hazırlık' },
   'deneme-kulubu': { hero: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80', alt: 'Deneme kulübü ve sınav analizi' },
   'ozel-ders':     { hero: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=80', alt: 'Birebir özel ders' },
+  '9-sinif':       { hero: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1400&q=80', alt: '9. sınıf YKS hazırlık programı' },
+  '10-sinif':      { hero: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1400&q=80', alt: '10. sınıf YKS hazırlık programı' },
+  '11-sinif':      { hero: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1400&q=80', alt: '11. sınıf YKS hazırlık programı' },
+  '12-sinif':      { hero: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80', alt: '12. sınıf YKS hazırlık programı' },
+  'mezun':         { hero: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80', tech: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80', alt: 'Mezun YKS hazırlık programı' },
 };
 
 const defaultImages = {

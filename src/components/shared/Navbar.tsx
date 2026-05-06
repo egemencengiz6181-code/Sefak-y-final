@@ -63,6 +63,11 @@ export default function Navbar() {
     { title: st('items.7-sinif.title'), description: st('items.7-sinif.description'), href: "/services/7-sinif", icon: GraduationCap },
     { title: st('items.8-sinif.title'), description: st('items.8-sinif.description'), href: "/services/8-sinif", icon: Trophy },
     { title: st('items.8-sinif-vip.title'), description: st('items.8-sinif-vip.description'), href: "/services/8-sinif-vip", icon: Star },
+    { title: st('items.9-sinif.title'), description: st('items.9-sinif.description'), href: "/services/9-sinif", icon: GraduationCap },
+    { title: st('items.10-sinif.title'), description: st('items.10-sinif.description'), href: "/services/10-sinif", icon: GraduationCap },
+    { title: st('items.11-sinif.title'), description: st('items.11-sinif.description'), href: "/services/11-sinif", icon: GraduationCap },
+    { title: st('items.12-sinif.title'), description: st('items.12-sinif.description'), href: "/services/12-sinif", icon: Trophy },
+    { title: st('items.mezun.title'), description: st('items.mezun.description'), href: "/services/mezun", icon: Award },
     { title: st('items.ozel-ders.title'), description: st('items.ozel-ders.description'), href: "/services/ozel-ders", icon: Users },
     { title: st('items.deneme-kulubu.title'), description: st('items.deneme-kulubu.description'), href: "/services/deneme-kulubu", icon: FileText },
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -187,9 +192,9 @@ export default function Navbar() {
               transition={{ duration: 0.18 }}
               onMouseEnter={() => openMenu(servicesLabel)}
               onMouseLeave={() => closeMenu()}
-              className="absolute top-full mt-3 w-[820px] p-6 bg-white/95 dark:bg-neutral-950/95 border border-black/10 dark:border-white/10 backdrop-blur-2xl rounded-[32px] shadow-2xl z-[100]"
+              className="absolute top-full mt-3 w-[1000px] p-6 bg-white/95 dark:bg-neutral-950/95 border border-black/10 dark:border-white/10 backdrop-blur-2xl rounded-[32px] shadow-2xl z-[100]"
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 {services.map((service) => (
                   <Link
                     key={service.title}

@@ -200,7 +200,7 @@ export default function HoverFooter() {
 
         {/* TextHoverEffect */}
         <div className="py-8 -mx-6 px-6 overflow-hidden">
-          <TextHoverEffect text="FINAL LGS" />
+          <TextHoverEffect text="FINAL YKS LGS" />
         </div>
 
         {/* Bottom bar */}

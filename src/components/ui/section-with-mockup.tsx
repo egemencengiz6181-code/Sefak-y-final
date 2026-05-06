@@ -74,7 +74,7 @@ function FloatingImage({
 }
 
 const stats = [
-  { icon: Trophy,        value: '15+',  label: 'Yıl Deneyim' },
+  { icon: Trophy,        value: '46+',  label: 'Yıl Deneyim' },
   { icon: Users,         value: '500+', label: 'Mezun Öğrenci' },
   { icon: FlaskConical,  value: '%94',  label: 'Başarı Oranı' },
   { icon: BookOpen,      value: '1-8', label: 'Sınıf Aralığı' },

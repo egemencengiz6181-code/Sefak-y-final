@@ -50,7 +50,7 @@ export default function AboutPage() {
             transition={{ delay: 0.5 }}
             className="text-primary-light tracking-[0.2em] uppercase text-2xl md:text-3xl mb-6 block font-black"
           >
-            Sefaköy Final LGS Dershanesi
+            Sefaköy Final YKS - LGS Dershanesi
           </motion.span>
           <motion.h1 
             initial={{ opacity: 0, scale: 0.95 }}
