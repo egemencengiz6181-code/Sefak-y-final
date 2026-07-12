@@ -59,6 +59,131 @@ body {
   animation: fade-up 0.8s ease-out forwards;
 }
 
+/* ── Performance: CSS animations replacing heavy framer-motion ──────────── */
+@keyframes hero-glow-pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.07); }
+}
+
+@keyframes float-up {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes float-down {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
+}
+
+/* Staggered hero fade-up */
+.hero-animate {
+  opacity: 0;
+  animation: fade-up 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero-animate-1 { animation-delay: 0ms; }
+.hero-animate-2 { animation-delay: 140ms; }
+.hero-animate-3 { animation-delay: 280ms; }
+.hero-animate-4 { animation-delay: 420ms; }
+
+/* Accordion / collapse with max-height */
+.accordion-body {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+.accordion-body.open {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+/* Mobile menu slide-in */
+.mobile-menu-overlay {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+}
+.mobile-menu-overlay.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Mega menu fade */
+.mega-menu {
+  opacity: 0;
+  transform: translateY(8px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.mega-menu.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Section whileInView animations — CSS only */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-animate-delay-1 { transition-delay: 100ms; }
+.scroll-animate-delay-2 { transition-delay: 220ms; }
+.scroll-animate-delay-3 { transition-delay: 340ms; }
+
+/* LetsWork form reveal */
+.form-reveal {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+}
+.form-reveal.open {
+  max-height: 800px;
+  opacity: 1;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate,
+  .scroll-animate,
+  .float-image-front,
+  .float-image-back,
+  .mobile-menu-overlay,
+  .accordion-body {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    max-height: 1000px !important;
+  }
+}
+
+/* ── Shimmer text (replaces framer-motion shimmer) ── */
+@keyframes shimmer-move {
+  0%   { background-position-x: -100%; }
+  60%  { background-position-x: 250%; }
+  100% { background-position-x: 250%; }
+}
+
+.shimmer-text {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.06) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 50% 200%;
+  animation: shimmer-move 4.8s linear 1s infinite;
+}
+
+.dark .shimmer-text {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.22) 40%, rgba(255,255,255,0.22) 60%, rgba(255,255,255,0.08) 100%);
+}
+
 /* ── Gradient Button ─────────────────────────────────────────────────────── */
 @property --grad-pos {
   syntax: "<percentage>";

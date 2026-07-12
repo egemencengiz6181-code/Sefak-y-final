@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
 import { type LucideIcon, ArrowRight, BookOpen, GraduationCap, Trophy, FileText, Users, Star } from 'lucide-react';
 import { Link } from '@/navigation';
 
@@ -41,10 +40,13 @@ export default function ReneeServiceCard({ title, description, slug, href, featu
       onMouseLeave={() => setIsFlipped(false)}
       onClick={handleClick}
     >
-      <motion.div
-        className="relative w-full h-full transition-all duration-700 preserve-3d"
-        animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ type: "spring", stiffness: 260, damping: 20 }}
+      <div
+        className="relative w-full h-full"
+        style={{
+          transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+          transition: 'transform 0.7s cubic-bezier(0.22, 1, 0.36, 1)',
+          transformStyle: 'preserve-3d',
+        }}
       >
         {/* Front Face */}
         <div className="absolute inset-0 backface-hidden rounded-[32px] border border-black/10 dark:border-white/10 bg-gradient-to-br from-black/5 dark:from-white/5 to-primary/10 backdrop-blur-xl p-8 flex flex-col items-center justify-center text-center overflow-hidden">
@@ -98,7 +100,7 @@ export default function ReneeServiceCard({ title, description, slug, href, featu
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
           </Link>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

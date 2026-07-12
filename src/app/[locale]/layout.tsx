@@ -13,6 +13,7 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+  preload: true,
 });
 
 export function generateStaticParams() {
@@ -65,10 +66,43 @@ export default async function LocaleLayout({
     <html lang={locale} className={inter.variable} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        {/* JSON-LD: LocalBusiness structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'EducationalOrganization',
+              name: 'Sefaköy Final LGS Dershanesi',
+              alternateName: 'Sefaköy Final',
+              url: 'https://www.sefakoyfinal.com',
+              logo: 'https://www.sefakoyfinal.com/logos/sefak%C3%B6ylogo.png',
+              description: 'İstanbul Küçükçekmece Sefaköy\'de LGS ve YKS hazırlık kursu. 46 yıllık deneyim, %94 başarı oranı.',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Sefaköy',
+                addressLocality: 'Küçükçekmece',
+                addressRegion: 'İstanbul',
+                addressCountry: 'TR',
+              },
+              telephone: '+902126011500',
+              email: 'sefakoy.finalabd@gmail.com',
+              sameAs: [],
+              openingHoursSpecification: [
+                {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                  opens: '09:00',
+                  closes: '21:00',
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="bg-background text-foreground antialiased selection:bg-primary/30 min-h-screen relative font-sans" suppressHydrationWarning>
-        {/* Arka Plan İkonu (Global Mühür) */}
-        <div className="fixed top-[15%] right-[-250px] w-[900px] h-[900px] opacity-[0.08] rotate-12 pointer-events-none z-0">
+        {/* Arka Plan İkonu (Global Mühür) — sadece desktop, lazy */}
+        <div className="hidden md:block fixed top-[15%] right-[-250px] w-[900px] h-[900px] opacity-[0.08] rotate-12 pointer-events-none z-0">
           <Image 
             src="/logos/sefak%C3%B6ylogo.png" 
             alt="" 

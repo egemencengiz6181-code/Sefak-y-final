@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const logoNumbers = Array.from({ length: 34 }, (_, i) => i + 1);
@@ -11,17 +10,12 @@ export default function LogoMarquee() {
       <div className="absolute top-0 left-0 w-40 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
       <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
+      {/* CSS marquee — no JS, GPU-accelerated */}
       <div className="relative flex overflow-hidden">
-        <motion.div
-          animate={{ x: [0, -100 * logoNumbers.length] }}
-          transition={{
-            duration: 60,
-            repeat: Infinity,
-            ease: "linear",
-          }}
+        <div
           className="flex flex-none items-center"
+          style={{ animation: `marquee-left ${logoNumbers.length * 2}s linear infinite` }}
         >
-          {/* Çift set oluşturarak sonsuz döngü sağla */}
           {[...logoNumbers, ...logoNumbers].map((num, index) => (
             <div
               key={index}
@@ -32,10 +26,11 @@ export default function LogoMarquee() {
                 alt={`Partner ${num}`}
                 fill
                 className="object-contain"
+                loading="lazy"
               />
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
