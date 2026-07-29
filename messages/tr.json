@@ -695,5 +695,43 @@
       "tips": "Çalışma Tüyoları",
       "motivation": "Motivasyon"
     }
+  },
+  "FormLanding": {
+    "meta_title": "Bilgi Formu | Sefaköy Final LGS Dershanesi",
+    "meta_description": "Programlarımız hakkında detaylı bilgi almak için formu doldurun. Size en kısa sürede dönüş yapacağız.",
+    "title": "Başarıya İlk Adımı At",
+    "subtitle": "Hedefine uygun programı birlikte belirleyelim. Formu doldur, seni arayalım.",
+    "form": {
+      "student_name": "Öğrenci Adı Soyadı",
+      "parent_name": "Veli Adı Soyadı",
+      "phone": "Telefon Numarası",
+      "email": "E-posta (Opsiyonel)",
+      "grade": "Önümüzdeki Yıl Sınıfı",
+      "current_school": "Mevcut Okulu",
+      "district": "Bulunduğunuz İlçe",
+      "program": "İlgilendiğiniz Program",
+      "note": "Ek Not (Opsiyonel)",
+      "submit": "Başvuruyu Gönder",
+      "submitting": "Gönderiliyor..."
+    },
+    "grades": {
+      "5": "5. Sınıf",
+      "6": "6. Sınıf",
+      "7": "7. Sınıf",
+      "8": "8. Sınıf",
+      "8-vip": "8. Sınıf VIP"
+    },
+    "programs": {
+      "5-6": "5. ve 6. Sınıf Programları",
+      "7-8": "7. ve 8. Sınıf Programları",
+      "8-vip": "8. Sınıf VIP Program",
+      "destek": "Destek & Analiz",
+      "undecided": "Henüz Karar Vermedim"
+    },
+    "success": {
+      "title": "Başvurunuz Alındı!",
+      "message": "En kısa sürede sizinle iletişime geçeceğiz.",
+      "back": "Ana Sayfaya Dön"
+    }
   }
 }

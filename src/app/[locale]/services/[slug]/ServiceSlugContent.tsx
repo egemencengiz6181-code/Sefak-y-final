@@ -34,7 +34,7 @@ function PhaseCard({ title, text, index }: { title: string; text: string; index:
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-sm hover:border-[#E21F26]/20 hover:bg-black/[0.05] dark:hover:bg-white/[0.05] transition-all duration-500 group"
+      className="relative p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-black/[0.03] dark:bg-white/[0.03] bg-background/90 hover:border-[#E21F26]/20 hover:bg-black/[0.05] dark:hover:bg-white/[0.05] transition-all duration-500 group"
     >
       <div className="text-7xl font-black text-black/[0.04] dark:text-white/[0.04] group-hover:text-[#E21F26]/10 transition-colors duration-500 absolute top-4 right-6 leading-none select-none">
         {num}
@@ -91,7 +91,7 @@ export default function ServiceSlugContent({ slug, images, i18n }: Props) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* ── AMBIENT GLOW ─────────────────────────────────────────────── */}
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#E21F26]/8 blur-[180px] rounded-full pointer-events-none -z-10" />
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#E21F26]/8  rounded-full pointer-events-none -z-10" />
 
       {/* ── BACK NAV ─────────────────────────────────────────────────── */}
       <div className="max-w-5xl mx-auto px-6 pt-36 pb-0">
@@ -163,7 +163,7 @@ export default function ServiceSlugContent({ slug, images, i18n }: Props) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="lg:sticky lg:top-32 p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-black/[0.03] dark:bg-white/[0.03] backdrop-blur-sm"
+            className="lg:sticky lg:top-32 p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-black/[0.03] dark:bg-white/[0.03] bg-background/90"
           >
             <h3 className="text-xs font-bold uppercase tracking-[0.25em] text-[#E21F26] mb-6">{i18n.scope}</h3>
             <ul className="space-y-3">

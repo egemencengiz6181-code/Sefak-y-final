@@ -5,15 +5,16 @@ import Footer from '@/components/shared/Footer';
 import MobileStickyButton from '@/components/shared/MobileStickyButton';
 import Providers from './providers';
 import {locales} from '@/config/locales';
-import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
+  weight: ['400', '500', '600', '700'],
   variable: '--font-inter',
   preload: true,
+  fallback: ['system-ui', '-apple-system', 'sans-serif'],
 });
 
 export function generateStaticParams() {
@@ -33,6 +34,22 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
+    keywords: [
+      'Sefaköy LGS Dershanesi',
+      'Küçükçekmece dershanesi',
+      'LGS hazırlık',
+      'YKS hazırlık',
+      'İstanbul dershaneleri',
+      'Sefaköy Final',
+      'ortaokul kursu',
+      'lise kursu',
+      '5. sınıf kursu',
+      '6. sınıf kursu',
+      '7. sınıf kursu',
+      '8. sınıf kursu',
+      'TYT AYT kursu',
+    ],
+    category: 'education',
     alternates: {
       canonical: `${origin}/${locale}`,
     },
@@ -43,11 +60,35 @@ export async function generateMetadata({
       title: t('title'),
       description: t('description'),
       url: `${origin}/${locale}`,
+      images: [
+        {
+          url: `${origin}/logos/sefak%C3%B6ylogo.png`,
+          width: 1200,
+          height: 630,
+          alt: 'Sefaköy Final LGS Dershanesi',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
+      images: [`${origin}/logos/sefak%C3%B6ylogo.png`],
+    },
+    appleWebApp: {
+      capable: true,
+      title: 'Sefaköy Final',
+      statusBarStyle: 'default',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }
@@ -66,7 +107,9 @@ export default async function LocaleLayout({
     <html lang={locale} className={inter.variable} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        {/* JSON-LD: LocalBusiness structured data */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        {/* JSON-LD: EducationalOrganization structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -87,7 +130,7 @@ export default async function LocaleLayout({
               },
               telephone: '+902126011500',
               email: 'sefakoy.finalabd@gmail.com',
-              sameAs: [],
+              sameAs: ['https://www.instagram.com/sefakoyfinal/'],
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',
@@ -101,18 +144,6 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="bg-background text-foreground antialiased selection:bg-primary/30 min-h-screen relative font-sans" suppressHydrationWarning>
-        {/* Arka Plan İkonu (Global Mühür) — sadece desktop, lazy */}
-        <div className="hidden md:block fixed top-[15%] right-[-250px] w-[900px] h-[900px] opacity-[0.08] rotate-12 pointer-events-none z-0">
-          <Image 
-            src="/logos/sefak%C3%B6ylogo.png" 
-            alt="" 
-            fill 
-            className="object-contain"
-            loading="lazy"
-            sizes="900px"
-          />
-        </div>
-
         <Providers locale={locale} messages={messages ?? {}}>
             <Navbar />
             <main className="relative z-10 pb-20 md:pb-0">

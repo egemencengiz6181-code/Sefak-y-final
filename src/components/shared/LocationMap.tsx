@@ -28,7 +28,7 @@ export default function LocationMap() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="absolute bottom-12 left-12 p-6 rounded-3xl bg-background/60 backdrop-blur-xl border border-black/10 dark:border-white/10 pointer-events-none z-20 hidden md:block"
+        className="absolute bottom-12 left-12 p-6 rounded-3xl bg-background/60 bg-background/95 border border-black/10 dark:border-white/10 pointer-events-none z-20 hidden md:block"
       >
         <div className="text-primary-light font-bold text-xs uppercase tracking-widest mb-2">Konum</div>
         <div className="text-slate-900 dark:text-white font-medium">Kartaltepe Mah. Halkalı Cad. 2. Orkide Sok. No:2</div>

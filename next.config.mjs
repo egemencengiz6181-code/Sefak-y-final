@@ -4,10 +4,14 @@ const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
+  },
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'next-intl'],
     optimizeCss: true,
   },
   images: {
@@ -26,7 +30,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/:path*',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-Frame-Options', value: 'DENY' },
@@ -36,14 +40,10 @@ const nextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload',
-          },
         ],
       },
       {
-        source: '/(_next/static|logos|works|okul|okul2)(.*)',
+        source: '/(.*)\\.(js|css|woff2|png|jpg|webp|avif|svg)',
         headers: [
           {
             key: 'Cache-Control',
@@ -52,7 +52,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/:path*\\.(jpg|jpeg|png|gif|ico|svg|webp|avif|woff|woff2)',
+        source: '/(_next/static|logos|works|okul|okul2)(.*)',
         headers: [
           {
             key: 'Cache-Control',

@@ -107,7 +107,7 @@ export default function Navbar() {
     <>
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 w-full px-6 md:px-12 py-5 flex items-center justify-between pointer-events-none transition-colors duration-300",
-      isScrolled && "max-md:bg-white/90 max-md:dark:bg-neutral-950/90 max-md:backdrop-blur-lg"
+      isScrolled && "max-md:bg-white/90 max-md:dark:bg-neutral-950/90 max-md:bg-background/90"
     )}>
       {/* Logo - Sol Taraf */}
       <div className="pointer-events-auto w-[200px] md:w-[260px] flex items-center">
@@ -127,7 +127,7 @@ export default function Navbar() {
       <div className="pointer-events-auto hidden md:flex flex-col items-center">
         <div className={cn(
           "flex items-center gap-1 py-1 px-1 rounded-full relative max-w-fit transition-all duration-300",
-          "bg-white/80 dark:bg-neutral-900/80 backdrop-blur-xl",
+          "bg-white/80 dark:bg-neutral-900/80 bg-background/95",
           "border border-black/[0.08] dark:border-white/[0.08]",
           "shadow-[0_4px_24px_rgba(0,0,0,0.06)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.3)]"
         )}>
@@ -175,7 +175,7 @@ export default function Navbar() {
         {/* Mega Menu — CSS transition */}
         <div
           className={cn(
-            "mega-menu absolute top-full mt-3 w-[1000px] p-6 bg-white/95 dark:bg-neutral-950/95 border border-black/10 dark:border-white/10 backdrop-blur-2xl rounded-[32px] shadow-2xl z-[100]",
+            "mega-menu absolute top-full mt-3 w-[1000px] p-6 bg-white/95 dark:bg-neutral-950/95 border border-black/10 dark:border-white/10 bg-background/95 rounded-[32px] shadow-2xl z-[100]",
             isHovered === servicesLabel && "open"
           )}
           onMouseEnter={() => openMenu(servicesLabel)}
@@ -208,7 +208,7 @@ export default function Navbar() {
 
       {/* Hamburger butonu (sadece mobil) */}
       <button
-        className="pointer-events-auto md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-black/10 dark:bg-white/10 border border-black/10 dark:border-white/10 backdrop-blur-lg text-black dark:text-white"
+        className="pointer-events-auto md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-black/10 dark:bg-white/10 border border-black/10 dark:border-white/10 bg-background/90 text-black dark:text-white"
         onClick={() => setIsMobileOpen((v) => !v)}
         aria-label="Menüyü aç/kapat"
       >

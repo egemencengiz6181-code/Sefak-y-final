@@ -685,5 +685,43 @@
       "tips": "Study Tips",
       "motivation": "Motivation"
     }
+  },
+  "FormLanding": {
+    "meta_title": "Information Form | Sefaköy Final LGS Course",
+    "meta_description": "Fill out the form to get detailed information about our programs. We will get back to you as soon as possible.",
+    "title": "Take the First Step to Success",
+    "subtitle": "Let's determine the right program for your goals. Fill out the form and we'll call you.",
+    "form": {
+      "student_name": "Student Name",
+      "parent_name": "Parent Name",
+      "phone": "Phone Number",
+      "email": "E-mail (Optional)",
+      "grade": "Grade for Next Year",
+      "current_school": "Current School",
+      "district": "District",
+      "program": "Program of Interest",
+      "note": "Additional Note (Optional)",
+      "submit": "Submit Application",
+      "submitting": "Submitting..."
+    },
+    "grades": {
+      "5": "5th Grade",
+      "6": "6th Grade",
+      "7": "7th Grade",
+      "8": "8th Grade",
+      "8-vip": "8th Grade VIP"
+    },
+    "programs": {
+      "5-6": "5th and 6th Grade Programs",
+      "7-8": "7th and 8th Grade Programs",
+      "8-vip": "8th Grade VIP Program",
+      "destek": "Support & Analysis",
+      "undecided": "Not Decided Yet"
+    },
+    "success": {
+      "title": "Application Received!",
+      "message": "We will contact you as soon as possible.",
+      "back": "Back to Home"
+    }
   }
 }

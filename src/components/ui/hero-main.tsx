@@ -1,43 +1,19 @@
 "use client";
 
 import { ArrowRight, MessageCircle } from "lucide-react";
-import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useState } from "react";
 import ContactPopup from "@/components/shared/ContactPopup";
 
-// Waves sadece desktop'ta yüklenir — mobilde hiç yüklenmez
-const Waves = dynamic(() => import('@/components/ui/waves'), { ssr: false });
-
 export default function HeroMain() {
   const t = useTranslations("HeroMain");
-  const { resolvedTheme } = useTheme();
-  const wavesBg = resolvedTheme === "dark" ? "#000000" : "#f4f4f8";
   const [popupOpen, setPopupOpen] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* ── WAVES BACKGROUND — sadece desktop ── */}
-      <div className="hidden md:block absolute inset-0 z-0">
-        <Waves
-          strokeColor="#E21F26"
-          backgroundColor={wavesBg}
-          lineCount={12}
-          waveSpeedX={0.0007}
-          waveSpeedY={0.0005}
-          waveAmpX={36}
-          waveAmpY={22}
-          xGap={16}
-          yGap={34}
-          friction={0.93}
-          tension={0.0035}
-          maxCursorMove={80}
-        />
-      </div>
-      {/* Mobil sade gradient */}
-      <div className="md:hidden absolute inset-0 z-0 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 dark:from-[#0a0a0f] dark:via-[#0d0005] dark:to-[#0a0a0f]" />
+      {/* ── SIMPLE GRADIENT BACKGROUND ── */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-background via-background to-muted" />
 
       {/* ── SCHOOL IMAGE BACKGROUND — LCP için priority ── */}
       <div className="absolute inset-0 z-[1] overflow-hidden">
@@ -54,13 +30,14 @@ export default function HeroMain() {
       {/* ── VIGNETTE OVERLAY ── */}
       <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,transparent_40%,rgba(255,255,255,0.82)_100%)] dark:bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,transparent_40%,rgba(0,0,0,0.82)_100%)]" />
 
-      {/* ── GLOW — CSS animation, GPU-only ── */}
+      {/* ── SUBTLE GLOW — CSS only, no blur ── */}
       <div
-        className="absolute z-[2] w-[720px] h-[720px] rounded-full blur-[160px] opacity-[0.18] pointer-events-none"
+        className="absolute z-[2] w-[600px] h-[600px] rounded-full opacity-[0.12] pointer-events-none"
         style={{
           background: "radial-gradient(circle, #E21F26 0%, #2E3192 50%, transparent 80%)",
           top: "50%",
           left: "50%",
+          transform: "translate(-50%, -50%)",
           animation: "hero-glow-pulse 14s ease-in-out infinite",
         }}
       />
@@ -68,7 +45,7 @@ export default function HeroMain() {
       {/* ── CONTENT ── */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {/* Eyebrow */}
-        <div className="hero-animate hero-animate-1 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E21F26]/30 bg-[#E21F26]/10 backdrop-blur-sm mb-8">
+        <div className="hero-animate hero-animate-1 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E21F26]/30 bg-[#E21F26]/10 bg-background/90 mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#E21F26] animate-pulse" />
           <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#E21F26]/80">
             Sefaköy · Küçükçekmece / İstanbul

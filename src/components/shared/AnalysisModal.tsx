@@ -44,7 +44,7 @@ function Overlay({ onClose }: { onClose: () => void }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[200]"
+      className="fixed inset-0 bg-black/70 bg-background/90 z-[200]"
       onClick={onClose}
     />
   );
@@ -121,6 +121,21 @@ export default function AnalysisModal() {
     return () => window.removeEventListener('open-analysis-modal', handler);
   }, []);
 
+  // Body scroll kilidi - modal açıkken scroll engelle
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = '0px'; // Prevent layout shift
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    };
+  }, [open]);
+
   const totalSteps = 3;
 
   const set = (key: keyof FormData, value: string | string[]) =>
@@ -186,17 +201,18 @@ export default function AnalysisModal() {
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.94, y: 20 }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="fixed inset-0 flex items-center justify-center z-[201] p-4"
+                  className="fixed inset-0 flex items-center justify-center z-[201] p-4 overflow-y-auto"
                   onClick={handleClose}
                 >
               <div
-                className="relative w-full max-w-lg bg-white dark:bg-[#0a0514] border border-[#E21F26]/20 rounded-3xl shadow-[0_0_80px_rgba(226,31,38,0.2)] overflow-hidden"
+                className="relative w-full max-w-lg bg-white dark:bg-[#0a0514] border border-[#E21F26]/20 rounded-3xl shadow-[0_0_80px_rgba(226,31,38,0.2)] overflow-hidden my-8"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Purple glow top */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[#E21F26]/10 blur-[80px] rounded-full pointer-events-none" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-[#E21F26]/10 rounded-full pointer-events-none" />
 
-                <div className="relative p-8">
+                <div className="relative p-8 max-h-[calc(100vh-4rem)] overflow-y-auto"
+                >
                   {/* Header */}
                   <div className="flex items-center justify-between mb-2">
                     <div>
