@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { X, ArrowRight, ArrowLeft, CheckCircle2, Building2, Lightbulb, Send, Loader2 } from "lucide-react";
 import { GradientButton } from "@/components/ui/gradient-button";
@@ -40,11 +39,8 @@ const INITIAL: FormData = {
 // ── Overlay ──────────────────────────────────────────────────────────────────
 function Overlay({ onClose }: { onClose: () => void }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/70 bg-background/90 z-[200]"
+    <div
+      className="fixed inset-0 bg-black/70 z-[200] modal-fade"
       onClick={onClose}
     />
   );
@@ -191,17 +187,12 @@ export default function AnalysisModal() {
           parent display:none (e.g. the desktop-only Navbar wrapper) */}
       {typeof document !== "undefined" &&
         createPortal(
-          <AnimatePresence>
-            {open && (
+          open ? (
               <>
                 <Overlay onClose={handleClose} />
 
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.94, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.94, y: 20 }}
-                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="fixed inset-0 flex items-center justify-center z-[201] p-4 overflow-y-auto"
+                <div
+                  className="fixed inset-0 flex items-center justify-center z-[201] p-4 overflow-y-auto modal-pop"
                   onClick={handleClose}
                 >
               <div
@@ -234,9 +225,8 @@ export default function AnalysisModal() {
                   {step < totalSteps && <Steps current={step} total={totalSteps} />}
 
                   {/* ── STEP 0: Path selection ─────────────────────── */}
-                  <AnimatePresence mode="wait">
                     {step === 0 && (
-                      <motion.div key="step0" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-4">
+                      <div key="step0" className="space-y-4 step-fade">
                         <p className="text-sm text-slate-500 dark:text-white/40 mb-6">{at('step0_desc')}</p>
                         {[
                           { val: "existing" as Path, icon: Building2, title: at('path_existing_title'), sub: at('path_existing_sub') },
@@ -261,22 +251,22 @@ export default function AnalysisModal() {
                             {form.path === val && <CheckCircle2 className="w-5 h-5 text-[#E21F26] ml-auto shrink-0" />}
                           </button>
                         ))}
-                      </motion.div>
+                      </div>
                     )}
 
                     {/* ── STEP 1: Existing brand ──────────────────── */}
                     {step === 1 && form.path === "existing" && (
-                      <motion.div key="step1a" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-4">
+                      <div key="step1a" className="space-y-4 step-fade">
                         <Field label={at('field_website')} placeholder={at('placeholder_website')} value={form.website} onChange={(v) => set("website", v)} />
                         <Field label={at('field_name')} placeholder={at('placeholder_name')} value={form.name} onChange={(v) => set("name", v)} />
                         <Field label={at('field_email')} placeholder={at('placeholder_email')} value={form.email} onChange={(v) => set("email", v)} type="email" />
                         <Field label={at('field_phone')} placeholder={at('placeholder_phone')} value={form.phone} onChange={(v) => set("phone", v)} type="tel" />
-                      </motion.div>
+                      </div>
                     )}
 
                     {/* ── STEP 1: New brand ───────────────────────── */}
                     {step === 1 && form.path === "new" && (
-                      <motion.div key="step1b" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-4">
+                      <div key="step1b" className="space-y-4 step-fade">
                         <Field label={at('field_sector')} placeholder={at('field_sector_placeholder')} value={form.sector} onChange={(v) => set("sector", v)} />
                         <TextArea label={at('field_project_details')} placeholder={at('field_project_placeholder')} value={form.projectDetail} onChange={(v) => set("projectDetail", v)} />
                         <div className="space-y-2">
@@ -303,12 +293,12 @@ export default function AnalysisModal() {
                           <Field label={at('field_email')} placeholder={at('placeholder_email')} value={form.email} onChange={(v) => set("email", v)} type="email" />
                           <Field label={at('field_phone')} placeholder={at('placeholder_phone')} value={form.phone} onChange={(v) => set("phone", v)} type="tel" />
                         </div>
-                      </motion.div>
+                      </div>
                     )}
 
                     {/* ── STEP 2: Final request ───────────────────── */}
                     {step === 2 && (
-                      <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-4">
+                      <div key="step2" className="space-y-4 step-fade">
                         <div className="p-4 rounded-2xl bg-[#E21F26]/5 border border-[#E21F26]/15">
                           <p className="text-xs text-[#E21F26] font-semibold uppercase tracking-wider mb-2">{at('summary_label')}</p>
                           <p className="text-sm text-slate-500 dark:text-white/60">
@@ -323,17 +313,12 @@ export default function AnalysisModal() {
                           value={form.request}
                           onChange={(v) => set("request", v)}
                         />
-                      </motion.div>
+                      </div>
                     )}
 
                     {/* ── SUCCESS ─────────────────────────────────────────── */}
                     {step === totalSteps && (
-                      <motion.div
-                        key="success"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="text-center py-8 space-y-4"
-                      >
+                      <div key="success" className="text-center py-8 space-y-4 step-fade">
                         <div className="w-16 h-16 rounded-full bg-[#E21F26]/20 border border-[#E21F26]/30 flex items-center justify-center mx-auto">
                           <CheckCircle2 className="w-8 h-8 text-[#E21F26]" />
                         </div>
@@ -345,9 +330,8 @@ export default function AnalysisModal() {
                         >
                           {at('btn_close')}
                         </button>
-                      </motion.div>
+                      </div>
                     )}
-                  </AnimatePresence>
 
                   {/* ── Navigation ───────────────────────────────────────── */}
                   {step < totalSteps && (
@@ -385,10 +369,9 @@ export default function AnalysisModal() {
                   )}
                 </div>
               </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>,
+            </div>
+              </>
+            ) : null,
           document.body,
         )}
     </>

@@ -50,7 +50,7 @@ export default function ReneeServiceCard({ title, description, slug, href, featu
       >
         {/* Front Face */}
         <div className="absolute inset-0 backface-hidden rounded-[32px] border border-black/10 dark:border-white/10 bg-gradient-to-br from-black/5 dark:from-white/5 to-primary/10 bg-background/95 p-8 flex flex-col items-center justify-center text-center overflow-hidden">
-          <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity blur-3xl -z-10" />
+          <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
           
           <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-8 border border-primary/20 group-hover:scale-110 transition-transform duration-500">
             <Icon className="w-10 h-10 text-primary-light" />

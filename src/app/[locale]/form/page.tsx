@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
+import Reveal from '@/components/shared/Reveal';
 import { CheckCircle2, ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -96,17 +96,6 @@ Not: ${form.note || 'Yok'}
 
   return (
     <div className="min-h-screen pt-32 pb-24 relative overflow-hidden bg-gradient-to-b from-background via-background to-muted">
-      {/* School Image Background */}
-      <div className="absolute inset-0 z-0 opacity-[0.05]">
-        <Image
-          src="/okul/okul.jpeg"
-          alt=""
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-      </div>
-
       {/* Subtle glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-[0.08] pointer-events-none rounded-full"
@@ -117,11 +106,7 @@ Not: ${form.note || 'Yok'}
 
       <div className="max-w-2xl mx-auto px-6 relative z-10">
         {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex justify-center mb-12"
-        >
+        <Reveal direction="down" className="flex justify-center mb-12">
           <div className="relative w-32 h-32">
             <Image
               src="/logos/sefak%C3%B6ylogo.png"
@@ -131,17 +116,10 @@ Not: ${form.note || 'Yok'}
               priority
             />
           </div>
-        </motion.div>
+        </Reveal>
 
-        <AnimatePresence mode="wait">
-          {!success ? (
-            <motion.div
-              key="form"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-8"
-            >
+        {!success ? (
+            <Reveal className="space-y-8">
               {/* Header */}
               <div className="text-center space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-b from-slate-900 to-slate-900/40 dark:from-white dark:to-white/40 bg-clip-text text-transparent">
@@ -302,21 +280,15 @@ Not: ${form.note || 'Yok'}
                   {loading ? t('form.submitting') : t('form.submit')}
                 </button>
               </form>
-            </motion.div>
+            </Reveal>
           ) : (
-            <motion.div
-              key="success"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+            <Reveal
+              direction="none"
               className="text-center space-y-8 py-20"
             >
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.2, type: 'spring' }}
-              >
+              <div className="success-pop">
                 <CheckCircle2 className="w-24 h-24 text-green-500 mx-auto" />
-              </motion.div>
+              </div>
               <div className="space-y-4">
                 <h2 className="text-4xl font-bold text-foreground">{t('success.title')}</h2>
                 <p className="text-xl text-foreground/50 max-w-md mx-auto">
@@ -330,9 +302,8 @@ Not: ${form.note || 'Yok'}
                 <ArrowLeft className="w-5 h-5" />
                 {t('success.back')}
               </Link>
-            </motion.div>
+            </Reveal>
           )}
-        </AnimatePresence>
       </div>
     </div>
   );

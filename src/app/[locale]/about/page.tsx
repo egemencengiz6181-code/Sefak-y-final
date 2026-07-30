@@ -50,7 +50,7 @@ export default function AboutPage() {
             { key: 'mission', color: 'from-accent/20' }
           ].map((item, i) => (
             <div key={item.key} className="group relative">
-              <div className={`absolute -inset-10 bg-gradient-to-b ${item.color} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl -z-10`} />
+              <div className={`absolute -inset-10 bg-gradient-to-b ${item.color} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10`} />
               <span className="text-6xl font-black text-black/5 dark:text-white/5 absolute -top-10 -left-6 select-none group-hover:text-primary/10 transition-colors">0{i+1}</span>
               <h4 className="text-3xl font-bold mb-6 group-hover:text-primary-light transition-colors">{t(`${item.key}.title`)}</h4>
               <p className="text-lg text-foreground/40 font-light leading-relaxed group-hover:text-foreground/70 transition-colors">

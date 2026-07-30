@@ -27,4 +27,9 @@ tsconfig.tsbuildinfo
 
 # OS files
 .DS_Store
+**/.DS_Store
 Thumbs.db
+# macOS AppleDouble sidecars (created when writing to non-HFS volumes, e.g. the
+# external drive this repo lives on). 44 of these were committed previously.
+._*
+**/._*

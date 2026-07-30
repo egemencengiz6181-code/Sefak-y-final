@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { useRouter } from '@/navigation';
 import { cn } from '@/lib/utils';
 import { 
@@ -104,23 +103,19 @@ export default function MarketingBadges() {
       <div className="md:hidden w-full px-4 py-8">
         <div className="flex flex-wrap gap-3 justify-center">
           {badges.map((badge, index) => (
-            <motion.button
+            <button
               key={badge.id}
               onClick={() => handleClick(badge.id)}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 120, damping: 14, delay: index * 0.05 }}
-              whileTap={{ scale: 0.95 }}
+              style={{ animationDelay: `${index * 50}ms` }}
               className={cn(
-                "flex items-center gap-2 px-5 py-3 rounded-2xl border border-white/10 shadow-lg backdrop-blur-md cursor-pointer",
+                "badge-pop flex items-center gap-2 px-5 py-3 rounded-2xl border border-white/10 shadow-lg cursor-pointer active:scale-95 transition-transform",
                 "bg-gradient-to-br font-bold text-white text-sm",
                 badge.color
               )}
             >
               <span className="text-white/70">{badge.icon}</span>
               <span className="tracking-tight text-white/90 whitespace-nowrap">{badge.label}</span>
-            </motion.button>
+            </button>
           ))}
         </div>
       </div>
@@ -135,25 +130,23 @@ export default function MarketingBadges() {
           const isOtherHovered = hoveredId !== null && hoveredId !== badge.id;
 
           return (
-            <motion.button
+            <button
               key={badge.id}
               onClick={() => handleClick(badge.id)}
               onMouseEnter={() => setHoveredId(badge.id)}
               onMouseLeave={() => setHoveredId(null)}
-              initial={{ opacity: 0, scale: 0.5, x: 0, y: 0, rotate: 0 }}
-              whileInView={{ opacity: 1, scale: 1, x: badge.x, y: badge.y, rotate: badge.rotation }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 100, damping: 15, delay: index * 0.05 }}
-              animate={{
-                scale: isHovered ? 1.2 : isOtherHovered ? 0.8 : 1,
-                opacity: isHovered ? 1 : isOtherHovered ? 0.2 : 1,
-                rotate: isHovered ? 0 : badge.rotation,
-                filter: isOtherHovered ? "blur(4px)" : "blur(0px)",
-                zIndex: isHovered ? 999 : (badge.zIndex || 10)
+              style={{
+                // Composited transform only — no filter/blur, which forced a
+                // GPU re-rasterise of every sibling badge on each hover.
+                transform: `translate3d(${badge.x}px, ${badge.y}px, 0) rotate(${
+                  isHovered ? 0 : badge.rotation
+                }deg) scale(${isHovered ? 1.2 : isOtherHovered ? 0.8 : 1})`,
+                opacity: isOtherHovered ? 0.25 : 1,
+                zIndex: isHovered ? 999 : badge.zIndex || 10,
+                transitionDelay: `${index * 40}ms`,
               }}
-              whileTap={{ scale: 0.95 }}
               className={cn(
-                "absolute flex items-center gap-3 px-8 py-4 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-md transition-all duration-500 group cursor-pointer",
+                "badge-float absolute flex items-center gap-3 px-8 py-4 rounded-2xl border border-white/10 shadow-2xl group cursor-pointer active:scale-95",
                 "bg-gradient-to-br font-bold text-white",
                 badge.color
               )}
@@ -161,7 +154,7 @@ export default function MarketingBadges() {
               <div className="absolute inset-0 rounded-2xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
               <span className="text-white/60 group-hover:text-white transition-colors">{badge.icon}</span>
               <span className="text-base tracking-tight text-white/90 group-hover:text-white whitespace-nowrap">{badge.label}</span>
-            </motion.button>
+            </button>
           );
         })}
       </div>

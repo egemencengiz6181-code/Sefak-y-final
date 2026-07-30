@@ -2,9 +2,13 @@
 
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { useState } from "react";
-import ContactPopup from "@/components/shared/ContactPopup";
+import dynamic from "next/dynamic";
+
+// Closed by default — keep framer-motion out of the initial hero bundle.
+const ContactPopup = dynamic(() => import("@/components/shared/ContactPopup"), {
+  ssr: false,
+});
 
 export default function HeroMain() {
   const t = useTranslations("HeroMain");
@@ -14,18 +18,6 @@ export default function HeroMain() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* ── SIMPLE GRADIENT BACKGROUND ── */}
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-background via-background to-muted" />
-
-      {/* ── SCHOOL IMAGE BACKGROUND — LCP için priority ── */}
-      <div className="absolute inset-0 z-[1] overflow-hidden">
-        <Image
-          src="/okul/okul.jpeg"
-          alt=""
-          fill
-          className="object-cover object-center opacity-[0.08]"
-          sizes="100vw"
-          priority
-        />
-      </div>
 
       {/* ── VIGNETTE OVERLAY ── */}
       <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,transparent_40%,rgba(255,255,255,0.82)_100%)] dark:bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,transparent_40%,rgba(0,0,0,0.82)_100%)]" />

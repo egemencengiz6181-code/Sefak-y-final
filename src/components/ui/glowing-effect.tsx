@@ -2,7 +2,33 @@
 
 import { memo, useCallback, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
-import { animate } from "framer-motion";
+
+/** easeOutExpo-ish — matches the previous [0.16, 1, 0.3, 1] curve closely. */
+function easeOut(t: number): number {
+  return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+}
+
+/**
+ * Minimal numeric tween. This was the only reason the whole framer-motion
+ * bundle was pulled into every page that rendered a GlowingEffect.
+ */
+function tween(
+  from: number,
+  to: number,
+  durationMs: number,
+  onUpdate: (v: number) => void
+): () => void {
+  let raf = 0;
+  let start = 0;
+  const step = (now: number) => {
+    if (!start) start = now;
+    const t = Math.min(1, (now - start) / durationMs);
+    onUpdate(from + (to - from) * easeOut(t));
+    if (t < 1) raf = requestAnimationFrame(step);
+  };
+  raf = requestAnimationFrame(step);
+  return () => cancelAnimationFrame(raf);
+}
 
 interface GlowingEffectProps {
   blur?: number;
@@ -33,6 +59,7 @@ const GlowingEffect = memo(
     const containerRef = useRef<HTMLDivElement>(null);
     const lastPosition = useRef({ x: 0, y: 0 });
     const animationFrameRef = useRef<number>(0);
+    const cancelTweenRef = useRef<(() => void) | null>(null);
 
     const handleMove = useCallback(
       (e?: MouseEvent | { x: number; y: number }) => {
@@ -86,13 +113,15 @@ const GlowingEffect = memo(
           const angleDiff = ((targetAngle - currentAngle + 180) % 360) - 180;
           const newAngle = currentAngle + angleDiff;
 
-          animate(currentAngle, newAngle, {
-            duration: movementDuration,
-            ease: [0.16, 1, 0.3, 1],
-            onUpdate: (value) => {
+          cancelTweenRef.current?.();
+          cancelTweenRef.current = tween(
+            currentAngle,
+            newAngle,
+            movementDuration * 1000,
+            (value) => {
               element.style.setProperty("--start", String(value));
-            },
-          });
+            }
+          );
         });
       },
       [inactiveZone, proximity, movementDuration]
@@ -100,6 +129,16 @@ const GlowingEffect = memo(
 
     useEffect(() => {
       if (disabled) return;
+
+      // Pointer-tracking glow is a desktop-only affordance. On touch devices
+      // every instance would add a body-level pointermove listener that runs
+      // getBoundingClientRect on each drag frame, so skip it entirely.
+      if (
+        typeof window !== "undefined" &&
+        !window.matchMedia("(hover: hover) and (pointer: fine)").matches
+      ) {
+        return;
+      }
 
       const handleScroll = () => handleMove();
       const handlePointerMove = (e: PointerEvent) => handleMove(e);
@@ -113,6 +152,7 @@ const GlowingEffect = memo(
         if (animationFrameRef.current) {
           cancelAnimationFrame(animationFrameRef.current);
         }
+        cancelTweenRef.current?.();
         window.removeEventListener("scroll", handleScroll);
         document.body.removeEventListener("pointermove", handlePointerMove);
       };

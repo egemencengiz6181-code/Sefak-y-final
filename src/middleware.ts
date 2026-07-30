@@ -13,8 +13,7 @@ export function middleware(request: NextRequest): NextResponse {
 }
 
 export const config = {
-  matcher: [
-    "/",
-    "/(tr)/:path*",
-  ],
+  // Skip the middleware for static assets, image optimisation and API routes —
+  // it has no work to do there and only adds latency to every asset request.
+  matcher: ["/", "/(tr(?:/.*)?)"],
 };

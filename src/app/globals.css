@@ -75,15 +75,18 @@ body {
   50% { transform: translateY(10px); }
 }
 
-/* Staggered hero fade-up */
+/* Staggered hero fade-up.
+   The headline (hero-animate-2) is the LCP element, so the whole sequence is
+   kept short: nothing starts from opacity:0 for longer than it takes to paint.
+   Long delays here read as a blank screen on slow mobile connections. */
 .hero-animate {
   opacity: 0;
-  animation: fade-up 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fade-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 .hero-animate-1 { animation-delay: 0ms; }
-.hero-animate-2 { animation-delay: 140ms; }
-.hero-animate-3 { animation-delay: 280ms; }
-.hero-animate-4 { animation-delay: 420ms; }
+.hero-animate-2 { animation-delay: 60ms; }
+.hero-animate-3 { animation-delay: 120ms; }
+.hero-animate-4 { animation-delay: 180ms; }
 
 /* Accordion / collapse with max-height */
 .accordion-body {
@@ -119,6 +122,110 @@ body {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
+}
+
+/* Reveal component — CSS replacement for framer-motion fade/slide reveals.
+   Only opacity + transform animate, so these stay on the compositor. */
+.motion-reveal {
+  opacity: 0;
+  transform: var(--reveal-from, translate3d(0, 24px, 0));
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+  /* Fail-safe: these elements ship as opacity:0 in the SSR HTML and are
+     revealed by an IntersectionObserver after hydration. If JS is blocked,
+     slow or errors, this forces them visible so the page can never be
+     stuck blank. */
+  animation: reveal-failsafe 0.01s linear 2.5s forwards;
+}
+.motion-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+  animation: none;
+}
+
+@keyframes reveal-failsafe {
+  to { opacity: 1; transform: none; }
+}
+
+/* Same guarantee when scripting is unavailable entirely. */
+
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Modal enter animations (ContactPopup / AnalysisModal) */
+@keyframes modal-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes modal-pop {
+  from { opacity: 0; transform: scale(0.94) translateY(16px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modal-fade { animation: modal-fade 0.22s ease-out both; }
+.modal-pop  { animation: modal-pop 0.28s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-fade, .modal-pop { animation: none; }
+}
+
+/* Success checkmark pop (form landing page) */
+@keyframes success-pop {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.success-pop {
+  animation: success-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .success-pop { animation: none; }
+}
+
+/* Marketing badges — CSS replacements for the framer-motion spring layout */
+@keyframes badge-pop {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.badge-pop {
+  opacity: 0;
+  animation: badge-pop 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.badge-float {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.45s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-pop { animation: none; opacity: 1; }
+  .badge-float { transition: none; }
+}
+
+/* Inline highlight marker sweep */
+@keyframes highlight-sweep {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.highlight-sweep {
+  transform-origin: left center;
+  animation: highlight-sweep 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+.highlight-sweep-delayed {
+  animation-duration: 0.4s;
+  animation-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .highlight-sweep { animation: none; transform: none; }
 }
 
 /* Section whileInView animations — CSS only */

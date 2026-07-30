@@ -1,9 +1,9 @@
 'use client';
 
-import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { Link } from '@/navigation';
 import React from 'react';
 import { type LucideIcon, BookOpen, GraduationCap, Trophy, FileText, Users, Star, Award } from 'lucide-react';
+import Reveal from '@/components/shared/Reveal';
 
 const ICON_MAP: Record<string, LucideIcon> = {
   BookOpen,
@@ -13,31 +13,6 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Users,
   Star,
   Award,
-};
-
-// Lightweight magnetic wrapper — only used on desktop hover
-const MagneticContent = ({ children }: { children: React.ReactNode }) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 150, damping: 15 });
-  const springY = useSpring(y, { stiffness: 150, damping: 15 });
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    x.set((e.clientX - rect.left - rect.width / 2) * 0.2);
-    y.set((e.clientY - rect.top - rect.height / 2) * 0.2);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
-
-  return (
-    <motion.div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{ x: springX, y: springY }}>
-      {children}
-    </motion.div>
-  );
 };
 
 interface ServiceCardProps {
@@ -51,12 +26,7 @@ interface ServiceCardProps {
 export function ServiceCard({ slug, icon, span = 'col-span-1', title, description }: ServiceCardProps) {
   const Icon = ICON_MAP[icon] ?? BookOpen;
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className={`${span} group relative`}
-    >
+    <Reveal onScroll className={`${span} group relative`}>
       <Link href={`/services/${slug}`} className="block h-full">
         <div className="relative h-full p-8 rounded-[32px] bg-black/[0.02] dark:bg-white/[0.02] bg-background/95 border border-black/5 dark:border-white/5 overflow-hidden transition-all duration-500 hover:border-primary/30">
           <div className="absolute -inset-20 bg-primary/20  rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10" />
@@ -64,30 +34,23 @@ export function ServiceCard({ slug, icon, span = 'col-span-1', title, descriptio
             <div className="w-14 h-14 rounded-2xl bg-black/5 dark:bg-white/5 flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors duration-500">
               <Icon className="w-7 h-7 text-primary-light" />
             </div>
-            <MagneticContent>
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary-light transition-colors tracking-tight">
-                {title}
-              </h3>
-            </MagneticContent>
+            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary-light transition-colors tracking-tight">
+              {title}
+            </h3>
             <p className="text-foreground/40 font-light leading-relaxed group-hover:text-foreground/70 transition-colors">
               {description}
             </p>
           </div>
         </div>
       </Link>
-    </motion.div>
+    </Reveal>
   );
 }
 
 export function SectionHeader({ title }: { title: string }) {
   return (
     <div className="mb-12 relative">
-      <motion.div
-        initial={{ width: 0 }}
-        whileInView={{ width: '100px' }}
-        viewport={{ once: true }}
-        className="h-px bg-gradient-to-r from-primary to-transparent mb-6"
-      />
+      <div className="h-px w-[100px] bg-gradient-to-r from-primary to-transparent mb-6" />
       <h2 className="text-primary-light tracking-[0.4em] uppercase text-xs font-bold">{title}</h2>
     </div>
   );
@@ -115,21 +78,21 @@ export default function ServicesPageClient({ pageTitle, pageSubtitle, sectionLis
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="mb-32">
-          <motion.h1
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+          <Reveal
+            as="h1"
+            direction="left"
             className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter"
           >
             {pageTitle}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
+          </Reveal>
+          <Reveal
+            as="p"
+            direction="left"
+            delay={200}
             className="text-2xl text-foreground/40 font-light max-w-2xl"
           >
             {pageSubtitle}
-          </motion.p>
+          </Reveal>
         </div>
 
         <section className="mb-32">

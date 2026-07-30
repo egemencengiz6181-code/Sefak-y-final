@@ -1,17 +1,23 @@
 import type { MetadataRoute } from 'next';
-import { works } from '@/config/works';
 
 const origin = 'https://www.sefakoyfinal.com';
 const locales = ['tr'] as const;
 
+// Must stay in sync with generateStaticParams in services/[slug]/page.tsx
 const serviceSlugs = [
+  'ilkokul-grubu',
   '5-sinif',
   '6-sinif',
   '7-sinif',
   '8-sinif',
   '8-sinif-vip',
-  'deneme-kulubu',
+  '9-sinif',
+  '10-sinif',
+  '11-sinif',
+  '12-sinif',
+  'mezun',
   'ozel-ders',
+  'deneme-kulubu',
 ] as const;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -49,20 +55,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   );
 
-  // ── Works (case study) routes ────────────────────────────────────────────────
-  const worksEntries: MetadataRoute.Sitemap = works.flatMap(({ slug }) =>
-    locales.map((locale) => ({
-      url: `${origin}/${locale}/works/${slug}`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-      alternates: {
-        languages: Object.fromEntries(
-          locales.map((l) => [l, `${origin}/${l}/works/${slug}`])
-        ),
-      },
-    }))
-  );
-
-  return [...staticEntries, ...serviceEntries, ...worksEntries];
+  return [...staticEntries, ...serviceEntries];
 }

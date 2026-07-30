@@ -90,7 +90,7 @@ function AchievementCard({ name, school, percentile, quote, program }: Student) 
         <p className="text-xs font-semibold text-foreground/35 mt-1">— {name}</p>
       </div>
       {/* Hover glow */}
-      <div className="absolute inset-0 rounded-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl bg-primary/15" />
+      <div className="absolute inset-0 rounded-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-primary/15" />
     </div>
   );
 }

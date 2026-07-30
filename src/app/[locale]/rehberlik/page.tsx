@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { useRef, useState } from 'react';
+import Reveal from '@/components/shared/Reveal';
+import { useState } from 'react';
 import { Link } from '@/navigation';
 import {
   Brain, BarChart2, Users, Presentation, FileText,
@@ -15,13 +15,6 @@ const LetsWorkSection = dynamic(() => import('@/components/ui/lets-work-section'
 const BLUE = '#2E3192';
 const RED  = '#E21F26';
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 32 },
-  show: (i = 0) => ({
-    opacity: 1, y: 0,
-    transition: { delay: i * 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-  }),
-};
 
 /* ─── Data ─────────────────────────────────────────────────────────── */
 type SectionItem = {
@@ -153,11 +146,7 @@ function SectionCard({ section, index }: { section: SectionItem; index: number }
   const color = section.color;
 
   return (
-    <motion.div
-      variants={fadeUp} custom={index * 0.5}
-      initial="hidden" whileInView="show" viewport={{ once: true, margin: '-40px' }}
-      className="relative rounded-3xl"
-    >
+    <Reveal onScroll delay={index * 50} className="relative rounded-3xl">
       <div
         className="relative rounded-3xl border transition-colors duration-500"
         style={{ borderColor: open ? color + '30' : 'rgba(255,255,255,0.06)' }}
@@ -210,16 +199,9 @@ function SectionCard({ section, index }: { section: SectionItem; index: number }
           </div>
         </button>
 
-        <AnimatePresence initial={false}>
-          {open && (
-            <motion.div
-              key="body"
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="overflow-hidden"
-            >
+        {/* CSS max-height accordion — animating height:auto in JS forces a
+            layout measurement on every frame of the transition. */}
+        <div className={`accordion-body${open ? ' open' : ''}`}>
               <div className="px-7 pb-7">
                 <div className="h-px mb-6 rounded-full" style={{ background: `linear-gradient(to right,${color}40,transparent)` }} />
                 <div className="space-y-4">
@@ -241,9 +223,7 @@ function SectionCard({ section, index }: { section: SectionItem; index: number }
                   )}
                 </div>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        </div>
 
         <div
           className="absolute bottom-0 left-0 h-[2px] rounded-b-3xl transition-all duration-500"
@@ -253,7 +233,7 @@ function SectionCard({ section, index }: { section: SectionItem; index: number }
           }}
         />
       </div>
-    </motion.div>
+    </Reveal>
   );
 }
 
@@ -270,37 +250,27 @@ function StatCard({ icon: Icon, label, color }: { icon: React.ElementType; label
 }
 
 export default function RehberlikPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
-  const heroY  = useTransform(scrollYProgress, [0, 1], ['0%', '18%']);
-  const heroOp = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
       {/* ambient glows */}
-      <div className="fixed top-[-80px] left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#2E3192]/8  rounded-full pointer-events-none -z-10" />
-      <div className="fixed top-[40%] right-[-80px] w-[500px] h-[500px] bg-[#E21F26]/5  rounded-full pointer-events-none -z-10" />
-      <div className="fixed bottom-0 left-[-80px] w-[400px] h-[400px] bg-[#2E3192]/5  rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#2E3192]/8  rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-[40%] right-[-80px] w-[500px] h-[500px] bg-[#E21F26]/5  rounded-full pointer-events-none -z-10" />
+      <div className="absolute bottom-0 left-[-80px] w-[400px] h-[400px] bg-[#2E3192]/5  rounded-full pointer-events-none -z-10" />
 
       {/* ══ HERO ════════════════════════════════════════════════════════ */}
-      <section ref={heroRef} className="relative min-h-[85vh] flex items-center pt-32 pb-20 px-6">
-        <motion.div style={{ y: heroY, opacity: heroOp }} className="max-w-6xl mx-auto w-full">
+      <section className="relative min-h-[85vh] flex items-center pt-32 pb-20 px-6">
+        <div className="max-w-6xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             <div>
-              <motion.div
-                variants={fadeUp} custom={0} initial="hidden" animate="show"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2E3192]/30 bg-[#2E3192]/[0.08] bg-background/90 mb-8"
-              >
+              <Reveal className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2E3192]/30 bg-[#2E3192]/[0.08] bg-background/90 mb-8">
                 <Sparkles className="w-3.5 h-3.5 text-[#2E3192]" />
                 <span className="text-xs font-bold uppercase tracking-[0.3em] text-[#2E3192]">Sefaköy Final LGS Dershanesi</span>
-              </motion.div>
+              </Reveal>
 
-              <motion.h1
-                variants={fadeUp} custom={1} initial="hidden" animate="show"
-                className="text-4xl md:text-5xl xl:text-6xl font-black tracking-tighter leading-[1.05] mb-6"
-              >
+              <Reveal as="h1" delay={100} className="text-4xl md:text-5xl xl:text-6xl font-black tracking-tighter leading-[1.05] mb-6">
                 <span className="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-900/40 dark:from-white dark:via-white dark:to-white/40 bg-clip-text text-transparent">
                   Psikolojik Danışmanlık
                 </span>
@@ -308,16 +278,13 @@ export default function RehberlikPage() {
                 <span className="bg-gradient-to-r from-[#2E3192] to-[#E21F26] bg-clip-text text-transparent">
                   ve Rehberlik Hizmetleri
                 </span>
-              </motion.h1>
+              </Reveal>
 
-              <motion.p
-                variants={fadeUp} custom={2} initial="hidden" animate="show"
-                className="text-base text-slate-500 dark:text-white/50 font-light leading-relaxed mb-10 max-w-lg"
-              >
+              <Reveal as="p" delay={200} className="text-base text-slate-500 dark:text-white/50 font-light leading-relaxed mb-10 max-w-lg">
                 Seviye Belirleme Sınavı&apos;ndan başlayarak her öğrenciye özel oluşturulan kapsamlı danışmanlık programı; psikolojik testler, yapay zeka destekli analiz ve düzenli veli raporlarını bir arada sunar.
-              </motion.p>
+              </Reveal>
 
-              <motion.div variants={fadeUp} custom={3} initial="hidden" animate="show" className="flex flex-wrap gap-4">
+              <Reveal delay={300} className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl font-bold text-sm text-white transition-all duration-300 group"
@@ -332,10 +299,10 @@ export default function RehberlikPage() {
                 >
                   Detayları Gör
                 </a>
-              </motion.div>
+              </Reveal>
             </div>
 
-            <motion.div variants={fadeUp} custom={4} initial="hidden" animate="show" className="relative">
+            <Reveal delay={400} className="relative">
               <div className="absolute -inset-4 rounded-[40px]  opacity-25 pointer-events-none" style={{ background: `linear-gradient(135deg,${BLUE}50,${RED}30)` }} />
               <div className="relative rounded-3xl border border-black/[0.07] dark:border-white/[0.07] bg-black/[0.03] dark:bg-white/[0.03] bg-background/95 p-8">
                 <GlowingEffect spread={50} glow disabled={false} proximity={80} inactiveZone={0.01} borderWidth={2} />
@@ -355,22 +322,19 @@ export default function RehberlikPage() {
                   <StatCard icon={BarChart2}      label="Denemede Özel Analiz"       color={RED}  />
                 </div>
               </div>
-            </motion.div>
+            </Reveal>
           </div>
-        </motion.div>
+        </div>
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
       </section>
 
       {/* ══ ACCORDION SECTIONS ══════════════════════════════════════════ */}
       <section id="detaylar" className="max-w-4xl mx-auto px-6 pb-32 space-y-4">
-        <motion.div
-          variants={fadeUp} custom={0} initial="hidden" whileInView="show" viewport={{ once: true }}
-          className="mb-10 text-center"
-        >
+        <Reveal onScroll className="mb-10 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.35em] mb-3" style={{ color: BLUE }}>Hizmet Başlıkları</p>
           <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Tüm Hizmetlerimiz</h2>
           <p className="text-slate-500 dark:text-white/35 mt-3 text-sm">Genişletmek için bölüme tıklayın</p>
-        </motion.div>
+        </Reveal>
 
         {SECTIONS.map((section, i) => (
           <SectionCard key={section.id} section={section} index={i} />

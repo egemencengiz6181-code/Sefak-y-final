@@ -11,8 +11,10 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
   },
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'next-intl'],
-    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'next-intl'],
+    // optimizeCss (critters) intentionally left off: it did not inline any
+    // critical CSS here and the package is unmaintained, so it was pure
+    // build-time risk.
   },
   images: {
     formats: ['image/avif', 'image/webp'],

@@ -1,6 +1,5 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import { X, Phone, MessageCircle } from 'lucide-react';
 import { useEffect } from 'react';
 
@@ -29,29 +28,19 @@ export default function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
 
+  if (!isOpen) return null;
+
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
+    <>
           {/* Backdrop */}
-          <motion.div
-            key="backdrop"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[200] bg-black/60 bg-background/90"
+          <div
+            className="fixed inset-0 z-[200] bg-black/60 modal-fade"
             onClick={onClose}
           />
 
           {/* Modal */}
-          <motion.div
-            key="modal"
-            initial={{ opacity: 0, scale: 0.92, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.92, y: 20 }}
-            transition={{ type: 'spring', stiffness: 340, damping: 28 }}
-            className="fixed inset-0 z-[201] flex items-center justify-center px-4"
+          <div
+            className="fixed inset-0 z-[201] flex items-center justify-center px-4 overflow-y-auto py-6 modal-pop"
             onClick={e => e.stopPropagation()}
           >
             <div className="relative w-full max-w-sm bg-white dark:bg-[#0f0f13] rounded-[32px] border border-black/10 dark:border-white/10 shadow-2xl overflow-hidden">
@@ -130,9 +119,7 @@ export default function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                 </p>
               </div>
             </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+          </div>
+    </>
   );
 }

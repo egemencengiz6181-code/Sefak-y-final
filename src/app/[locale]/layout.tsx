@@ -5,6 +5,7 @@ import Footer from '@/components/shared/Footer';
 import MobileStickyButton from '@/components/shared/MobileStickyButton';
 import Providers from './providers';
 import {locales} from '@/config/locales';
+import {getClientMessages} from '@/lib/client-messages';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 
@@ -102,13 +103,16 @@ export default async function LocaleLayout({
 }) {
   const {locale} = await params;
   const messages = await getMessages();
+  // Only the namespaces client components read — keeps ~40 kB of server-only
+  // copy (Services.items bodies, meta tags) out of every page's HTML.
+  const clientMessages = getClientMessages(messages);
 
   return (
     <html lang={locale} className={inter.variable} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        {/* No font preconnect: next/font self-hosts Inter from /_next/static,
+            so the browser never contacts fonts.googleapis.com. */}
         {/* JSON-LD: EducationalOrganization structured data */}
         <script
           type="application/ld+json"
@@ -144,7 +148,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="bg-background text-foreground antialiased selection:bg-primary/30 min-h-screen relative font-sans" suppressHydrationWarning>
-        <Providers locale={locale} messages={messages ?? {}}>
+        <Providers locale={locale} messages={clientMessages}>
             <Navbar />
             <main className="relative z-10 pb-20 md:pb-0">
               {children}
