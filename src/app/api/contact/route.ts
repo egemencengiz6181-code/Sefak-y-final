@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// Declared here rather than via vercel.json "functions", whose glob has to
+// match the compiled output and fails the deploy when it doesn't.
+export const maxDuration = 30;
+export const runtime = 'nodejs';
+
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST ?? 'smtp.gmail.com',
   port: Number(process.env.SMTP_PORT ?? 465),
