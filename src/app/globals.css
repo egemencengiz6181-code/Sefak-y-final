@@ -2,19 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Stored as space-separated RGB channels, not hex, so Tailwind's alpha
+   modifiers (bg-background/95, text-foreground/40, ...) can compose them.
+   With a hex value these utilities silently generate no CSS at all, which
+   left panels transparent and muted text uncoloured. */
 :root {
-  --background: #f4f4f8;
-  --foreground: #0f0a1a;
+  --background: 244 244 248; /* #f4f4f8 */
+  --foreground: 15 10 26;    /* #0f0a1a */
 }
 
 .dark {
-  --background: #05010d;
-  --foreground: #f2f2f2;
+  --background: 5 1 13;        /* #05010d */
+  --foreground: 242 242 242;   /* #f2f2f2 */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
