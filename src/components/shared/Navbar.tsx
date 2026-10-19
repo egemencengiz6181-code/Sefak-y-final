@@ -50,6 +50,7 @@ export default function Navbar() {
     { name: t('about'), url: "/about", icon: BookOpen },
     { name: t('services'), url: "/services", icon: ChevronDown, hasMegaMenu: true },
     { name: t('guidance'), url: "/rehberlik", icon: Users },
+    { name: t('rankings'), url: "/derecelerimiz", icon: Trophy },
     { name: t('references'), url: "/references", icon: Award },
     { name: t('contact'), url: "/contact", icon: BookOpen },
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -144,7 +145,7 @@ export default function Navbar() {
                 <Link
                   href={item.url}
                   className={cn(
-                    "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors flex items-center gap-2",
+                    "relative cursor-pointer text-sm font-semibold whitespace-nowrap px-4 xl:px-5 py-2 rounded-full transition-colors flex items-center gap-2",
                     "text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white",
                     isActive && "text-black dark:text-white"
                   )}

@@ -531,7 +531,8 @@
       "11-sinif": "11. Sınıf",
       "12-sinif": "12. Sınıf",
       "mezun": "Mezun"
-    }
+    },
+    "rankings": "Derecelerimiz"
   },
   "Footer": {
     "address": "Kartaltepe Mahallesi Halkalı Caddesi 2. Orkide Sokak, No: 2, Küçükçekmece/İstanbul",
@@ -733,5 +734,16 @@
       "message": "En kısa sürede sizinle iletişime geçeceğiz.",
       "back": "Ana Sayfaya Dön"
     }
+  },
+  "Rankings": {
+    "meta_title": "Derecelerimiz | Sefaköy Final Eğitim Kurumları",
+    "meta_description": "YKS'de hayalindeki üniversiteye, LGS'de hedef lisesine yerleşen Sefaköy Final öğrencileri.",
+    "eyebrow": "Gurur Tablomuz",
+    "title": "Derecelerimiz",
+    "subtitle": "YKS ve LGS'de hedeflerine ulaşan öğrencilerimizi tebrik ediyoruz.",
+    "tab_yks": "YKS",
+    "tab_lgs": "LGS",
+    "empty": "Dereceler çok yakında burada.",
+    "close": "Kapat"
   }
 }

@@ -231,16 +231,16 @@
         "phase3_text": "Group sessions where students evaluate together and peer learning.",
         "result_title": "Outcome",
         "result_text": "Continuously increasing net score, exam habits and strengthened confidence.",
-        "tech_title": "LGS Format \u00b7 Weekly mock + analysis",
+        "tech_title": "LGS Format · Weekly mock + analysis",
         "tech_intro": "Weekly mock exams in LGS format. Analysis sessions included.",
-        "tech_tools": "Weekly mock exam \u00b7 Net analysis \u00b7 Group evaluation \u00b7 Progress tracking",
+        "tech_tools": "Weekly mock exam · Net analysis · Group evaluation · Progress tracking",
         "features": [
           "Weekly mock exam",
           "Net analysis",
           "Group evaluation",
           "Progress tracking"
         ],
-        "meta_title": "Mock Exam Club | Sefak\u00f6y Final LGS Academy",
+        "meta_title": "Mock Exam Club | Sefaköy Final LGS Academy",
         "meta_description": "Weekly LGS format mock exams, net analysis and group evaluation."
       },
       "ilkokul-grubu": {
@@ -258,9 +258,9 @@
         "phase3_text": "Activities to strengthen reading, writing and basic math skills. Attention and concentration exercises.",
         "result_title": "Outcomes",
         "result_text": "Strong academic foundation, study habits and school adjustment.",
-        "tech_title": "5 weekdays \u00b7 School & Homework Support",
+        "tech_title": "5 weekdays · School & Homework Support",
         "tech_intro": "Regular school and homework support every weekday.",
-        "tech_tools": "Homework support \u00b7 Individual tracking \u00b7 Skill activities \u00b7 Parent updates",
+        "tech_tools": "Homework support · Individual tracking · Skill activities · Parent updates",
         "features": [
           "5 weekday support",
           "Homework assistance",
@@ -269,8 +269,9 @@
           "Reading & writing activities",
           "Attention development"
         ],
-        "meta_title": "Primary School Group (Grades 1-4) | Sefak\u00f6y Final LGS Academy",
-        "meta_description": "School and homework support program 5 weekdays for primary school students in grades 1-4."      },
+        "meta_title": "Primary School Group (Grades 1-4) | Sefaköy Final LGS Academy",
+        "meta_description": "School and homework support program 5 weekdays for primary school students in grades 1-4."
+      },
       "9-sinif": {
         "title": "9th Grade",
         "description": "2 weekend days + 2 weekdays. Total 14 lesson hours. Individual guidance, 7-day library (08:30–19:00) and camp programs.",
@@ -431,7 +432,8 @@
           "Camp programs"
         ],
         "meta_title": "Graduate Program | Sefaköy Final YKS - LGS Academy",
-        "meta_description": "18 lesson hours/week + 9h Q&A with weekly mock exams, AI analysis and individual guidance for graduate YKS prep."      }
+        "meta_description": "18 lesson hours/week + 9h Q&A with weekly mock exams, AI analysis and individual guidance for graduate YKS prep."
+      }
     }
   },
   "References": {
@@ -521,7 +523,8 @@
       "11-sinif": "11th Grade",
       "12-sinif": "12th Grade",
       "mezun": "Graduate"
-    }
+    },
+    "rankings": "Our Rankings"
   },
   "Footer": {
     "address": "Kartaltepe Mah. Halkalı Cad. 2. Orkide Sok. No: 2, Küçükçekmece/İstanbul",
@@ -672,7 +675,7 @@
     ]
   },
   "Blog": {
-    "meta_title": "Education Blog | Sefak\u00f6y Final LGS Academy",
+    "meta_title": "Education Blog | Sefaköy Final LGS Academy",
     "meta_description": "Useful articles on LGS and primary/middle school education.",
     "title_prefix": "Education",
     "title_highlight": "Blog",
@@ -723,5 +726,16 @@
       "message": "We will contact you as soon as possible.",
       "back": "Back to Home"
     }
+  },
+  "Rankings": {
+    "meta_title": "Our Rankings | Sefaköy Final",
+    "meta_description": "Sefaköy Final students who reached their target universities (YKS) and high schools (LGS).",
+    "eyebrow": "Hall of Fame",
+    "title": "Our Rankings",
+    "subtitle": "Congratulations to our students who reached their goals in YKS and LGS.",
+    "tab_yks": "YKS",
+    "tab_lgs": "LGS",
+    "empty": "Coming soon.",
+    "close": "Close"
   }
 }
